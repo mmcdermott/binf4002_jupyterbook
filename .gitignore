@@ -23,3 +23,8 @@ uv.lock
 
 # Sphinx temp
 _static/
+
+# Notebook-generated artifacts
+book/lectures/data/
+_exec_logs/
+processed_data.pkl
