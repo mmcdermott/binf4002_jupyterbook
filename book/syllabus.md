@@ -19,41 +19,37 @@ The dates given for each lecture are the calendar slot in BINF 4002 Spring 2026.
 
 ## Lectures at a glance
 
-| #  | Date         | Topic                                                | Source     | NB? | Folder                                                                |
-|----|--------------|------------------------------------------------------|------------|-----|------------------------------------------------------------------------|
-| 1  | Tue Jan 20   | Course orientation                                   | PPTX       | —   | [`Lectures/lecture-01-orientation/`](Lectures/lecture-01-orientation/) |
-| 2  | Thu Jan 22   | Linear algebra                                       | PPTX       | —   | [`Lectures/lecture-02-linear-algebra/`](Lectures/lecture-02-linear-algebra/) |
-| 3  | Tue Jan 27   | Probability                                          | PPTX       | —   | [`Lectures/lecture-03-probability/`](Lectures/lecture-03-probability/) |
-| 4  | Thu Jan 29   | Information theory & Bayesian probability            | PPTX       | —   | [`Lectures/lecture-04-information-theory/`](Lectures/lecture-04-information-theory/) |
-| 5  | Tue Feb 3    | Calculus & optimization                              | PPTX       | yes | [`Lectures/lecture-05-calculus-optimization/`](Lectures/lecture-05-calculus-optimization/) |
-| 6  | Thu Feb 5    | Probabilistic optimization                           | PPTX       | yes | [`Lectures/lecture-06-probabilistic-optimization/`](Lectures/lecture-06-probabilistic-optimization/) |
-| 7  | Tue Feb 10   | Probabilistic modeling (Di Liu, guest)               | PDF (guest)| —   | [`Lectures/lecture-07-probabilistic-modeling/`](Lectures/lecture-07-probabilistic-modeling/) |
-| 8  | Thu Feb 12   | Binary-classification evaluation (Florent Pollet)    | PDF (guest) + PPTX draft | — | [`Lectures/lecture-08-binary-classification-evaluation/`](Lectures/lecture-08-binary-classification-evaluation/) |
-| 9  | Tue Feb 17   | Binary-classification training                       | PPTX       | yes | [`Lectures/lecture-09-binary-classification-training/`](Lectures/lecture-09-binary-classification-training/) |
-| 10 | Thu Feb 19   | Generalization, domain shift, fairness recap         | PPTX       | —   | [`Lectures/lecture-10-generalization-domain-shift/`](Lectures/lecture-10-generalization-domain-shift/) |
-| 11 | Tue Feb 24   | Lab Day #1                                           | —          | labs| [`Lectures/lecture-11-lab-day-1/`](Lectures/lecture-11-lab-day-1/) |
-| 12 | Thu Feb 26   | Lab Day #2                                           | —          | labs| [`Lectures/lecture-12-lab-day-2/`](Lectures/lecture-12-lab-day-2/) |
-| 13 | Tue Mar 3    | Neural networks                                      | TeX        | yes | [`Lectures/lecture-13-neural-networks/`](Lectures/lecture-13-neural-networks/) |
-| 14 | Thu Mar 5    | Large language models                                | TeX        | yes | [`Lectures/lecture-14-large-language-models/`](Lectures/lecture-14-large-language-models/) |
-| 15 | Tue Mar 10   | Foundation models                                    | PPTX       | —   | [`Lectures/lecture-15-foundation-models/`](Lectures/lecture-15-foundation-models/) |
-| 16 | Thu Mar 12   | Lab Day #3 (last class before spring break)          | —          | labs| [`Lectures/lecture-16-lab-day-3/`](Lectures/lecture-16-lab-day-3/) |
-| —  | Mar 17 / 19  | *Spring break (no class)*                            | —          | —   | — |
-| 17 | Tue Mar 24   | EHR & claims data (modality)                         | TeX        | yes | [`Lectures/lecture-17-ehr-claims-data/`](Lectures/lecture-17-ehr-claims-data/) |
-| 18 | Thu Mar 26   | EHR & claims data (modeling)                         | TeX        | —   | [`Lectures/lecture-18-ehr-claims-modeling/`](Lectures/lecture-18-ehr-claims-modeling/) |
-| 19 | Tue Mar 31   | Clinical & biomedical text (modality)                | TeX        | yes | [`Lectures/lecture-19-clinical-text-data/`](Lectures/lecture-19-clinical-text-data/) |
-| 20 | Thu Apr 2    | Clinical & biomedical NLP (modeling)                 | TeX        | yes | [`Lectures/lecture-20-clinical-nlp-modeling/`](Lectures/lecture-20-clinical-nlp-modeling/) |
-| 21 | Tue Apr 7    | Medical imaging (modality)                           | TeX        | yes | [`Lectures/lecture-21-medical-imaging-data/`](Lectures/lecture-21-medical-imaging-data/) |
-| 22 | Thu Apr 9    | Medical imaging (modeling)                           | TeX        | yes | [`Lectures/lecture-22-medical-imaging-modeling/`](Lectures/lecture-22-medical-imaging-modeling/) |
-| 23 | Tue Apr 14   | Population health & survival analysis                | TeX        | yes | [`Lectures/lecture-23-population-health-survival/`](Lectures/lecture-23-population-health-survival/) |
-| 24 | Thu Apr 16   | Causality & fairness                                 | TeX*       | yes | [`Lectures/lecture-24-causality-fairness/`](Lectures/lecture-24-causality-fairness/) |
-| 25 | Tue Apr 21   | DNA, genetics, gene regulation                       | TeX        | yes | [`Lectures/lecture-25-dna-genetics/`](Lectures/lecture-25-dna-genetics/) |
-| 26 | Thu Apr 23   | Proteins, molecules, structural biology              | TeX        | yes | [`Lectures/lecture-26-proteins-molecules/`](Lectures/lecture-26-proteins-molecules/) |
-| 27 | Tue Apr 28   | Modern biological AI                                 | TeX        | yes | [`Lectures/lecture-27-modern-biological-ai/`](Lectures/lecture-27-modern-biological-ai/) |
-| 28 | Thu Apr 30   | Course recap / synthesis                             | —          | —   | *(in-class recap of L1-L27, no folder)* |
-
-\* L24's TeX references 6 figures that are produced by running `nb24_causality_fairness.ipynb`. They are not committed as static images; see L24 README and `Lectures/questions.md` §8.
-
-Source-type abbreviations: **PPTX** = PowerPoint; **TeX** = LaTeX (Beamer); **NB** = companion Jupyter notebook; **(guest)** = guest-lecturer deck, no editable source.
+| #  | Date         | Topic                                                                                       |
+|----|--------------|---------------------------------------------------------------------------------------------|
+| 1  | Tue Jan 20   | [Course orientation](lectures/lecture-01.md)                                                |
+| 2  | Thu Jan 22   | [Linear algebra](lectures/lecture-02.md)                                                    |
+| 3  | Tue Jan 27   | [Probability](lectures/lecture-03.md)                                                       |
+| 4  | Thu Jan 29   | [Information theory & Bayesian probability](lectures/lecture-04.md)                         |
+| 5  | Tue Feb 3    | [Calculus & optimization](lectures/lecture-05.md)                                           |
+| 6  | Thu Feb 5    | [Probabilistic optimization](lectures/lecture-06.md)                                        |
+| 7  | Tue Feb 10   | [Probabilistic modeling (Di Liu, guest)](lectures/lecture-07.md)                            |
+| 8  | Thu Feb 12   | [Binary-classification evaluation (Florent Pollet, guest)](lectures/lecture-08.md)          |
+| 9  | Tue Feb 17   | [Binary-classification training](lectures/lecture-09.md)                                    |
+| 10 | Thu Feb 19   | [Generalization, domain shift, fairness recap](lectures/lecture-10.md)                      |
+| 11 | Tue Feb 24   | [Lab Day #1](lectures/lecture-11.md)                                                        |
+| 12 | Thu Feb 26   | [Lab Day #2](lectures/lecture-12.md)                                                        |
+| 13 | Tue Mar 3    | [Neural networks](lectures/lecture-13.md)                                                   |
+| 14 | Thu Mar 5    | [Large language models](lectures/lecture-14.md)                                             |
+| 15 | Tue Mar 10   | [Foundation models](lectures/lecture-15.md)                                                 |
+| 16 | Thu Mar 12   | [Lab Day #3 (last class before spring break)](lectures/lecture-16.md)                       |
+| —  | Mar 17 / 19  | *Spring break (no class)*                                                                   |
+| 17 | Tue Mar 24   | [EHR & claims data (modality)](lectures/lecture-17.md)                                      |
+| 18 | Thu Mar 26   | [EHR & claims data (modeling)](lectures/lecture-18.md)                                      |
+| 19 | Tue Mar 31   | [Clinical & biomedical text (modality)](lectures/lecture-19.md)                             |
+| 20 | Thu Apr 2    | [Clinical & biomedical NLP (modeling)](lectures/lecture-20.md)                              |
+| 21 | Tue Apr 7    | [Medical imaging (modality)](lectures/lecture-21.md)                                        |
+| 22 | Thu Apr 9    | [Medical imaging (modeling)](lectures/lecture-22.md)                                        |
+| 23 | Tue Apr 14   | [Population health & survival analysis](lectures/lecture-23.md)                             |
+| 24 | Thu Apr 16   | [Causality & fairness](lectures/lecture-24.md)                                              |
+| 25 | Tue Apr 21   | [DNA, genetics, gene regulation](lectures/lecture-25.md)                                    |
+| 26 | Thu Apr 23   | [Proteins, molecules, structural biology](lectures/lecture-26.md)                           |
+| 27 | Tue Apr 28   | [Modern biological AI](lectures/lecture-27.md)                                              |
+| 28 | Thu Apr 30   | [Course recap / synthesis](lectures/lecture-28.md)                                          |
 
 ---
 
@@ -482,13 +478,13 @@ Calendar-wise: lab → lab → NN → LLMs → FMs → lab, then spring break. T
 
 ---
 
-# Part 3 — Health data modalities and modeling  (Lectures 17-22)
+# Part 3 — Clinical AI  (Lectures 17-22)
 
 ## Topic
-Three two-lecture pairs (data → modeling) through EHR/claims, clinical text, and medical imaging.
+Three two-lecture pairs (data → modeling) through EHR/claims, clinical text, and medical imaging — the data types that arise as a byproduct of clinical care.
 
 ## Summary
-For each of three major modalities — EHR/claims (L17-L18), clinical & biomedical text (L19-L20), medical imaging (L21-L22) — students learn the data-generating process and modality-specific pathologies first, then the modeling consequences. The recurring move is: enumerate how the data are produced (care, billing, documentation, scanners, labs); identify what is informative beyond labels (timing, missingness, metadata); pick a representation; pick a model.
+For each of three major data types produced by the practice of care — EHR/claims (L17-L18), clinical & biomedical text (L19-L20), medical imaging (L21-L22) — students learn the data-generating process and care-specific pathologies first, then the modeling consequences. The recurring move is: enumerate how the data are produced (care delivery, billing, documentation, scanners, labs); identify what is informative beyond labels (timing, missingness, metadata); pick a representation; pick a model.
 
 ## Goals
 - Read an EHR / claims dataset, clinical-note corpus, or imaging dataset and name what is generated, what is missing, and what is selection.

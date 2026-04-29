@@ -8,9 +8,11 @@ The release schedule:
 - **Chunk 2 — ML loss types / objectives** (released **Mon Mar 2, 2026**, used in [Lab Day #3](../lectures/lecture-16.md)).
 - **Chunk 3 — Data types / modalities** (released **Fri Mar 6, 2026**, used in [Lab Day #3](../lectures/lecture-16.md)).
 
-Students worked the labs in order. Solution notebooks exist for chunk 1 (in `Labs/solutions/`) but were not the primary deliverable — the lab notebooks themselves are scaffolded with reflection questions and inline explanations.
+Students worked the labs in order during the semester. **The labs in this book are the *solution* versions — every TODO is filled in and every code cell has run with its outputs visible.** Use them to study: read the prompts, then read the worked solutions, then run them in Colab to experiment.
 
-The lab notebooks below are *the released student versions* (no solutions inline). Click any lab to open it; if you want to run it yourself, use the **launch button** at the top of the notebook page (Colab and Binder when configured).
+Click any lab below to view it inline. To re-run it yourself, use the launch button at the top right of any notebook page (Open in Colab / Open in Binder).
+
+> **Note.** For chunk 1 (labs 0-5) the solutions are a separate notebook — the version shown here. For chunks 2-3 (labs 6-16) the original released notebooks already include solution cells inline at the bottom of each section, marked "Solution: ...".
 
 ## What each lab covers
 

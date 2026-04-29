@@ -28,7 +28,7 @@ parse:
 # and `BINF4002-2026` with your actual GitHub user/org and repository
 # once you create the repo.
 repository:
-  url: https://github.com/mmcdermott/BINF4002-2026   # <-- update once the repo exists
+  url: https://github.com/mmcdermott/binf4002_jupyterbook
   path_to_book: book                                 # this book lives under repo-root/book/
   branch: main
 

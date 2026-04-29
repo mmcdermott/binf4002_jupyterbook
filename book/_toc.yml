@@ -7,24 +7,20 @@ parts:
       - file: concept_map
   - caption: Part 1 — Foundations
     chapters:
+      - file: parts/part-1
       - file: lectures/lecture-01
       - file: lectures/lecture-02
       - file: lectures/lecture-03
       - file: lectures/lecture-04
       - file: lectures/lecture-05
-        sections:
-          - file: lectures/nb-05-gradient-descent
       - file: lectures/lecture-06
-        sections:
-          - file: lectures/nb-06-probabilistic-optimization
       - file: lectures/lecture-07
       - file: lectures/lecture-08
       - file: lectures/lecture-09
-        sections:
-          - file: lectures/nb-09-binary-classification
       - file: lectures/lecture-10
   - caption: Part 2 — Modern AI & lab work
     chapters:
+      - file: parts/part-2
       - file: lectures/lecture-11
       - file: lectures/lecture-12
       - file: lectures/lecture-13
@@ -35,8 +31,9 @@ parts:
           - file: lectures/nb-14-llm
       - file: lectures/lecture-15
       - file: lectures/lecture-16
-  - caption: Part 3 — Health data modalities
+  - caption: Part 3 — Clinical AI
     chapters:
+      - file: parts/part-3
       - file: lectures/lecture-17
         sections:
           - file: lectures/nb-17-ehr-claims
@@ -55,6 +52,7 @@ parts:
           - file: lectures/nb-22-imaging-modeling
   - caption: Part 4 — Population, causality, fairness
     chapters:
+      - file: parts/part-4
       - file: lectures/lecture-23
         sections:
           - file: lectures/nb-23-pophealth
@@ -63,6 +61,7 @@ parts:
           - file: lectures/nb-24-causality-fairness
   - caption: Part 5 — Molecules & biological AI
     chapters:
+      - file: parts/part-5
       - file: lectures/lecture-25
         sections:
           - file: lectures/nb-25-dna-genetics
@@ -74,7 +73,38 @@ parts:
           - file: lectures/nb-27-modern-bio-models
   - caption: Part 6 — Recap
     chapters:
+      - file: parts/part-6
       - file: lectures/lecture-28
+  - caption: Study Guides
+    chapters:
+      - file: study_guides/intro
+      - file: study_guides/lecture-01
+      - file: study_guides/lecture-02
+      - file: study_guides/lecture-03
+      - file: study_guides/lecture-04
+      - file: study_guides/lecture-05
+      - file: study_guides/lecture-06
+      - file: study_guides/lecture-07
+      - file: study_guides/lecture-08
+      - file: study_guides/lecture-09
+      - file: study_guides/lecture-10
+      - file: study_guides/lecture-11
+      - file: study_guides/lecture-12
+      - file: study_guides/lecture-13
+      - file: study_guides/lecture-14
+      - file: study_guides/lecture-15
+      - file: study_guides/lecture-16
+      - file: study_guides/lecture-17
+      - file: study_guides/lecture-18
+      - file: study_guides/lecture-19
+      - file: study_guides/lecture-20
+      - file: study_guides/lecture-21
+      - file: study_guides/lecture-22
+      - file: study_guides/lecture-23
+      - file: study_guides/lecture-24
+      - file: study_guides/lecture-25
+      - file: study_guides/lecture-26
+      - file: study_guides/lecture-27
   - caption: Labs
     chapters:
       - file: labs/intro

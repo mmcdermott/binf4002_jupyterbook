@@ -19,7 +19,6 @@ flowchart LR
   classDef bio fill:#ede9fe,stroke:#6d28d9,color:#4c1d95
   classDef recap fill:#f5f5f4,stroke:#57534e,color:#1c1917
 
-  L1[L1 Orientation]:::foundation
   L2[L2 Linear algebra]:::foundation
   L3[L3 Probability]:::foundation
   L4[L4 Bayes & info theory]:::foundation
@@ -89,7 +88,9 @@ flowchart LR
   L27 --> L28
 ```
 
-**How to read it.** Foundations (blue) flow into modern AI (yellow), into health-data modalities (green), into population/causality (pink), into biological AI (purple), all converging at the recap (gray). The dependency graph is dense in places — L2 (linear algebra) feeds L5, L13, and L25; L4 (Bayes) feeds L6, L17, and L24 — because those ideas really do reappear that many times.
+**How to read it.** Foundations (blue) flow into modern AI (yellow), into clinical AI (green), into population/causality (pink), into biological AI (purple), all converging at the recap (gray). The dependency graph is dense in places — L2 (linear algebra) feeds L5, L13, and L25; L4 (Bayes) feeds L6, L17, and L24 — because those ideas really do reappear that many times.
+
+L1 (course orientation) is intentionally not shown above — it sets up the course's epistemic stance but doesn't introduce technical machinery that downstream lectures depend on.
 
 ---
 
@@ -120,7 +121,6 @@ Every health dataset has a measurement system, an incentive structure, and a sel
 ```{mermaid}
 graph LR
   TL2((TL2 Data are generated))
-  TL2 --- L1[L1 The course's central stance]
   TL2 --- L17[L17 EHR / claims as care + billing byproducts]
   TL2 --- L18[L18 Recording timing is itself signal]
   TL2 --- L19[L19 Clinical text is documentation]
