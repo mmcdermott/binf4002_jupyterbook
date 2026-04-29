@@ -12,11 +12,8 @@ This is the **canonical syllabus** for BINF 4002. It is a hierarchical content m
 
 The dates given for each lecture are the calendar slot in BINF 4002 Spring 2026.
 
-> Companion files at the project root:
-> - [`syllabus_markmap.md`](syllabus_markmap.md) — Markmap-formatted compact version of this syllabus, ready to render as an interactive mind map at [markmap.js.org](https://markmap.js.org).
-> - [`mind_map.md`](mind_map.md) — cross-cutting through-lines (TL1-TL6), suggested mind-map hierarchy, and external-reference clusters.
-> - [`Lectures/BINF4002_IRL_syllabus.md`](Lectures/BINF4002_IRL_syllabus.md) — earlier LLM-derived narrative synthesis (more prose, less hierarchy).
-> - [`Lectures/questions.md`](Lectures/questions.md) — open issues and verification log.
+> Companion file:
+> - [`concept_map.md`](concept_map.md) — interactive mind map plus a cross-lecture concept map showing how the six course-wide through-lines (TL1-TL6) thread the lectures together. **Start here when you sit down to review.**
 
 ---
 
@@ -841,7 +838,7 @@ L25-L27 folders.
 
 - **Date.** Thu Apr 30, 2026.
 - **Topic.** Synthesis of everything covered during the semester.
-- **Summary.** No new content; the originally-planned deployment lecture is *not* taught this cycle. The slot is used to walk back through the course arc — foundations → modern AI → health data modalities → population/causality/fairness → biological AI — and to surface the cross-cutting through-lines (see [`mind_map.md`](mind_map.md)) so students can see the course as a whole.
+- **Summary.** No new content; the originally-planned deployment lecture is *not* taught this cycle. The slot is used to walk back through the course arc — foundations → modern AI → health data modalities → population/causality/fairness → biological AI — and to surface the cross-cutting through-lines (see [`concept_map.md`](concept_map.md)) so students can see the course as a whole.
 - **Goals.** Re-state the course-level learning objectives, identify which lectures contributed to each one, and give students a synthesis frame for the final exam.
 - **Key takeaways.** Same as Level 0 — the six course-wide takeaways (see top of this file).
 - **Subsections.**
@@ -849,11 +846,11 @@ L25-L27 folders.
   - Cross-cutting through-lines (TL1-TL6).
   - Open questions / what was *not* covered (deployment, post-deployment monitoring, regulation — flagged for self-study).
   - Q&A.
-- **Materials.** No new lecture deliverable for this slot. Students should re-read this syllabus and [`mind_map.md`](mind_map.md).
-- **External references.** For the dropped deployment material, students wanting to self-study should read Finlayson et al. (*NEJM* 2021) and the FDA *AI/ML SaMD Action Plan* (2021); see [`mind_map.md`](mind_map.md) for the broader external-reference cluster.
+- **Materials.** No new lecture deliverable for this slot. Students should re-read this syllabus and [`concept_map.md`](concept_map.md).
+- **External references.** For the dropped deployment material, students wanting to self-study should read Finlayson et al. (*NEJM* 2021) and the FDA *AI/ML SaMD Action Plan* (2021); see [`concept_map.md`](concept_map.md) for the broader external-reference cluster.
 
 > **Note on what was dropped.** A standalone deployment lecture (drift, feedback loops, alert fatigue, regulation, FDA SaMD) was originally planned for this slot but is not taught this cycle. Deployment-adjacent ideas still appear in L8 (calibration), L10 (domain shift), L17-L18 (label/action windows), and L24 (mechanism-level fairness mitigation).
 
 ---
 
-> **Mind-map and through-lines.** The cross-cutting through-lines (TL1-TL6) and the suggested hierarchical mind-map structure live in [`mind_map.md`](mind_map.md) at the project root, alongside the external-reference clusters that the mind map links to.
+> **Mind-map and through-lines.** The cross-cutting through-lines (TL1-TL6) and the suggested hierarchical mind-map structure live in [`concept_map.md`](concept_map.md) at the project root, alongside the external-reference clusters that the mind map links to.

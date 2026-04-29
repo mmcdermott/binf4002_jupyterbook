@@ -17,6 +17,8 @@ parse:
     - tasklist
     - attrs_inline
     - linkify
+    - html_admonition
+    - html_image
 
 # ===== Repository / launch buttons =====
 # Set the values below once the project is pushed to GitHub. Until then,
@@ -27,7 +29,7 @@ parse:
 # once you create the repo.
 repository:
   url: https://github.com/mmcdermott/BINF4002-2026   # <-- update once the repo exists
-  path_to_book: site_jupyterbook/book                # path to this book's root within the repo
+  path_to_book: book                                 # this book lives under repo-root/book/
   branch: main
 
 launch_buttons:
@@ -50,7 +52,16 @@ html:
     <p>Spring 2026 — BINF 4002</p>
 
 sphinx:
+  extra_extensions:
+    - sphinxcontrib.mermaid
+  extra_static_paths:
+    - _static
   config:
     suppress_warnings:
       - "myst.header"
       - "mystnb.unknown_mime_type"
+    mermaid_version: "10.9.0"
+    html_extra_path:
+      - concept_mindmap.html
+    myst_html_meta:
+      "description lang=en": "BINF 4002 — Machine Learning for Health"

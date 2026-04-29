@@ -4,8 +4,7 @@ parts:
   - caption: Course-wide
     chapters:
       - file: syllabus
-      - file: mind_map
-      - file: syllabus_markmap
+      - file: concept_map
   - caption: Part 1 — Foundations
     chapters:
       - file: lectures/lecture-01
@@ -96,6 +95,3 @@ parts:
       - file: labs/lab14_images
       - file: labs/lab15_timeseries
       - file: labs/lab16_event_streams_MEDS
-  - caption: Appendix
-    chapters:
-      - file: questions
