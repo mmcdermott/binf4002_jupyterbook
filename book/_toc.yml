@@ -1,0 +1,101 @@
+format: jb-book
+root: intro
+parts:
+  - caption: Course-wide
+    chapters:
+      - file: syllabus
+      - file: mind_map
+      - file: syllabus_markmap
+  - caption: Part 1 — Foundations
+    chapters:
+      - file: lectures/lecture-01
+      - file: lectures/lecture-02
+      - file: lectures/lecture-03
+      - file: lectures/lecture-04
+      - file: lectures/lecture-05
+        sections:
+          - file: lectures/nb-05-gradient-descent
+      - file: lectures/lecture-06
+        sections:
+          - file: lectures/nb-06-probabilistic-optimization
+      - file: lectures/lecture-07
+      - file: lectures/lecture-08
+      - file: lectures/lecture-09
+        sections:
+          - file: lectures/nb-09-binary-classification
+      - file: lectures/lecture-10
+  - caption: Part 2 — Modern AI & lab work
+    chapters:
+      - file: lectures/lecture-11
+      - file: lectures/lecture-12
+      - file: lectures/lecture-13
+        sections:
+          - file: lectures/nb-13-nn-fundamentals
+      - file: lectures/lecture-14
+        sections:
+          - file: lectures/nb-14-llm
+      - file: lectures/lecture-15
+      - file: lectures/lecture-16
+  - caption: Part 3 — Health data modalities
+    chapters:
+      - file: lectures/lecture-17
+        sections:
+          - file: lectures/nb-17-ehr-claims
+      - file: lectures/lecture-18
+      - file: lectures/lecture-19
+        sections:
+          - file: lectures/nb-19-clinical-text
+      - file: lectures/lecture-20
+        sections:
+          - file: lectures/nb-20-clinical-nlp
+      - file: lectures/lecture-21
+        sections:
+          - file: lectures/nb-21-imaging-data
+      - file: lectures/lecture-22
+        sections:
+          - file: lectures/nb-22-imaging-modeling
+  - caption: Part 4 — Population, causality, fairness
+    chapters:
+      - file: lectures/lecture-23
+        sections:
+          - file: lectures/nb-23-pophealth
+      - file: lectures/lecture-24
+        sections:
+          - file: lectures/nb-24-causality-fairness
+  - caption: Part 5 — Molecules & biological AI
+    chapters:
+      - file: lectures/lecture-25
+        sections:
+          - file: lectures/nb-25-dna-genetics
+      - file: lectures/lecture-26
+        sections:
+          - file: lectures/nb-26-proteins-molecules
+      - file: lectures/lecture-27
+        sections:
+          - file: lectures/nb-27-modern-bio-models
+  - caption: Part 6 — Recap
+    chapters:
+      - file: lectures/lecture-28
+  - caption: Labs
+    chapters:
+      - file: labs/intro
+      - file: labs/lab0_preprocessing
+      - file: labs/lab1_logistic_regression
+      - file: labs/lab2_decision_trees
+      - file: labs/lab3_knn
+      - file: labs/lab4_ensemble_methods
+      - file: labs/lab5_neural_networks
+      - file: labs/lab6_multiclass_classification
+      - file: labs/lab7_regression
+      - file: labs/lab8_survival_analysis
+      - file: labs/lab9_probabilistic_regression
+      - file: labs/lab10_clustering
+      - file: labs/lab11_dimensionality_reduction
+      - file: labs/lab12_graph_data
+      - file: labs/lab13_ordinal_sequences
+      - file: labs/lab14_images
+      - file: labs/lab15_timeseries
+      - file: labs/lab16_event_streams_MEDS
+  - caption: Appendix
+    chapters:
+      - file: questions

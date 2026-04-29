@@ -1,0 +1,14 @@
+[project]
+name = "binf4002-jupyterbook-site"
+version = "0.1.0"
+description = "Jupyter Book site for BINF 4002 — Machine Learning for Health"
+requires-python = ">=3.11,<3.13"
+dependencies = [
+    # Pin to the Sphinx-based 1.x line. Jupyter Book 2.0 switched to mystmd and uses a different
+    # config format (myst.yml) that's incompatible with the _config.yml/_toc.yml setup here.
+    "jupyter-book>=1.0,<2.0",
+    "sphinx-multitoc-numbering>=0.1",
+    "sphinx-design>=0.6",
+    "myst-parser>=2.0",
+    "nbformat>=5.10",
+]

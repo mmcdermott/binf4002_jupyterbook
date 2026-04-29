@@ -1,0 +1,56 @@
+title: "BINF 4002 — Machine Learning for Health"
+author: "Matthew McDermott"
+copyright: "2026"
+logo: ""
+only_build_toc_files: true
+
+# Pre-executed notebooks ship with their original outputs; no execution at build time.
+execute:
+  execute_notebooks: "off"
+
+parse:
+  myst_enable_extensions:
+    - colon_fence
+    - dollarmath
+    - amsmath
+    - deflist
+    - tasklist
+    - attrs_inline
+    - linkify
+
+# ===== Repository / launch buttons =====
+# Set the values below once the project is pushed to GitHub. Until then,
+# the launch buttons render but won't be functional. (Colab requires a public
+# raw URL to the .ipynb; Binder needs the repo to be public for free
+# binders; the live "thebe" launcher needs binder.) Replace `mmcdermott`
+# and `BINF4002-2026` with your actual GitHub user/org and repository
+# once you create the repo.
+repository:
+  url: https://github.com/mmcdermott/BINF4002-2026   # <-- update once the repo exists
+  path_to_book: site_jupyterbook/book                # path to this book's root within the repo
+  branch: main
+
+launch_buttons:
+  notebook_interface: classic        # "classic" or "jupyterlab"
+  binderhub_url: https://mybinder.org
+  colab_url: https://colab.research.google.com
+  thebe: false                       # interactive cells in-browser; off until repo is public
+  # Once the repo is public on GitHub, students reading the book see a
+  # rocket icon on each notebook page that opens the notebook in Colab
+  # (top choice) or Binder. The Colab URL is constructed from
+  # repository.url + path_to_book + the notebook path.
+
+html:
+  use_repository_button: true        # "edit on GitHub" link
+  use_issues_button: true            # "open issue" link
+  use_edit_page_button: true
+  home_page_in_navbar: true
+  baseurl: ""
+  extra_navbar: |
+    <p>Spring 2026 — BINF 4002</p>
+
+sphinx:
+  config:
+    suppress_warnings:
+      - "myst.header"
+      - "mystnb.unknown_mime_type"

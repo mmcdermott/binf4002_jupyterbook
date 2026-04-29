@@ -1,0 +1,25 @@
+# Jupyter Book build output
+book/_build/
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+.venv/
+.python-version
+
+# uv
+uv.lock
+
+# OS / editor cruft
+.DS_Store
+.idea/
+.vscode/
+*.swp
+*~
+
+# Notebook checkpoints
+.ipynb_checkpoints/
+
+# Sphinx temp
+_static/
