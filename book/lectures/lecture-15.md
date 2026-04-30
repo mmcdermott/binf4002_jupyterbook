@@ -52,20 +52,57 @@ Two reasons the framing in this lecture is consequential:
 - L22 (medical imaging) — domain-specific image foundation models (RadImageNet, MedSAM) are case studies.
 - L27 (modern biological AI) — protein language models, DNA foundation models. Each one has to answer "foundation over what (x, α)?" in a way that the lecture sets up.
 
-## Source files in this folder
+---
 
-- `FMs Lecture.pdf` — the slides as released to students.
-- `FMs Lecture.pptx` — editable PowerPoint source. (No LaTeX source for this lecture.)
+## Study guide
 
-## To go deeper
+*Key terms, self-check questions, and additional resources for active recall.*
 
-- **Bommasani et al., "On the Opportunities and Risks of Foundation Models," arXiv:2108.07258.** The 200-page paper that named the term. You can read just the executive summary and the parts relevant to your application.
-- **Moor et al., "Foundation models for generalist medical artificial intelligence," _Nature_ 616, 2023.** The clinical version of the foundation-model argument.
-- **Hollmann et al., "TabPFN: A Transformer That Solves Small Tabular Classification Problems in a Second," _ICLR_ 2023.** The prior-fitted-networks paper; a clean example of a non-LLM foundation model.
-- **Steinberg et al., "Language models are an effective representation learning technique for electronic health record data," _J Biomed Inform_ 113, 2021.** EHR autoregressive models as foundation models.
-- **McDermott et al., "Closing the AI accountability gap: defining an end-to-end framework for internal algorithmic auditing," _FAccT_ 2020** (or current McDermott-lab preprints on EHR foundation models, depending on what's been published when you read this).
+### Key Terms
 
-## Study tools
+| Term | Definition |
+|---|---|
+| **Foundation Model** | (Bommasani et al. 2021) A model trained on broad data, typically with self-supervised objectives, designed to be *adapted* to many downstream tasks. The term is broad; sharper questions follow. |
+| **Single-task model** | One x → one y. Classical setup. |
+| **Multi-task model** | One x → multiple y's. Shared representation, multiple heads. |
+| **Transfer learning / Few-shot** | Pre-train on broad data, adapt to a new task with a small number of labeled examples. |
+| **Zero-shot / Task-conditioned** | The model takes both an input x *and* a task description α; outputs without task-specific labeled data. (LLMs prompted in natural language.) |
+| **Task conditioning (formal)** | A foundation model is a model that takes (x, α) as input. The "foundation" is that the model has internalized enough of the input domain *and* of task structure to handle previously-unseen α. |
+| **Task distribution** | The distribution over α the model is meant to handle. Honest evaluation must sample α from this distribution. |
+| **Labeled-data efficiency** | Few labels per *task* needed for adaptation. FMs often win here. |
+| **Total-data efficiency** | Less data overall (pre-train + adapt) than the single-task baseline. FMs often *do not* win here. |
+| **Prior-fitted networks** | A foundation model whose α is "this entire labeled tabular dataset" (e.g., TabPFN). |
 
-- [Study guide for L15](../study_guides/lecture-15.md) — key terms, self-check questions, curated external resources.
-- [Concept map](../concept_map.md) — see how this lecture connects to the rest of the course.
+### The Spectrum
+
+```{admonition} Single-task → zero-shot
+:class: tip
+Single-task → multi-task → transfer/few-shot → zero-shot/task-conditioned. Each step adds adaptation flexibility at the cost of needing more / different training data and more careful evaluation. The right place on the spectrum depends on your *task distribution*.
+```
+
+### The Load-Bearing Question
+
+```{admonition} "Foundation model over what?"
+:class: warning
+Always ask:
+- Foundation model over **what input domain**? (English text? Clinical notes? Pathology slides? Genomes?)
+- Foundation model over **what task distribution**? (Q&A? Classification? IE? All of language tasks?)
+- Does it improve **labeled-data efficiency**, **total-data efficiency**, **task-accessibility**, or some combination?
+
+A "good" FM usually wins one or two of those axes, not all three.
+```
+
+### Self-Check Questions
+
+1. Distinguish single-task, multi-task, few-shot/transfer, and zero-shot/task-conditioned. Give a clinical example of each.
+2. Why is the (x, α) framing more useful than "broad pre-training + adaptable" as a definition?
+3. An LLM scores 0.85 on benchmark X. Why is that *not* a statement about all of language? What would a more honest evaluation look like?
+4. Give a setting where a focused single-task model with abundant labels would *beat* a foundation model — and a setting where it wouldn't.
+5. EHR autoregressive models can be cast as foundation models over event streams. What is the (x, α) decomposition? What's the task distribution?
+
+### Additional Resources
+
+- [Bommasani et al., "On the Opportunities and Risks of Foundation Models," arXiv:2108.07258](https://arxiv.org/abs/2108.07258) — the paper that named the term. Skim the executive summary.
+- [Moor et al., "Foundation models for generalist medical AI," *Nature* 616, 2023](https://www.nature.com/articles/s41586-023-05881-4) — the clinical version of the FM argument.
+- [Hollmann et al., "TabPFN," *ICLR* 2023](https://arxiv.org/abs/2207.01848) — clean example of a non-LLM foundation model.
+- [Steinberg et al., "Language models are an effective representation learning technique for EHR data," *J Biomed Inform* 113, 2021](https://www.sciencedirect.com/science/article/pii/S1532046420302835) — EHR autoregressive models.

@@ -41,19 +41,44 @@ That last bullet sounds abstract; it is the reason the course is structured as i
 - L17-L18 (EHR data) is full of "the observed distribution is not the population distribution" arguments.
 - L24 (causality) and L28 (recap) keep returning to "expectation under what distribution?"
 
-## Source files in this folder
+---
 
-- `Lecture 3.pdf` — the slides as released to students.
-- `Lecture 3 - probability.pptx` — editable PowerPoint source.
+## Study guide
 
-## To go deeper
+*Key terms, self-check questions, and additional resources for active recall.*
 
-- **Bishop, _Pattern Recognition and Machine Learning_, Ch. 1.** The ML-flavored probability primer.
-- **Wasserman, _All of Statistics_, Chs. 1-3.** A no-nonsense reset on probability and basic statistical inference.
-- **Murphy, _Probabilistic Machine Learning: An Introduction_, Ch. 2.** Tighter, more modern, ML-oriented.
-- **MacKay, _Information Theory, Inference, and Learning Algorithms_ (free PDF), Chs. 2-3.** Slow, careful, opinionated; pairs well with the formalism in this lecture.
+### Key Terms
 
-## Study tools
+| Term | Definition |
+|---|---|
+| **Probability Triple** | (Ω, Σ, P): sample space Ω (all outcomes), event space Σ (measurable subsets), probability measure P : Σ → [0,1] satisfying P(Ω)=1 and countable additivity. |
+| **Random Variable** | A measurable function X : Ω → E mapping outcomes to observable values. The induced distribution over E is what we usually work with. |
+| **PMF (discrete)** | Probability mass function: P(X=x) for each x. Must sum to 1. |
+| **PDF (continuous)** | Probability density function: f(x) ≥ 0 with ∫ f(x) dx = 1. P(a ≤ X ≤ b) = ∫ₐᵇ f(x) dx. |
+| **Expectation** | 𝔼[X] = Σ x P(X=x) (discrete) or ∫ x f(x) dx (continuous). The probability-weighted average outcome. |
+| **Law of Large Numbers** | Sample averages of iid draws converge in probability to the true expectation as n → ∞. |
+| **Variance** | Var(X) = 𝔼[(X − 𝔼[X])²] = 𝔼[X²] − 𝔼[X]². Measures spread around the mean. |
 
-- [Study guide for L03](../study_guides/lecture-03.md) — key terms, self-check questions, curated external resources.
-- [Concept map](../concept_map.md) — see how this lecture connects to the rest of the course.
+### Intuition: What Is a Probability Triple?
+
+```{admonition} Coin-flip example
+:class: tip
+Ω = {H, T}.  Σ = {∅, {H}, {T}, {H,T}}.  P({H}) = P({T}) = ½.
+The event space must be closed under complement and countable union — i.e., a σ-algebra. For most practical uses you can think of a random variable and its distribution as equivalent; the formal triple captures the rigorous foundations.
+```
+
+### Self-Check Questions
+
+1. Verify the three axioms of a probability measure for a fair die.
+2. If X ~ Uniform(0,1), compute 𝔼[X] and Var(X) from first principles.
+3. Why must a PDF integrate to 1? What goes wrong if it doesn't?
+4. What is the relationship between CDF and PDF?
+5. A random variable maps outcomes to values — what does it mean for it to be "measurable"?
+
+### Additional Resources
+
+- [Harvard Stat 110 (Joe Blitzstein) — full course online](https://projects.iq.harvard.edu/stat110/home) — one of the best probability courses available.
+- [Probability for Machine Learning (Brownlee)](https://machinelearningmastery.com/probability-for-machine-learning/) — applied intro; pairs well with the formal definitions.
+- [StatQuest — Probability (YouTube)](https://www.youtube.com/c/joshstarmer) — short, clear videos on distributions and expectations.
+- [Betancourt — Probability Theory for ML](https://betanalpha.github.io/assets/case_studies/probability_theory.html) — rigorous measure-theoretic treatment.
+- Bishop, *PRML*, Ch. 1; Wasserman, *All of Statistics*, Chs. 1-3; Murphy, *PML*, Ch. 2.

@@ -52,22 +52,59 @@ Three reasons this lecture comes *before* clinical NLP modeling:
 - L14 (LLMs) is the generic NLP background. The big question is whether general-language LLMs transfer to clinical text — preview of L20.
 - L24 (fairness) returns to: clinical notes can encode the documenting-clinician's biases, not just objective findings.
 
-## Source files in this folder
+---
 
-- `L19.pdf` — the slides as released to students. *The LaTeX source compiles to a 100-page PDF identical to this in content (verified).*
-- `latex/main.tex` and `latex/figures/` — the editable Beamer source.
-- `nb19_clinical_text_data.ipynb` — companion notebook exploring clinical text artifacts (note length distributions, vocabulary differences, copy-paste detection, negation prevalence, abbreviation ambiguity).
+## Study guide
 
-## To go deeper
+*Key terms, self-check questions, and additional resources for active recall.*
 
-- **Wang et al., "A clinical text classification paradigm using weak supervision and deep representation," _BMC Med Inform Decis Mak_ 19, 2019.** The pragmatic clinical-NLP playbook.
-- **Wu et al., "A survey on clinical natural language processing in the United Kingdom from 2007 to 2022," _NPJ Digit Med_ 5, 2022.** Landscape survey, useful for sense-making.
-- **Steinkamp et al., "Notational difference: how electronic health record templates affect documentation quality," _JAMIA Open_ 4, 2021.** The templates story, with data.
-- **Johnson, Pollard et al., "MIMIC-III, a freely accessible critical care database," _Sci Data_ 3, 2016** (and the subsequent MIMIC-IV paper). The dataset behind most clinical NLP work, plus the access procedure.
-- **Liu et al., "A scoping review of electronic health record–based clinical prediction models," _Annals of Family Medicine_ 22, 2024.** A useful summary of how clinical text is being used, and where it tends to go wrong.
-- **HIPAA Privacy Rule, 45 CFR §164.514** — the regulation governing de-identification.
+### Key Terms
 
-## Study tools
+| Term | Definition |
+|---|---|
+| **Clinical note** | Free-text + templated documentation in the EHR (HPI, PMH, A&P, discharge summaries). |
+| **Biomedical literature** | PubMed articles, abstracts, guidelines, reviews — peer-reviewed prose. |
+| **Report** | Semi-structured text: radiology, pathology, imaging-study findings. Sections + free text at the leaves. |
+| **Template / Macro** | Pre-formatted note skeletons inserted by EHR shortcut tools. Most modern notes are mostly templates. |
+| **Copy-paste / Note bloat** | Clinicians copy-forward from earlier notes; same paragraphs reappear across visits and patients. |
+| **Abbreviation ambiguity** | "MS" = multiple sclerosis / mitral stenosis / mental status / magnesium sulfate / morphine sulfate (context-dependent). |
+| **Negation / Assertion** | "No history of pneumonia" mentions pneumonia but asserts its absence. NegEx is the classical handler. |
+| **De-identification** | Removing PHI per HIPAA Safe Harbor (names, dates, addresses, IDs). Required for sharing. |
+| **MIMIC-III / IV** | Open-access ICU dataset from Beth Israel (MIT). The substrate for most clinical NLP research. Requires DUA training. |
+| **PubMed** | NIH-maintained index of biomedical literature; ~37M+ records. The biomedical text corpus most LLMs that matter for clinical use have been pre-trained on. |
+| **UMLS** | Unified Medical Language System: NIH meta-thesaurus mapping ~200 terminologies to a unified concept space. |
 
-- [Study guide for L19](../study_guides/lecture-19.md) — key terms, self-check questions, curated external resources.
-- [Concept map](../concept_map.md) — see how this lecture connects to the rest of the course.
+### What Makes Clinical Text Hard
+
+```{admonition} It's documentation, not communication
+:class: warning
+Clinical text is produced under workflow, billing, and templating pressure — not natural language. A model that "does NLP on clinical text" needs to know it's modeling *documentation behavior*, not communication. Ignoring this leads to models that learn template completion rather than clinical reasoning.
+```
+
+### Anatomy of a Clinical Note
+
+Most clinical notes have:
+
+- **HPI** (History of Present Illness) — narrative of why the patient is here.
+- **PMH** (Past Medical History) — list of past diagnoses; often copy-forward.
+- **Medications** — current med list; templated.
+- **Vitals / Labs** — structured data also in the EHR's structured tables.
+- **A&P** (Assessment & Plan) — clinical reasoning and plan, where the action is.
+
+Each section has its own conventions and its own failure modes for downstream models.
+
+### Self-Check Questions
+
+1. Why is "five copies of the same paragraph for the same patient" not five independent samples? What modeling decision does this affect?
+2. NegEx flips the polarity of any keyword preceded by a negation phrase ("no", "denies", "rule out"). Walk through one *failure mode* of this approach.
+3. MIMIC-III is the most-used open clinical-text dataset. What's the *selection effect* in MIMIC patients that limits "MIMIC-NLP performance" as a measure of "clinical NLP performance"?
+4. HIPAA Safe Harbor lists 18 categories of PHI to remove. After removing all of them, can a patient still be re-identified? Give an example.
+5. PubMed and clinical notes are both "biomedical text." Why are they ecosystems with different conventions, and what does that imply for transfer?
+
+### Additional Resources
+
+- [MIMIC-IV documentation](https://mimic.mit.edu/) — the dataset behind most clinical-NLP work; access procedure included.
+- [Wang et al., "A clinical text classification paradigm using weak supervision and deep representation," *BMC Med Inform Decis Mak* 19, 2019](https://bmcmedinformdecismak.biomedcentral.com/articles/10.1186/s12911-018-0723-6) — pragmatic clinical-NLP playbook.
+- [Wu et al., "A survey on clinical NLP in the UK 2007-2022," *NPJ Digit Med* 5, 2022](https://www.nature.com/articles/s41746-022-00684-9) — landscape survey.
+- [Steinkamp et al., "Notational difference: how EHR templates affect documentation quality," *JAMIA Open* 4, 2021](https://academic.oup.com/jamiaopen/article/4/3/ooab062/6346091) — templates with data.
+- [HIPAA Privacy Rule, 45 CFR §164.514](https://www.hhs.gov/hipaa/for-professionals/privacy/special-topics/de-identification/) — the regulation governing de-identification.

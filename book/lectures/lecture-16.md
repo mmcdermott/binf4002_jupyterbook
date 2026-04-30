@@ -56,20 +56,52 @@ Three roles for this slot:
 - **L24** (causality, fairness) — `lab9_probabilistic_regression` and `lab11_dimensionality_reduction` provide the building blocks.
 - **L25-L26** (DNA, proteins) — `lab12_graph_data` and `lab13_ordinal_sequences` provide the substrate.
 
-## Source files in this folder
+---
 
-- `labs/` — labs 6-16 (chunks 2 and 3) as released.
-- `solutions/` — instructor solution notebooks for the same labs.
+## Study guide
 
-## To go deeper
+*Key terms, self-check questions, and additional resources for active recall.*
 
-- **scikit-learn user guide** for the loss-types chunk (multiclass, regression, clustering, dim reduction).
-- **lifelines** Python package and its docs — the standard tool for `lab8_survival_analysis`.
-- **PyG (PyTorch Geometric)** docs and tutorials — for `lab12_graph_data`.
-- **MEDS schema specification** (`Medical-Event-Data-Standard/MEDS` on GitHub) — for `lab16`.
-- **Géron, _Hands-On Machine Learning_, Chs. 8-9 and 14-16** for image / sequence / time-series chapters.
+### Chunk 2 — ML Loss Types / Objectives
 
-## Study tools
+| Lab | Loss / Task | Probabilistic Model |
+|---|---|---|
+| **lab6 — Multiclass classification** | Categorical cross-entropy | Categorical / Multinomial; softmax output. |
+| **lab7 — Regression** | MSE (default), MAE | Gaussian; Laplace. |
+| **lab8 — Survival analysis** | Cox partial likelihood | Proportional-hazards model with right-censoring. |
+| **lab9 — Probabilistic regression** | Gaussian NLL with predicted variance | Heteroscedastic Gaussian. Calibration becomes explicit. |
+| **lab10 — Clustering** | Within-cluster sum of squares (k-means); GMM NLL | k-means; Gaussian mixture. |
+| **lab11 — Dimensionality reduction** | PCA reconstruction error; t-SNE / UMAP objectives | Linear (PCA) vs. neighborhood-preserving (t-SNE/UMAP). |
 
-- [Study guide for L16](../study_guides/lecture-16.md) — key terms, self-check questions, curated external resources.
-- [Concept map](../concept_map.md) — see how this lecture connects to the rest of the course.
+### Chunk 3 — Data Types / Modalities
+
+| Lab | Data Shape | Architectural Implication |
+|---|---|---|
+| **lab12 — Graph data** | Nodes + edges | Graph neural networks; message passing. |
+| **lab13 — Ordinal sequences** | Tokens with order | RNN / transformer encoder. |
+| **lab14 — Images** | 2D pixel grids | CNN with translation equivariance. |
+| **lab15 — Time series** | Irregular timestamps + values | Time-series-specific losses, missingness handling. |
+| **lab16 — Event streams (MEDS)** | Health event streams | Set-of-irregular-events transformer or chunked RNN. (Preview of L17-L18.) |
+
+### Things to Practice
+
+```{admonition} The orthogonality of model / loss / data
+:class: tip
+The same logistic-regression-style training loop adapts to multiclass, regression, survival — by changing the *loss*. The same architectural template adapts to images, sequences, graphs — by changing the *input encoding*. **Loss type and data type are independent ML axes; both matter.**
+```
+
+### Self-Check Questions
+
+1. Why does survival analysis use Cox partial likelihood instead of just MSE on time-to-event? (Hint: censoring.)
+2. A probabilistic regressor (lab 9) outputs both a mean and a variance. Why is this useful clinically? What's the calibration check?
+3. PCA, t-SNE, and UMAP all reduce dimensions. What does each *preserve*? Which would you trust to claim "this 2D embedding shows the actual structure of the data"?
+4. A whole-slide pathology image is 50,000 × 50,000 pixels. Why can't you run a CNN end-to-end on it, and what's the standard workaround?
+5. MEDS-format event streams (lab 16) preserve event timestamps. Why is "discarding timestamps and tabularizing" a *real* loss, not just an inconvenience?
+
+### Additional Resources
+
+- [scikit-learn user guide](https://scikit-learn.org/stable/user_guide.html) — losses, dim reduction.
+- [lifelines](https://lifelines.readthedocs.io/) — the standard Python tool for `lab8_survival_analysis`.
+- [PyG (PyTorch Geometric)](https://pytorch-geometric.readthedocs.io/) — for `lab12_graph_data`.
+- [MEDS schema specification (GitHub)](https://github.com/Medical-Event-Data-Standard/meds) — for `lab16`.
+- [Géron, *Hands-On ML* — Chs. 14-16](https://www.oreilly.com/library/view/hands-on-machine-learning/9781098125967/) — image / sequence / time-series chapters.

@@ -37,19 +37,51 @@ You will see this language in L11 (NN architectures as inductive bias), L18 (tab
 - L25 (population structure / PCA) is a literal eigenanalysis of a centered covariance matrix.
 - L27 (equivariant 3D molecular models) is what happens when "the basis matters" becomes a hard architectural constraint.
 
-## Source files in this folder
+---
 
-- `Lecture 2.pdf` — the slides as released to students.
-- `Lecture 2 - linear_algebra.pptx` — editable PowerPoint source.
+## Study guide
 
-## To go deeper
+*Key terms, self-check questions, and additional resources for active recall.*
 
-- **3Blue1Brown, _Essence of Linear Algebra_ video series.** The single best companion if the basis-vs.-coordinates distinction is fuzzy. Episodes 1-9 cover everything in this lecture.
-- **Strang, _Introduction to Linear Algebra_ (any recent edition), Chs. 1-3 and 7.** The standard textbook, with an emphasis on how the four fundamental subspaces relate.
-- **Goodfellow, Bengio, Courville, _Deep Learning_, Ch. 2.** The exact subset of linear algebra you need for the rest of the course.
-- **Murphy, _Probabilistic Machine Learning: An Introduction_ (vol 1, 2022), Ch. 7.** Linear algebra as ML uses it — eigenanalysis, SVD, matrix calculus.
+### Key Terms
 
-## Study tools
+| Term | Definition |
+|---|---|
+| **Vector** | An ordered list of numbers representing a point or direction in space; formally, an element of a vector space. |
+| **Vector Space** | A set V closed under addition and scalar multiplication, satisfying eight axioms (commutativity, associativity, identity, inverse, distributivity). |
+| **Linear Operator** | A function T : V → W that preserves addition and scalar multiplication: T(u+v) = T(u)+T(v) and T(αv) = αT(v). |
+| **Matrix** | A rectangular array of numbers representing a linear operator when acting by multiplication on column vectors. |
+| **Basis** | A linearly independent spanning set for a vector space. Every vector has a unique representation as a linear combination of basis vectors. |
+| **Coordinatization** | The process of representing abstract vectors as tuples of numbers relative to a chosen basis. |
+| **Eigenvalue / Eigenvector** | For matrix A, λ and v satisfy Av = λv. The eigenvector's direction is unchanged by A; λ is the scaling factor. |
+| **Singular Values (SVD)** | A = UΣVᵀ. Singular values σᵢ are the square roots of eigenvalues of AᵀA, measuring how much A stretches space in each direction. |
+| **Matrix Transpose** | Aᵀ has rows and columns swapped. Key identity: (AB)ᵀ = BᵀAᵀ. |
+| **Trace** | Sum of diagonal elements of a square matrix. Tr(A) = Σ Aᵢᵢ = sum of eigenvalues. |
 
-- [Study guide for L02](../study_guides/lecture-02.md) — key terms, self-check questions, curated external resources.
-- [Concept map](../concept_map.md) — see how this lecture connects to the rest of the course.
+### Why Linear Algebra Matters in ML
+
+- Data is represented as vectors / matrices (feature matrices, weight matrices in neural nets).
+- Model training involves matrix multiplications and decompositions.
+- PCA, SVD, and eigendecomposition underlie dimensionality reduction and many algorithms.
+- Understanding the geometry of vector spaces builds intuition for what models are actually doing.
+
+```{admonition} Conceptual takeaway
+:class: tip
+A matrix is **not** a table of numbers; it is the coordinate form of a linear operator under a chosen basis. Different bases → different matrices for the *same* operator. "Choosing a representation" = "choosing a basis."
+```
+
+### Self-Check Questions
+
+1. Prove that matrix multiplication is associative but not generally commutative.
+2. What does it mean geometrically for a matrix to be singular (non-invertible)?
+3. If A has eigenvalue 0, what does that imply about the transformation A represents?
+4. Write out what ∂/∂**x** of **x**ᵀA**x** equals (matrix-vector derivative identity).
+5. What is the difference between a basis and an orthonormal basis? Why does orthonormality simplify computations?
+
+### Additional Resources
+
+- [3Blue1Brown — Essence of Linear Algebra](https://www.youtube.com/playlist?list=PLZHQObOWTQDPD3MizzM2xVFitgF8hE_ab) — best visual introduction to the geometry of linear algebra.
+- [Gilbert Strang — Linear Algebra (MIT OCW 18.06)](https://ocw.mit.edu/courses/18-06-linear-algebra-spring-2010/) — full course with lectures, problem sets, and exams.
+- [The Matrix Cookbook (PDF)](https://www.math.uwaterloo.ca/~hwolkowi/matrixcookbook.pdf) — reference for matrix derivatives and identities.
+- [Immersive Linear Algebra (interactive online textbook)](http://immersivemath.com/ila/index.html) — visual treatment of key concepts.
+- Goodfellow, Bengio, Courville, *Deep Learning*, Ch. 2 — the exact subset of LA needed for the rest of the course.

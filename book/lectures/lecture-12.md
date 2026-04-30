@@ -27,20 +27,33 @@ In addition to everything from Lab Day #1:
 - L13 (neural networks) is now the last NN-related lab you've seen plus the lecture you haven't. The contrast between "I trained a small NN in lab5 and it kind of worked" and "here is why architecture and optimization actually matter" is what L13 is built around.
 - L16 (Lab Day #3) will pull in the loss-types chunk (lab 6-11) released the following Monday and the data-types chunk (lab 12-16) released on Mar 6; some carry-over from labs 0-5 is expected.
 
-## Source files in this folder
+---
 
-- `labs/` — same six lab notebooks (labs 0-5) as in `lecture-11-lab-day-1/labs/`.
-- `solutions/` — solution notebooks.
+## Study guide
 
-## To go deeper
+*Key terms, self-check questions, and additional resources for active recall.*
 
-Same references as Lab Day #1. In particular:
+### Common Debugging Patterns to Build
 
-- **scikit-learn user guide** for the API.
-- **Géron Ch. 2-7** for an applied companion.
-- **ESL Chs. 2 and 9-10** for the classical statistical-learning lens on the same material.
+| Symptom | Common Causes |
+|---|---|
+| **Train acc ≫ test acc** | Overfitting — model too complex, regularization too weak, leakage between splits, or k too small in k-NN. |
+| **Train acc ≈ test acc, both low** | Underfitting — model class too simple, or task fundamentally hard with the available features. |
+| **Wildly variable test acc across runs** | High variance — small training set, or stochastic algorithm without seed control. |
+| **Logistic regression worse than naive baseline** | Feature scaling missing, or label encoding wrong. |
+| **k-NN catastrophically slow** | High dimensionality / large training set; consider approximate-NN or first dim-reduction. |
+| **Tree splits look weird** | Feature has near-zero variance, or majority class dominates due to imbalance. |
 
-## Study tools
+### Self-Check Questions
 
-- [Study guide for L12](../study_guides/lecture-12.md) — key terms, self-check questions, curated external resources.
-- [Concept map](../concept_map.md) — see how this lecture connects to the rest of the course.
+1. You see Train AUROC = 0.95 and Test AUROC = 0.65. Walk through the causes you'd investigate, in order.
+2. A lab-mate fits a logistic regression on raw Hounsfield unit values without scaling. The model "works" (AUROC 0.7) — but should they trust it? Why or why not?
+3. A random forest with 100 trees does better than a single decision tree. Identify which mechanism (bagging, feature subsampling, both) is most responsible, and explain.
+4. You evaluate two models with the same AUROC. Calibration plots show one is well-calibrated and one is shifted upward by 0.2 across the score range. Which is "better"? *(Trick question — discuss both senses.)*
+
+### Additional Resources
+
+Same as L11. In particular:
+
+- [Domingos, "A Few Useful Things to Know About Machine Learning," *CACM* 55(10), 2012](https://homes.cs.washington.edu/~pedrod/papers/cacm12.pdf) — twelve practical principles.
+- [Karpathy, "A Recipe for Training Neural Networks" (blog)](http://karpathy.github.io/2019/04/25/recipe/) — diagnostic mindset that generalizes to non-NN models too.

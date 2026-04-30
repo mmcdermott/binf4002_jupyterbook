@@ -37,8 +37,7 @@ Click any lab in the **Labs** part of the left sidebar. The rocket icon at the t
 | Part | Pages | What's there |
 |---|---|---|
 | **Course-wide** | 2 | The full hierarchical [syllabus](syllabus.md) and the [concept map](concept_map.md) (prerequisite graph + through-lines + interactive mind map). |
-| **Parts 1-6** | 6 part overviews + 28 lecture pages | One overview per Part, then student-facing review pages per lecture. Companion notebooks for L13, L14, L17, L19-L27 are nested under their lecture. |
-| **Study Guides** | 27 + 1 intro | Per-lecture key-terms tables, callout-box insights, self-check questions, and curated external resources. The fastest way to review for the final. |
+| **Parts 1-6** | 6 part overviews + 28 lecture pages | One overview per Part, then student-facing review pages per lecture. Each lecture page ends with a "Study guide" section (key terms, self-check questions, additional resources). Companion notebooks for L13, L14, L17, L19-L27 are nested under their lecture. |
 | **Labs** | 17 + 1 intro | The 17 lab notebooks released across the semester, with full inline outputs. Open in Colab to run them yourself. |
 
 ## The course in one paragraph
@@ -47,15 +46,12 @@ The course builds from mathematical and statistical foundations toward practical
 
 ## How the pages relate
 
-The **syllabus**, **concept map**, **lecture pages**, **study guides**, and **labs** are five views of the same content, each optimized for a different way of studying:
+The **syllabus**, **concept map**, **lecture pages**, and **labs** are four views of the same content, each optimized for a different way of studying:
 
 - **Syllabus** — the structured, hierarchical, *complete* statement of what each lecture covers. Reference document.
 - **Concept map** — the *across-lecture* picture: prerequisites, through-lines, mind map. Use this when reviewing.
-- **Lecture pages** — *narrative* per-lecture reviews ("what was the message of this lecture, and why does it matter?"). Use these when you missed a class or want a refresher in your own time.
-- **Study guides** — *self-test* per-lecture material (key terms, self-check questions, resources). Use these when you want to actively recall, not passively read.
+- **Lecture pages** — *narrative* per-lecture reviews ("what was the message of this lecture, and why does it matter?") *plus* a Study guide section at the bottom (key terms, self-check questions, additional resources). Use the narrative when you missed a class or want a refresher; use the Study guide for active recall.
 - **Labs** — *hands-on* work. The notebooks have full inline outputs in the book; click the rocket to run them yourself in Colab.
-
-Cross-links are wired up: every lecture page points to its study guide and companion notebook; every study guide points back at the lecture page; every part-overview points at all of its child lectures.
 
 ## Citing or sharing this book
 

@@ -1,6 +1,6 @@
 # BINF 4002 — Machine Learning for Health (Jupyter Book)
 
-A Sphinx-based Jupyter Book for the Spring 2026 BINF 4002 course at Columbia DBMI. Each lecture chapter is a student-facing review page; companion notebooks are first-class child pages that render with their original outputs; all 17 course labs are first-class chapters in their own Part; per-lecture **study guides** with key terms, self-check questions, and curated external resources live in their own Part as well. Every notebook page ships **"Open in Colab"** and **"Open in Binder"** launch buttons (active once this repo is public on GitHub).
+A Sphinx-based Jupyter Book for the Spring 2026 BINF 4002 course at Columbia DBMI. Each lecture chapter is a student-facing review page that ends with a Study guide section (key terms, self-check questions, curated external resources); companion notebooks are first-class child pages that render with their original outputs; all 17 course labs are first-class chapters in their own Part. Every notebook page ships **"Open in Colab"** and **"Open in Binder"** launch buttons (active once this repo is public on GitHub).
 
 ## What's in this repo
 
@@ -15,9 +15,8 @@ A Sphinx-based Jupyter Book for the Spring 2026 BINF 4002 course at Columbia DBM
 │   ├── concept_map.md         #   prerequisite graph + 6 through-lines + interactive mind map
 │   ├── concept_mindmap.html   #   the rendered Markmap (iframe target)
 │   ├── parts/                 #   one overview page per Part (Parts 1-6)
-│   ├── lectures/              #   28 lecture pages + 12 companion notebooks
-│   ├── labs/                  #   17 lab notebooks + an overview page
-│   └── study_guides/          #   27 per-lecture study guides + an intro
+│   ├── lectures/              #   28 lecture pages (each with a Study guide section) + 12 companion notebooks
+│   └── labs/                  #   17 lab notebooks + an overview page
 ├── Lectures/                  # full per-lecture source bundle (PPTX/TeX/PDFs/figures/notebooks)
 ├── Labs/                      # canonical lab notebooks + solutions
 ├── .github/workflows/         # GitHub Actions deploy workflow
@@ -85,7 +84,7 @@ The included GitHub Actions workflow deploys automatically on every push to `mai
 
 ## License
 
-Course content (lecture text, syllabus, mind map, study guides) is licensed under [CC BY 4.0](LICENSE-CC-BY-4.0). Code (notebooks, build scripts) is under [MIT](LICENSE-MIT).
+Course content (lecture text, syllabus, mind map) is licensed under [CC BY 4.0](LICENSE-CC-BY-4.0). Code (notebooks, build scripts) is under [MIT](LICENSE-MIT).
 
 ## Citing this course
 

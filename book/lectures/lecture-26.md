@@ -67,25 +67,64 @@ Three reasons this lecture is the right setup for L27:
 - L24 (causality, fairness) — drug-discovery models inherit biases of their training data (which compounds were measured, which assays were used).
 - L10's domain-shift story applies: scaffold splits expose lack of generalization; random splits hide it.
 
-## Source files in this folder
+---
 
-- `lec26_proteins_molecules.pdf` — the slides as released to students. *The LaTeX source compiles to a 56-page PDF identical to this in content (verified).*
-- `latex/lec26_proteins_molecules.tex` and `latex/figures/` — editable Beamer source.
-- `nb26_proteins_molecules.ipynb` — companion notebook: protein structure visualization, MSA + conservation, PSSM construction, fingerprint similarity, scaffold-split demo, drug-property prediction, docking visualization.
+## Study guide
 
-## To go deeper
+*Key terms, self-check questions, and additional resources for active recall.*
 
-- **Berman et al., "The Protein Data Bank," _Nucleic Acids Res_ 28, 2000.** The original PDB paper.
-- **Altschul et al., "Basic local alignment search tool (BLAST)," _J Mol Biol_ 215, 1990.** Sequence alignment foundation.
-- **Adzhubei et al., "A method and server for predicting damaging missense mutations" (PolyPhen-2), _Nat Methods_ 7, 2010.**
-- **Ng & Henikoff, "Predicting deleterious amino acid substitutions" (SIFT), _Genome Res_ 11, 2001.**
-- **Rogers & Hahn, "Extended-Connectivity Fingerprints," _J Chem Inf Model_ 50, 2010.** Morgan/ECFP fingerprints.
-- **Trott & Olson, "AutoDock Vina," _J Comput Chem_ 31, 2010.** The docking workhorse.
-- **Wu et al., "MoleculeNet: a benchmark for molecular machine learning," _Chem Sci_ 9, 2018.** Standardized molecular ML benchmarks.
-- **Bento et al., "The ChEMBL bioactivity database: an update," _Nucleic Acids Res_ 42, 2014.** The substrate for most QSAR work.
-- **Coursera _Drug Discovery_ specialization (UC San Diego).** Decent companion course.
+### Key Terms
 
-## Study tools
+| Term | Definition |
+|---|---|
+| **Primary structure** | Amino-acid sequence of a protein. Length ~50-2000 typically. |
+| **Secondary structure** | Local conformations: α-helices, β-sheets, loops. |
+| **Tertiary structure** | The 3D fold of a single protein chain. |
+| **Quaternary structure** | Multi-chain complexes. |
+| **PDB (Protein Data Bank)** | The reference database of experimentally-determined protein structures (~200K). |
+| **Protein data gap** | ~250M known protein sequences vs. ~200K experimental structures. The gap that makes structure prediction matter. |
+| **MSA (Multiple Sequence Alignment)** | Aligning hundreds-to-thousands of homologous sequences. Reveals conserved positions and co-evolving pairs. The substrate for everything else. |
+| **PSSM** | Position-Specific Scoring Matrix: per-position amino-acid frequencies extracted from an MSA. |
+| **Coevolution** | Pairs of positions that mutate together — strongly suggestive of spatial contact. |
+| **SIFT / PolyPhen** | Classical missense-variant-effect predictors using sequence conservation (SIFT) and conservation + structural features (PolyPhen). Still strong baselines. |
+| **Homology modeling** | Build a 3D model by aligning to a structurally-determined homolog. Pre-AlphaFold standard. |
+| **SMILES** | A linear textual encoding of a molecule (atoms + bonds). Canonical SMILES is unique. |
+| **ECFP / Morgan fingerprint** | Bit-vector encoding: bit i is on iff some local substructure of radius r is present. Default small-molecule featurization. |
+| **QSAR** | Quantitative Structure-Activity Relationship: predict bioactivity from structure. Random forest on fingerprints + log-activity is the canonical setup. |
+| **Tanimoto similarity** | \|A ∩ B\| / \|A ∪ B\| over fingerprint bits. Standard chemical-similarity measure. |
+| **Molecular docking** | Predict how a small molecule binds to a protein pocket. AutoDock Vina is the workhorse. |
+| **Scaffold split** | Train/test split by chemical scaffold rather than at random. **Random splits over-estimate molecular-ML performance.** |
 
-- [Study guide for L26](../study_guides/lecture-26.md) — key terms, self-check questions, curated external resources.
-- [Concept map](../concept_map.md) — see how this lecture connects to the rest of the course.
+### Classical Methods Are Strong
+
+```{admonition} Don't dismiss them
+:class: tip
+Sequence alignment, MSAs, PSSMs, fingerprints, docking, QSAR — these encode *generations* of biological knowledge into the model itself. Modern deep-learning methods compete with them only when they encode similar (or stronger) priors. **A random forest on Morgan fingerprints, evaluated with scaffold splits, is competitive with most reported deep-learning approaches** on molecular-property prediction. Not always, but often.
+```
+
+### Evaluation Matters As Much As Architecture
+
+```{admonition} Random splits over-estimate; scaffold splits are honest
+:class: warning
+Molecular datasets contain many *near-duplicate* compounds (same scaffold, different decorations). Random splits put near-duplicates in both train and test, inflating apparent generalization. Scaffold splits (or stricter time-split / cluster-split evaluations) are the honest test.
+```
+
+### Self-Check Questions
+
+1. What's the difference between a PSSM and a learned protein embedding? Why is PSSM still used in 2026?
+2. SIFT scores a missense variant by sequence conservation. PolyPhen adds structural features. When would you reach for SIFT vs. PolyPhen vs. an ESM-2 zero-shot score (L27)?
+3. ECFP fingerprints encode local substructure. Why do they work surprisingly well on QSAR despite ignoring 3D geometry?
+4. AutoDock Vina returns a "docking score." What does it actually estimate, and what are its known failure modes?
+5. A paper reports 0.85 ROC on lipophilicity prediction with random splits and 0.65 with scaffold splits. Which number should the reader take away as the model's true performance?
+
+### Additional Resources
+
+- [Berman et al., "The Protein Data Bank," *Nucleic Acids Res* 28, 2000](https://academic.oup.com/nar/article/28/1/235/2384399).
+- [Altschul et al., BLAST, *J Mol Biol* 215, 1990](https://www.sciencedirect.com/science/article/abs/pii/S0022283605803602).
+- [Adzhubei et al., PolyPhen-2, *Nat Methods* 7, 2010](https://www.nature.com/articles/nmeth0410-248).
+- [Ng & Henikoff, SIFT, *Genome Res* 11, 2001](https://genome.cshlp.org/content/11/5/863).
+- [Rogers & Hahn, "Extended-Connectivity Fingerprints," *J Chem Inf Model* 50, 2010](https://pubs.acs.org/doi/10.1021/ci100050t).
+- [Trott & Olson, "AutoDock Vina," *J Comput Chem* 31, 2010](https://onlinelibrary.wiley.com/doi/10.1002/jcc.21334).
+- [Wu et al., "MoleculeNet," *Chem Sci* 9, 2018](https://pubs.rsc.org/en/content/articlehtml/2018/sc/c7sc02664a).
+- [Bento et al., "ChEMBL bioactivity database," *Nucleic Acids Res* 42, 2014](https://academic.oup.com/nar/article/42/D1/D1083/1043509) — the substrate for most QSAR work.
+- [RDKit](https://www.rdkit.org/) — open-source cheminformatics toolkit; the standard tool for SMILES / fingerprints.

@@ -83,10 +83,4 @@ If you can answer all of these without notes, you're ready:
 
 ## Materials
 
-No new lecture deliverable. Re-read the [syllabus](../syllabus.md) and [concept map](../concept_map.md). The companion [study guides](../study_guides/intro.md) for L1-L27 are the fastest way to active-recall.
-
-## Study tools
-
-- [Concept map](../concept_map.md) — prerequisite graph, six through-lines, interactive mind map.
-- [Syllabus](../syllabus.md) — full hierarchical content reference.
-- [Study guides intro](../study_guides/intro.md) — index of all 27 per-lecture study guides.
+No new lecture deliverable. Re-read the [syllabus](../syllabus.md) and [concept map](../concept_map.md). Each lecture page also has a "Study guide" section at the bottom with key terms and self-check questions — those are the fastest way to active-recall.
