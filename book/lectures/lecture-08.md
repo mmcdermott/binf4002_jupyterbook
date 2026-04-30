@@ -91,7 +91,7 @@ AUROC = P(s₁ > s₀) where s₁ is a random score from a positive case and s�
 
 1. A COVID test has sensitivity 0.95 and specificity 0.90. In a population with 5% prevalence, compute the PPV and NPV.
 2. Sketch the ROC curve for: (a) a random classifier, (b) a perfect classifier, (c) a typical classifier. What area does each subtend?
-3. A model achieves AUROC = 0.85 but its calibration curve shows probabilities are consistently twice as high as the true rate. What are the implications for clinical use?
+3. A model achieves AUROC = 0.85 but its calibration curve shows that across the whole range of true rates the model overestimates by a constant +0.10 (additive miscalibration; the model says 0.30 when truth is 0.20, says 0.50 when truth is 0.40, etc.). What are the implications for clinical use, and why is this miscalibration "invisible" to AUROC?
 4. Why might you choose a threshold other than 0.5? Give an example where a low threshold (high sensitivity) is preferable and one where a high threshold (high precision) is preferable.
 5. Explain the tradeoff between sensitivity and specificity in a screening test vs. a confirmatory test.
 

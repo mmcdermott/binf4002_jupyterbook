@@ -21,7 +21,7 @@ The high-dimensional point is the most counter-intuitive and the most important:
 ## Things you should walk away believing
 
 - The gradient ∇f(x) points in the direction of steepest *ascent*. Subtract it, scaled, to descend.
-- "Smoothness" is not a vibe — it has a definition (continuous derivatives), and ReLU networks violate it almost everywhere, which has real consequences.
+- "Smoothness" is not a vibe — it has a definition (continuous derivatives), and ReLU networks fail it on a measure-zero set (the kink at z = 0). They are differentiable *almost everywhere*, but the non-smooth points still have real consequences (subgradient methods, choice of subgradient at zero, instability in line-search-based optimizers).
 - A stationary point is where the gradient is zero. It can be a min, a max, or a saddle. In high dimensions it is almost always a saddle.
 - Random search and coordinate descent are not just historical baselines — they are the right tool when gradients are unavailable or unreliable (e.g., black-box hyperparameter tuning, certain genomic problems, RL).
 - Low-dimensional pictures of optimization landscapes are misleading. Build the high-dimensional intuition early.
@@ -46,7 +46,7 @@ The high-dimensional point is the most counter-intuitive and the most important:
 | **Partial Derivative** | ∂f / ∂xᵢ: rate of change of f w.r.t. coordinate xᵢ, holding others fixed. Defined as the limit of (f(x+εeᵢ) − f(x))/ε as ε→0. |
 | **Gradient** | ∇f(x) = [∂f/∂x₁, …, ∂f/∂xₙ]ᵀ. Points in the direction of steepest *ascent* of a real-valued function. |
 | **Hessian** | H_f(x): n×n matrix of second partial derivatives. Hᵢⱼ = ∂²f / ∂xᵢ∂xⱼ. Quantifies local curvature. |
-| **Smoothness** | f is smooth (C∞) if it is infinitely differentiable everywhere. A strong assumption; many ML loss surfaces are not smooth (e.g., ReLU). |
+| **Smoothness** | f is smooth (C∞) if it is infinitely differentiable everywhere. ML loss surfaces frequently fail smoothness on a measure-zero set (e.g., ReLU at z = 0); they are differentiable *almost everywhere* but not C∞, which is enough to break some optimizer guarantees. |
 | **Stationary Point** | A point x* where ∇f(x*) = 0. Includes local minima, local maxima, and saddle points. |
 | **Saddle Point** | A stationary point that is a minimum in some directions and a maximum in others. Common in high-D loss surfaces. |
 | **Gradient Descent** | xₜ₊₁ = xₜ − η ∇f(xₜ). η is the learning rate. Moves opposite the gradient to minimize f. |

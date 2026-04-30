@@ -29,7 +29,7 @@ Three reasons this lecture is more than "here's how transformers work":
 
 **Next-token prediction is a universal interface for language tasks.** Translation, summarization, classification, extraction, question-answering — all become "given this prompt, predict the continuation." That single fact is why LLMs swept across NLP applications so fast. It will also be the underlying claim of L15 (foundation models) and L20 (clinical NLP).
 
-**Scale matters but it isn't free.** A bigger model trained on more data tends to do better, but the relationship is not linear, the cost is not free, and the failure modes (hallucination, miscalibration, biased output) get *more* prominent at scale, not less. The Bender et al. ("Stochastic Parrots") critique is part of this lecture for a reason.
+**Scale matters but it isn't free.** A bigger model trained on more data tends to do better, but the relationship is not linear, the cost is not free, and *failure modes do not automatically diminish with scale* — some (factual recall on common knowledge) tend to improve, while others (hallucination, miscalibration, sycophancy, biased output) often persist or get worse. The Bender et al. ("Stochastic Parrots") critique is part of this lecture for a reason.
 
 **Fluency is not understanding.** This is the L1 epistemic-uncertainty point applied to LLMs specifically. A clinical LLM that confidently produces a fluent-but-wrong answer is *more* dangerous than one that produces an obviously-wrong answer. We will return to this in L20 when we discuss LLMs vs. domain-adapted models for clinical NLP.
 
@@ -68,7 +68,7 @@ Three reasons this lecture is more than "here's how transformers work":
 | **Transformer Block** | (Multi-head self-attention) → residual + LayerNorm → (FFN) → residual + LayerNorm. Stack many of these. |
 | **Causal vs. Bidirectional Attention** | Causal: a token can only attend to earlier tokens (decoder, GPT). Bidirectional: any-to-any (encoder, BERT). |
 | **Perplexity** | exp(cross-entropy). Lower is better. The most-used LM evaluation metric. |
-| **Pre-training / Fine-tuning** | Pre-train on huge unlabeled text with next-token-prediction; fine-tune on a specific task with labeled examples. |
+| **Pre-training / Fine-tuning** | Pre-train on huge unlabeled text with a self-supervised objective — *next-token-prediction* for decoder-only LMs (GPT family) or *masked-language-modeling* for encoder-only LMs (BERT, ClinicalBERT, used heavily in L20); encoder-decoder T5-style models combine both. Then fine-tune on a specific task with labeled examples. |
 | **Prompting / In-context Learning** | Ask the LM a question or give few-shot examples in the input; let the model use its learned patterns to produce an answer. No weight updates. |
 | **RLHF** | Reinforcement learning from human feedback: align a pre-trained LM with human preferences via a reward model + PPO. |
 | **Hallucination** | An LM produces fluent text that is *factually wrong* and presented confidently. Major hazard in clinical use. |
@@ -91,7 +91,7 @@ There are |V|^n possible n-gram contexts, and almost all of them never appear in
 
 1. Write the language-modeling objective formally. What is being maximized over what?
 2. Why does an n-gram model with n = 5 fail catastrophically on most clinical-text corpora?
-3. Walk through one transformer block: what are Q, K, V, what does softmax(QKᵀ/√d) V compute, and what role do the residual + LayerNorm play?
+3. Walk through one transformer block: what are Q, K, V, what does softmax(QKᵀ/√d_k) V compute (where d_k is the key dimension), and what role do the residual + LayerNorm play?
 4. Distinguish causal from bidirectional attention. Which would you use for: (a) clinical-note summarization with a decoder LM, (b) entity recognition with an encoder LM?
 5. A clinical LLM scores 0.92 on a benchmark. Walk through what you'd verify before trusting it for live deployment. (Hint: at least three categories.)
 6. Why is calibration uniquely hard for LLMs? What workarounds exist?

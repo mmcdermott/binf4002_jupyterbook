@@ -38,7 +38,7 @@ Three reasons this lecture is the spine of the second half of the course:
 - Missingness, frequency-of-measurement, and code-presence are themselves data, often the most informative data.
 - Cohort definitions are modeling choices. Document them. Validate them against external definitions when possible.
 - The observed population is not the target population. If you don't think about this explicitly, your model will assume they are.
-- Coding systems are hierarchical and revisable. ICD-10 came after ICD-9; SNOMED-CT is updated quarterly. Models that ignore this break across institutions and across time.
+- Coding systems are hierarchical and revisable. ICD-10 came after ICD-9, ICD-11 came after ICD-10 (2022 release, in transition globally); SNOMED-CT is updated quarterly. Models that ignore this break across institutions and across time.
 - OMOP, MEDS, and FHIR are worth the upfront cost. They are the closest thing the field has to a lingua franca.
 
 ## How this connects to the rest of the course
@@ -62,7 +62,7 @@ Three reasons this lecture is the spine of the second half of the course:
 |---|---|
 | **EHR (Electronic Health Record)** | Clinical record system used by hospitals/clinics; contains diagnoses, procedures, medications, labs, vitals, notes, imaging. *Created by clinicians during care.* |
 | **Claims data** | Billing records submitted to payers. Tells you what was *billed*, not what *happened*. More comparable across institutions because billing standards are tighter. |
-| **ICD-9 / ICD-10** | International Classification of Diseases. Hierarchical disease-code system. ICD-10 is the current standard in most countries. |
+| **ICD-9 / ICD-10 / ICD-11** | International Classification of Diseases. Hierarchical disease-code system. ICD-10 is widely deployed (the US uses ICD-10-CM, which transitioned in October 2015); WHO released **ICD-11** in 2022 and many countries are now in transition. Models trained on one revision do not directly read another. |
 | **CPT** | Current Procedural Terminology. Procedure / service codes used for billing. |
 | **RxNorm** | Standardized vocabulary for clinical drugs. |
 | **LOINC** | Logical Observation Identifiers Names and Codes — for labs and clinical observations. |
@@ -92,7 +92,7 @@ A vital sign is in the EHR because someone took it. Someone took it because the 
 1. Patient A has a diagnosis of hypertension with three encounters in 2024. Patient B has the same diagnosis and one encounter. Why might these patients have *systematically different* downstream outcomes that are not about disease severity?
 2. Why is "missing lab value" not the same kind of missingness as "missing answer on a survey"? Give one concrete clinical example where the *fact of measurement* is more informative than its value.
 3. ICD-9 → ICD-10 transition (US: October 2015) added many codes and changed the structure. What does this do to a model trained on pre-2015 data and deployed in 2025?
-4. OMOP, MEDS, FHIR. Match each to: "billing-derived dataset across multiple sites," "modality-agnostic event-stream format," "API standard for clinical interoperability."
+4. OMOP, MEDS, FHIR. Match each to: "common data model for harmonizing EHR + claims across sites" (OMOP is a CDM, not a billing-only dataset), "modality-agnostic event-stream format," "HL7 API standard for clinical interoperability."
 5. Berkson's paradox in one sentence: how can you avoid it when defining your study cohort?
 
 ### Additional Resources
