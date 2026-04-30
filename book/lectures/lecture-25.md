@@ -10,8 +10,8 @@ Genetic data are the highest-dimensional, most-structured, and most population-d
 
 We work top-down from biology to ML.
 
-- **Central dogma and DNA basics.** DNA → RNA → protein. ~3 billion base pairs in the human genome, 99.9% identical across humans, ~3 million variants per individual. Variants come in different flavors: SNPs (single-nucleotide), indels, structural variants, copy-number variants. Most ML on genetics works with SNPs.
-- **Measurement technologies.** SNP arrays (cheap, ~1M variants, biased toward known variants) vs. sequencing (more expensive, full coverage of detected variants, ~30M variants for whole genome). Modern biobanks combine both.
+- **Central dogma and DNA basics.** DNA → RNA → protein. ~3 billion base pairs in the human genome, ~99.5-99.9% identical across humans (the higher figure counts only SNVs; the lower includes indels and structural variants), ~4-5 million variants per individual relative to the reference (mostly SNVs plus indels). Variants come in different flavors: SNPs (single-nucleotide), indels, structural variants, copy-number variants. Most ML on genetics works with SNPs.
+- **Measurement technologies.** SNP arrays (cheap, ~1M variants, biased toward known variants) vs. sequencing (more expensive, full coverage of detected variants — ~4-5M *per individual* for WGS). Population-scale catalogs that aggregate variants across many people (gnomAD, 1000 Genomes) reach 30-100M+ unique variants total — that's a *catalog* size, not a per-individual count. Modern biobanks combine arrays and sequencing.
 - **Population structure.** Allele frequencies vary by ancestry. The first few principal components of a SNP matrix correspond, almost literally, to geographic origin. This is *not* a bug — it's a feature of the data — and ignoring it is one of the most common errors in genetic ML.
 - **Linkage disequilibrium (LD).** Nearby variants are correlated because they're inherited together. LD structure varies by ancestry. The "effective number of independent variants" is much smaller than the raw count.
 - **GWAS — Genome-Wide Association Studies.** The standard analysis: for each of ~10⁶ variants, test for association with phenotype. Effect sizes are tiny, multiple-testing burden is enormous, p-value threshold is conventionally 5 × 10⁻⁸ (Bonferroni for ~10⁶ independent tests).
@@ -39,7 +39,7 @@ Three reasons this lecture is more than "the biology you should remember from un
 - Genetic data are high-D, structured, and population-dependent.
 - Population structure looks like signal until you correct for it. PCA-correction is canonical.
 - LD makes "number of variants" misleading. The effective dimensionality is much smaller.
-- GWAS p-values must clear ~5 × 10⁻⁸. Anything below ~10⁻⁵ is "suggestive" at best.
+- GWAS p-values must clear ~5 × 10⁻⁸ for genome-wide significance. Anything between ~5 × 10⁻⁸ and ~10⁻⁵ is "suggestive" at best (smaller p-values are more significant).
 - A QQ plot that doesn't lie on the diagonal is the first thing a reviewer will check.
 - PRS transferability is poor across ancestries, and this matters clinically.
 - Gene regulation, expression, and eQTLs are the *mechanistic* layer between genotype and phenotype.

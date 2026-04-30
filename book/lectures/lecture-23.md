@@ -24,10 +24,10 @@ We then look at *Simpson's paradox* in real data — an effect that points one d
 **Half 2: Survival analysis.** When the outcome of interest is *time to an event* (death, recurrence, progression, discharge), and some patients are *censored* (you don't observe the event because the study ended, they dropped out, they died of something else), classification and regression are no longer enough.
 
 - **Censoring.** The distinguishing feature. Right-censoring (most common) means we know the patient was event-free up to time T but we don't know after that.
-- **Competing risks.** A patient dies of cause B before they could die of cause A. This is *not* random censoring; it is structural.
+- **Competing risks.** A patient dies of cause B before they could die of cause A. This *violates the independent-censoring assumption* that Kaplan-Meier and standard Cox both rely on — the censoring time depends on the failure mechanism, so it is **informative censoring**. The standard remedies are cause-specific hazards or Fine-Gray subdistribution models.
 - **Kaplan-Meier estimator.** A non-parametric estimator of the survival function S(t) = P(time-to-event > t). Easy to compute, easy to interpret, robust. Read by stratifying into subgroups and overlaying curves.
 - **Cox proportional hazards.** The classical regression model for survival. Models the *hazard rate* as h(t|x) = h₀(t) exp(βᵀx). The "proportional hazards" assumption is the crucial caveat — it can fail, and you should test it.
-- **Modern survival models.** DeepSurv (Cox + neural network), DeepHit (neural network for competing risks), survival forests. Extend Cox without breaking it.
+- **Modern survival models.** Three different ways of relaxing Cox's assumptions: **DeepSurv** is a Cox extension proper (replaces the linear predictor βᵀx with a neural network, keeps the proportional-hazards form); **DeepHit** is *not* a Cox extension — it directly models the discrete-time joint distribution over event types and times, designed to handle competing risks; **random survival forests** (Ishwaran et al.) are a non-parametric tree-based method with survival-specific split criteria, also not a Cox extension.
 - **Propensity-score preview.** A taste of what L24 will do formally with causal inference: when you compare two treatment groups in observational data, you can't just compute the difference in survival curves — you have to weight or match by propensity to treat.
 
 ## Why it matters
@@ -45,10 +45,10 @@ Three reasons this lecture matters more than its place in the syllabus suggests:
 - Data source determines what question you can answer. Pick the source for the question, not the model for the source.
 - Healthy-volunteer effect is real, measurable, and biases biobank-based generalizations toward "healthier population."
 - Simpson's paradox forces a choice about aggregation. The "correct" aggregation depends on the question.
-- Censoring and competing risks are structural, not accidental. Survival analysis is what handles them.
+- Censoring is the defining structural feature; competing risks make censoring *informative* and require special handling. Survival analysis is what handles both.
 - Kaplan-Meier is the *first* analysis you do for any time-to-event outcome. Even if you'll fit Cox later.
-- Cox is interpretable but assumes proportional hazards. Test the assumption. Modern alternatives (DeepSurv, DeepHit) relax it at the cost of interpretability.
-- Comparing treatment arms in observational data without propensity adjustment is a strong implicit assumption — the kind L24 will dissect.
+- Cox is interpretable but assumes proportional hazards. Test the assumption. DeepSurv extends Cox; DeepHit and random survival forests are different approaches entirely, each relaxing different Cox assumptions at the cost of interpretability.
+- Comparing treatment arms in observational data is making an *unconfoundedness* assumption (treatment is as-good-as-randomized given covariates). Propensity adjustment doesn't create unconfoundedness — it is one tool that uses it. L24 dissects this.
 
 ## How this connects to the rest of the course
 
@@ -75,13 +75,15 @@ Three reasons this lecture matters more than its place in the syllabus suggests:
 | **RCT (Randomized Clinical Trial)** | Gold standard for *causal* questions; weak external validity because trial-eligible populations are narrow. |
 | **Real-world data (RWD)** | Blanket FDA term covering claims, EHR-derived datasets, registries, pragmatic-trial data. |
 | **Censoring (right-)** | Patient is observed event-free up to time T but their status after T is unknown. The defining feature of survival analysis. |
-| **Competing risks** | Patient experiences event B (e.g., dies of cancer) before they could experience event A (e.g., recurrence). Censored for A in a *non-random* way. |
+| **Competing risks** | Patient experiences event B (e.g., dies of cancer) before they could experience event A (e.g., recurrence). Causes **informative censoring** — violates the independent-censoring assumption. Handled by cause-specific hazards or Fine-Gray subdistribution models. |
 | **Survival function S(t)** | P(T > t). Probability that the event has not occurred by time t. |
 | **Hazard rate h(t)** | Instantaneous event rate at time t given survival to time t. |
 | **Kaplan-Meier estimator** | Non-parametric estimate of S(t) from censored data. Easy to compute, easy to interpret. |
 | **Log-rank test** | Test of equality of survival curves between groups. |
 | **Cox proportional hazards** | h(t \| x) = h₀(t) exp(βᵀx). The classical regression model for survival. *Proportional* hazards is the assumption to test. |
-| **DeepSurv / DeepHit** | Neural extensions: replace the linear predictor in Cox with an MLP (DeepSurv), or model competing risks directly (DeepHit). |
+| **DeepSurv** | Cox extension: replaces the linear predictor βᵀx with a neural network; keeps proportional hazards. |
+| **DeepHit** | *Not* a Cox extension — directly models the discrete-time joint distribution over event types and times; built for competing risks. |
+| **Random Survival Forests** | Non-parametric tree-based method with survival-specific split criteria (Ishwaran et al.); not a Cox extension. |
 | **Simpson's paradox** | Aggregate trend reverses within subgroups. Forces a choice about aggregation. |
 
 ### Why EHR Alone Isn't Enough

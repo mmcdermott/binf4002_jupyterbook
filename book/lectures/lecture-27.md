@@ -24,7 +24,7 @@ We move through five threads.
 
 - **AlphaFold 2 (Jumper et al., 2021).** Sequence + MSA → 3D structure. Combines an evoformer (transformer over residues + MSA) with a structure module (geometry-aware decoding). Won CASP14 by a large margin; the field changed.
 - **pLDDT (predicted Local Distance Difference Test).** Per-residue confidence score in [0, 100]. Distinguishes "this region is well-predicted" from "this region might be wrong" or "this region is intrinsically disordered." Use it. Always.
-- **AlphaFold DB.** ~200M predicted structures, free, queryable. Has rewritten what's possible for proteome-scale analysis.
+- **AlphaFold DB.** ~214M predicted structures (as of 2025), free, queryable. Has rewritten what's possible for proteome-scale analysis.
 - **ESMFold.** Fold from a single sequence — no MSA required. Faster, less accurate, but a different tradeoff.
 - **AlphaFold limitations.** Disorder, large complexes, novel folds, dynamics, conformational ensembles. Don't treat the predicted structure as ground truth.
 
@@ -32,13 +32,14 @@ We move through five threads.
 
 - **The genomic-modeling challenge.** Long context (regulatory elements can be Mb away from the gene), no clean tokenization, weak per-position labels.
 - **Enformer (Avsec et al., 2021).** Long-context transformer over DNA, trained to predict tissue-specific gene expression. Outperforms previous methods on regulatory variant interpretation.
-- **Evo (Nguyen et al., 2024).** Decoder-only language model over genomic sequence at scale (millions of base pairs of context).
+- **Evo (Nguyen et al., 2024).** Decoder-only language model over genomic sequence; Evo 1 supports ~131k bp of context, with the Evo 2 follow-up extending toward ~1M bp.
 - **The genomic-FM controversy.** Tang & Koo (2025) argue that current genomic foundation models *don't actually beat well-tuned task-specific models* on regulatory-genomics benchmarks once you control for fair comparison. The story is unsettled.
 
 **Thread 4: 3D molecular models and equivariance.**
 
-- **Why equivariance matters.** A molecule rotated in space is still the *same molecule*. A model that doesn't respect rotation has to learn it from data — wasted capacity. Equivariant neural networks (E(3)-equivariant graph nets) bake the symmetry into the architecture.
-- **Equivariant networks for molecular property prediction.** SchNet, EGNN, NequIP, MACE. Each enforces rotation-equivariance differently.
+- **Why equivariance matters.** A molecule rotated or translated in space is still the *same molecule*. A model that doesn't respect those symmetries has to learn them from data — wasted capacity. Equivariant graph nets bake the symmetry into the architecture.
+- **SE(3) vs. E(3).** Most modern molecular networks (NequIP, MACE) target **SE(3)-equivariance** — rotations and translations only. They deliberately *exclude* reflections, because chiral molecules (most drugs, all amino acids) are *not* invariant under reflection: a chiral molecule's mirror image is a different chemical entity, often with very different biological activity (the canonical cautionary example is thalidomide). E(3) (which adds reflections) would force the model to give the same output for a molecule and its mirror image — wrong for chirality-sensitive tasks.
+- **Equivariant networks for molecular property prediction.** SchNet, EGNN, NequIP, MACE. Each enforces rotation/translation-equivariance differently; SE(3)-equivariant variants preserve chirality.
 - **Why this is the right inductive bias.** It's the L13 architecture-as-prior point applied to the geometry of molecules.
 
 **Thread 5: Generative protein design.**
@@ -94,12 +95,12 @@ Three reasons this lecture is the conceptual capstone of the biological AI arc:
 | **Zero-shot variant-effect prediction** | Score how unlikely a mutation is under the pLM. Often *competitive with, and on some benchmarks outperforming,* SIFT / PolyPhen. Conclusion is dataset-, split-, and endpoint-dependent — there is no blanket ranking. |
 | **AlphaFold 2** | Jumper et al. 2021. Sequence + MSA → 3D structure. Combines an evoformer (transformer over residues + MSA) with a structure module. CASP14 winner. |
 | **pLDDT** | Predicted Local Distance Difference Test. Per-residue confidence in [0, 100]. *Use it. Always.* Distinguishes well-predicted regions from disordered or wrong ones. |
-| **AlphaFold DB** | ~200M predicted structures, free, queryable. Has rewritten what's possible for proteome-scale analysis. |
+| **AlphaFold DB** | ~214M predicted structures (as of 2025), free, queryable. Has rewritten what's possible for proteome-scale analysis. |
 | **ESMFold** | Single-sequence structure predictor (no MSA). Faster, less accurate. Different tradeoff. |
 | **Enformer** | Avsec et al. 2021. Long-context transformer over DNA, predicts tissue-specific gene expression. |
-| **Evo** | Nguyen et al. 2024. Decoder-only LM over genomic sequence at million-base-pair scale. |
+| **Evo** | Nguyen et al. 2024. Decoder-only LM over genomic sequence; Evo 1 ~131k bp context, Evo 2 extends toward ~1M bp. |
 | **Genomic-FM controversy** | Tang & Koo (2025) argue current genomic FMs *don't actually beat* well-tuned task-specific models on regulatory-genomics benchmarks once compared fairly. |
-| **Equivariant neural network** | Architecture that respects symmetries of the input (e.g., E(3)-equivariance: rotations and translations of a molecule give correspondingly transformed outputs). NequIP, MACE, EGNN. |
+| **Equivariant neural network** | Architecture that respects symmetries of the input. Most molecular networks (NequIP, MACE, EGNN) target **SE(3)-equivariance** — rotations and translations only — because chirality breaks reflection symmetry; E(3) would add reflections, which is *wrong* for chiral molecules (thalidomide etc.). |
 | **Inverse folding** | Given a protein backbone, generate a sequence that folds to it. ProteinMPNN. |
 | **Generative protein design** | De-novo generation of protein structures. RFdiffusion is the canonical diffusion-based tool. |
 | **Validation gap** | Computational design is cheap; *experimental* validation in the wet lab is the bottleneck and what makes a generative biology result a *result* rather than a hypothesis. |
@@ -130,7 +131,7 @@ Predictive models are validated against held-out test sets. Generative models �
 1. ESM-2 attention heads carry contact-relevant signal even though no MSA is supplied at inference. What is the right way to phrase this — "the model has discovered coevolution," "attention recovers MSA couplings," or "single-sequence statistics correlate with structural constraints"? Which framing is most accurate, and why?
 2. AlphaFold 2 predictions come with pLDDT scores. Walk through the consequences of ignoring pLDDT in three downstream use cases.
 3. Genomic foundation models (Enformer, Evo) face a critique that they don't outperform task-specific models. What do you think the reasonable interpretation of this critique is?
-4. Equivariance for 3D molecules: state the symmetry being respected, and explain why baking it into the architecture is more efficient than learning it from data.
+4. Equivariance for 3D molecules: state the symmetry being respected, explain why baking it into the architecture is more efficient than learning it from data, and explain why most molecular networks target SE(3) and not E(3).
 5. ProteinMPNN does inverse folding. Why is the inverse problem (sequence given structure) different from the forward problem (structure given sequence), and which is "harder"?
 
 ### Additional Resources
