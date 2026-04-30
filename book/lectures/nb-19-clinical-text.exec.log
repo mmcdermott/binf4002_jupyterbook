@@ -1,0 +1,7 @@
+2026-04-29T23:50:21-04:00 executing book/lectures/nb-19-clinical-text.ipynb with extras: biopython datasets nltk kagglehub
+Downloading biopython (3.1MiB)
+ Downloading biopython
+Installed 104 packages in 94ms
+[NbConvertApp] Converting notebook book/lectures/nb-19-clinical-text.ipynb to notebook
+[NbConvertApp] Writing 669505 bytes to book/lectures/nb-19-clinical-text.ipynb
+2026-04-29T23:50:56-04:00 book/lectures/nb-19-clinical-text.ipynb exit=0

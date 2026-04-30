@@ -76,3 +76,8 @@ Three reasons this lecture sits where it does in the course:
 - **Kleinberg, Mullainathan, Raghavan, "Inherent Trade-Offs in the Fair Determination of Risk Scores," _ITCS_ 2017.** The other impossibility paper.
 - **Rajkomar et al., "Ensuring Fairness in Machine Learning to Advance Health Equity," _Ann Intern Med_ 169, 2018.** A clinical-AI-applied take.
 - **Coursera _A Crash Course in Causality_ (Roy, U. Pittsburgh).** Free hands-on companion.
+
+## Study tools
+
+- [Study guide for L24](../study_guides/lecture-24.md) — key terms, self-check questions, curated external resources.
+- [Concept map](../concept_map.md) — see how this lecture connects to the rest of the course.

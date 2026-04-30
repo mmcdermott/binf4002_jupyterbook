@@ -72,3 +72,8 @@ Three reasons this lecture matters more than its place in the syllabus suggests:
 - **NHANES analytic guidelines (CDC).** Required reading if you'll touch NHANES.
 - **SEER documentation (NCI).** Required for cancer-registry work.
 - **Coursera _Survival Analysis in R for Public Health_ (Imperial College).** Hands-on companion course.
+
+## Study tools
+
+- [Study guide for L23](../study_guides/lecture-23.md) — key terms, self-check questions, curated external resources.
+- [Concept map](../concept_map.md) — see how this lecture connects to the rest of the course.

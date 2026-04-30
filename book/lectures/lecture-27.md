@@ -92,3 +92,8 @@ Three reasons this lecture is the conceptual capstone of the biological AI arc:
 - **Tang & Koo, "Evaluating the representational power of pre-trained DNA language models for regulatory genomics," _Genome Biology_ 26, 2025.** The genomic-FM critique. Read alongside Enformer / Evo.
 - **Geiger et al., "e3nn: Euclidean neural networks," arXiv:2207.09453.** The equivariance toolkit.
 - **Coursera/edX courses on _Computational Structural Biology_ and _Drug Discovery_ — multiple options for hands-on companions.**
+
+## Study tools
+
+- [Study guide for L27](../study_guides/lecture-27.md) — key terms, self-check questions, curated external resources.
+- [Concept map](../concept_map.md) — see how this lecture connects to the rest of the course.

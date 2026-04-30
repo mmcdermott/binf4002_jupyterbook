@@ -56,3 +56,8 @@ Every one of these is the same mistake at root: forgetting that "the metric I ju
 - **Vickers & Elkin, "Decision-curve analysis: a novel method for evaluating prediction models," _Med Decis Making_ 26(6), 2006.** The original DCA paper. Read it once, you'll never forget what net benefit means.
 - **Van Calster et al., "Calibration: the Achilles' heel of predictive analytics," _BMC Med_ 17, 2019.** A short, punchy argument for why calibration is more often what's wrong than discrimination.
 - **Saito & Rehmsmeier, "The precision-recall plot is more informative than the ROC plot when evaluating binary classifiers on imbalanced datasets," _PLOS ONE_, 2015.** Useful when prevalence is low.
+
+## Study tools
+
+- [Study guide for L08](../study_guides/lecture-08.md) — key terms, self-check questions, curated external resources.
+- [Concept map](../concept_map.md) — see how this lecture connects to the rest of the course.

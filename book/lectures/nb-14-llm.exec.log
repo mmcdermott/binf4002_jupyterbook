@@ -1,0 +1,7 @@
+2026-04-29T23:32:46-04:00 executing book/lectures/nb-14-llm.ipynb with extras: torch transformers datasets nltk wikipedia
+   Building wikipedia==1.4.0
+      Built wikipedia==1.4.0
+Installed 128 packages in 92ms
+[NbConvertApp] Converting notebook book/lectures/nb-14-llm.ipynb to notebook
+[NbConvertApp] Writing 767698 bytes to book/lectures/nb-14-llm.ipynb
+2026-04-29T23:47:40-04:00 book/lectures/nb-14-llm.ipynb exit=0

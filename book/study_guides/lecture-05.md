@@ -38,4 +38,4 @@ The gradient gives the slope of the tangent hyperplane to the loss surface at a 
 - [Goodfellow et al., *Deep Learning* Ch. 4](https://www.deeplearningbook.org/contents/numerical.html) — optimization foundations in the context of deep learning.
 - Boyd & Vandenberghe, *Convex Optimization* (free PDF), Ch. 9; Nocedal & Wright, *Numerical Optimization*, Chs. 2-3 — classical references.
 
-> See also: [L5 lecture page](../lectures/lecture-05.md). Companion notebook: [`gradient_descent.ipynb`](../../Lectures/lecture-05-calculus-optimization/gradient_descent.ipynb).
+> See also: [L5 lecture page](../lectures/lecture-05.md).

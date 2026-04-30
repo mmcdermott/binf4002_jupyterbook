@@ -51,4 +51,4 @@ For MSE loss:  𝔼[(y − f̂(x))²] = **Bias² + Variance + Irreducible Error*
 - [James et al., *An Introduction to Statistical Learning* (free PDF)](https://www.statlearning.com/) — Ch. 2 covers bias-variance clearly and accessibly.
 - Vapnik, *Nature of Statistical Learning Theory*, Chs. 1-2; Shalev-Shwartz & Ben-David, *Understanding Machine Learning*, Chs. 2-3 — formal PAC learning.
 
-> See also: [L6 lecture page](../lectures/lecture-06.md). Companion notebook: [`Probabilistic_Optimization.ipynb`](../../Lectures/lecture-06-probabilistic-optimization/Probabilistic_Optimization.ipynb).
+> See also: [L6 lecture page](../lectures/lecture-06.md).

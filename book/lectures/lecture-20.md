@@ -61,3 +61,8 @@ Three reasons this lecture is the practical core of clinical NLP:
 - **Zack et al., "Assessing the potential of GPT-4 to perpetuate racial and gender biases in health care," _Lancet Digital Health_ 6, 2024.** A sobering case study on bias in clinical LLMs.
 - **Lewis et al., "Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks," _NeurIPS_ 2020.** The original RAG paper.
 - **Spasic & Nenadic, "Clinical Text Data in Machine Learning: Systematic Review," _JMIR Med Inform_ 8, 2020.** Useful survey-of-the-field.
+
+## Study tools
+
+- [Study guide for L20](../study_guides/lecture-20.md) — key terms, self-check questions, curated external resources.
+- [Concept map](../concept_map.md) — see how this lecture connects to the rest of the course.

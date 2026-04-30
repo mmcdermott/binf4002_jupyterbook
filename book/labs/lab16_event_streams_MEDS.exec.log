@@ -1,0 +1,5 @@
+2026-04-30T01:10:08-04:00 executing book/labs/lab16_event_streams_MEDS.ipynb with extras: pyarrow beautifulsoup4 torch
+[NbConvertApp] Converting notebook book/labs/lab16_event_streams_MEDS.ipynb to notebook
+/home/mmd/.cache/uv/builds-v0/.tmpk8HRAj/bin/python: No module named pip
+[NbConvertApp] Writing 504333 bytes to book/labs/lab16_event_streams_MEDS.ipynb
+2026-04-30T01:10:13-04:00 book/labs/lab16_event_streams_MEDS.ipynb exit=0

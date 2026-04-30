@@ -8,8 +8,6 @@ We are setting up the engine that runs almost every model in the course: **find 
 
 The lecture covers multivariate functions geometrically (level sets, gradients, tangent surfaces), differentiation and smoothness (and where it fails), stationary points and optima, and the algorithmic landscape: random search, coordinate descent, iterative methods, and gradient descent. We also flag the way high-dimensional optimization landscapes behave very differently from the 2-D pictures everyone draws on whiteboards.
 
-The companion notebook `gradient_descent.ipynb` makes the geometric intuition concrete: visualize the loss surface, watch a gradient-descent trajectory, see what learning rate and curvature do.
-
 The paradox flagged is **Borel-Kolmogorov**: a paradox about how conditioning on a measure-zero event is ill-defined unless you specify how you take the limit. It's a warning that the smooth-looking move "differentiate the conditional density" hides nontrivial assumptions.
 
 ## Why it matters
@@ -37,7 +35,6 @@ The high-dimensional point is the most counter-intuitive and the most important:
 
 - `Lecture 5.pdf` — the slides as released to students.
 - `Lecture 5 - calculus_and_optimization.pptx` — editable PowerPoint source.
-- `gradient_descent.ipynb` — companion notebook visualizing gradient descent on simple objectives.
 
 ## To go deeper
 
@@ -45,3 +42,8 @@ The high-dimensional point is the most counter-intuitive and the most important:
 - **Nocedal & Wright, _Numerical Optimization_, Chs. 2-3.** The non-convex side, written for people who actually run optimizers in practice.
 - **Goodfellow, Bengio, Courville, _Deep Learning_, Ch. 4.** Optimization as ML uses it, including the high-dimensional saddle-point story.
 - **Bottou, Curtis & Nocedal, "Optimization Methods for Large-Scale Machine Learning," _SIAM Review_ 60(2), 2018.** The deep dive on stochastic optimization for ML.
+
+## Study tools
+
+- [Study guide for L05](../study_guides/lecture-05.md) — key terms, self-check questions, curated external resources.
+- [Concept map](../concept_map.md) — see how this lecture connects to the rest of the course.

@@ -37,3 +37,8 @@ Same references as Lab Day #1. In particular:
 - **scikit-learn user guide** for the API.
 - **Géron Ch. 2-7** for an applied companion.
 - **ESL Chs. 2 and 9-10** for the classical statistical-learning lens on the same material.
+
+## Study tools
+
+- [Study guide for L12](../study_guides/lecture-12.md) — key terms, self-check questions, curated external resources.
+- [Concept map](../concept_map.md) — see how this lecture connects to the rest of the course.

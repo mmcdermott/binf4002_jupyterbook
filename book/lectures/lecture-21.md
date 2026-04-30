@@ -62,3 +62,8 @@ Three reasons this lecture is the substrate for L22:
 - **Zech et al., "Variable generalization performance of a deep learning model to detect pneumonia in chest radiographs: A cross-sectional study," _PLOS Med_ 15, 2018.** The paper that made the field take cross-site evaluation seriously.
 - **DICOM Standard.** [https://www.dicomstandard.org](https://www.dicomstandard.org) — the standard reference. Skim once.
 - **Pianykh, _Digital Imaging and Communications in Medicine (DICOM): A Practical Introduction and Survival Guide._** A friendlier book-form intro to DICOM if the spec is too dense.
+
+## Study tools
+
+- [Study guide for L21](../study_guides/lecture-21.md) — key terms, self-check questions, curated external resources.
+- [Concept map](../concept_map.md) — see how this lecture connects to the rest of the course.

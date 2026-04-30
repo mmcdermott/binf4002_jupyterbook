@@ -66,3 +66,8 @@ Three roles for this slot:
 - **PyG (PyTorch Geometric)** docs and tutorials — for `lab12_graph_data`.
 - **MEDS schema specification** (`Medical-Event-Data-Standard/MEDS` on GitHub) — for `lab16`.
 - **Géron, _Hands-On Machine Learning_, Chs. 8-9 and 14-16** for image / sequence / time-series chapters.
+
+## Study tools
+
+- [Study guide for L16](../study_guides/lecture-16.md) — key terms, self-check questions, curated external resources.
+- [Concept map](../concept_map.md) — see how this lecture connects to the rest of the course.

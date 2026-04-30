@@ -14,8 +14,6 @@ Once that hazard is in your mind, the rest of the lecture lays out the full ML t
 - **k-Nearest Neighbors as a procedural baseline.** No training step in the usual sense; classification = "vote among the k closest training points." It is *consistent* (in the limit of infinite data, it converges to the Bayes-optimal classifier) but practically catastrophic in high dimensions.
 - **The optimization view.** Training = minimize empirical risk. With logistic loss + linear model = logistic regression. With cross-entropy + neural network = the same recipe scaled up.
 
-The companion notebook `Lecture_9.ipynb` (with its `dataset (*).jpg` images) makes the geometric intuition vivid: see how decision boundaries move as you change loss, capacity, and dataset structure.
-
 The paradox flagged is the **Healthy Vaccinee Effect** — a confounder you should have in your peripheral vision the rest of the course.
 
 ## Why it matters
@@ -48,7 +46,6 @@ Three threads converge here:
 
 - `Lecture 9.pdf` — the slides as released to students.
 - `Lecture 9.pptx` — editable PowerPoint source.
-- `Lecture_9.ipynb` — companion notebook with the decision-boundary visualizations used in lecture.
 - `dataset*.jpg` — input figures the notebook consumes.
 
 ## To go deeper
@@ -57,3 +54,8 @@ Three threads converge here:
 - **Murphy, _Probabilistic Machine Learning: An Introduction_, Chs. 4 and 16.** Modern, ML-flavored coverage of training and kNN.
 - **Domingos, "A Few Useful Things to Know About Machine Learning," _CACM_ 55(10), 2012.** Twelve things every ML practitioner should internalize. Worth re-reading once a year.
 - **Géron, _Hands-On Machine Learning with Scikit-Learn, Keras, and TensorFlow_ (3rd ed.).** The applied companion if you want to run all of this in code.
+
+## Study tools
+
+- [Study guide for L09](../study_guides/lecture-09.md) — key terms, self-check questions, curated external resources.
+- [Concept map](../concept_map.md) — see how this lecture connects to the rest of the course.

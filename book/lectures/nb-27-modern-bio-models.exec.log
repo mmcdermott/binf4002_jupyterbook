@@ -1,0 +1,5 @@
+2026-04-30T00:32:16-04:00 executing book/lectures/nb-27-modern-bio-models.ipynb with extras: torch fair-esm
+Installed 97 packages in 138ms
+[NbConvertApp] Converting notebook book/lectures/nb-27-modern-bio-models.ipynb to notebook
+[NbConvertApp] Writing 717826 bytes to book/lectures/nb-27-modern-bio-models.ipynb
+2026-04-30T00:32:37-04:00 book/lectures/nb-27-modern-bio-models.ipynb exit=0

@@ -40,3 +40,8 @@ Every later lecture has a "where this can go wrong in health" subsection. L1 is 
 - **Beam & Kohane, "Big Data and Machine Learning in Health Care," _JAMA_ 319(13), 2018.** A short, opinionated piece on what ML for health is and isn't. Good companion to this lecture's framing.
 - **Topol, "High-performance medicine: the convergence of human and artificial intelligence," _Nat Med_ 25, 2019.** A panoramic survey — useful for getting a sense of where the field thinks it is going.
 - **Wiens et al., "Do no harm: a roadmap for responsible machine learning for health care," _Nat Med_ 25, 2019.** The "epistemic humility" version of this lecture, written as a checklist.
+
+## Study tools
+
+- [Study guide for L01](../study_guides/lecture-01.md) — key terms, self-check questions, curated external resources.
+- [Concept map](../concept_map.md) — see how this lecture connects to the rest of the course.

@@ -1,0 +1,7 @@
+2026-04-30T00:30:09-04:00 executing book/lectures/nb-23-pophealth.ipynb with extras: lifelines torch
+   Building autograd-gamma==0.5.0
+      Built autograd-gamma==0.5.0
+Installed 103 packages in 125ms
+[NbConvertApp] Converting notebook book/lectures/nb-23-pophealth.ipynb to notebook
+[NbConvertApp] Writing 2067528 bytes to book/lectures/nb-23-pophealth.ipynb
+2026-04-30T00:30:27-04:00 book/lectures/nb-23-pophealth.ipynb exit=0

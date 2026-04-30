@@ -13,8 +13,6 @@ The lecture builds the train / test / generalization gap from first principles:
 - We do not have access to that expectation. We have a sample. So we minimize the *empirical* expectation 1/n Σ ℓ(f(xᵢ), yᵢ) instead.
 - Empirical-loss minimization is a sample-based approximation of what we actually want. Sometimes it works; sometimes it doesn't.
 
-The companion notebook `Probabilistic_Optimization.ipynb` makes this concrete: simulate samples from a known distribution, watch how empirical and true risk diverge as you change sample size and model capacity.
-
 The paradox flagged is **Red-ball / Black-ball**: an example where the "obvious" expected-value reasoning fails because the prior on the urn matters more than the likelihood of the draw.
 
 ## Why it matters
@@ -48,7 +46,6 @@ This framing also gives you the right way to think about generalization failures
 
 - `Lecture 6.pdf` — the slides as released to students.
 - `Lecture 6 - probabilistic_optimization.pptx` — editable PowerPoint source.
-- `Probabilistic_Optimization.ipynb` — companion notebook simulating empirical vs. expected risk.
 
 ## To go deeper
 
@@ -56,3 +53,8 @@ This framing also gives you the right way to think about generalization failures
 - **Shalev-Shwartz & Ben-David, _Understanding Machine Learning_, Chs. 2-3.** PAC learning in modern notation; cleaner than Vapnik to read first.
 - **Bottou, Curtis & Nocedal, "Optimization Methods for Large-Scale Machine Learning," _SIAM Review_ 60(2), 2018.** The link between probabilistic optimization and the stochastic optimizers you'll actually run.
 - **Murphy, _Probabilistic Machine Learning: An Introduction_, Chs. 4 and 8.** Modern ML treatment of empirical risk and its decomposition.
+
+## Study tools
+
+- [Study guide for L06](../study_guides/lecture-06.md) — key terms, self-check questions, curated external resources.
+- [Concept map](../concept_map.md) — see how this lecture connects to the rest of the course.

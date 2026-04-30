@@ -1,0 +1,5 @@
+2026-04-29T23:47:40-04:00 executing book/lectures/nb-17-ehr-claims.ipynb with extras: pyarrow
+Installed 71 packages in 121ms
+[NbConvertApp] Converting notebook book/lectures/nb-17-ehr-claims.ipynb to notebook
+[NbConvertApp] Writing 724667 bytes to book/lectures/nb-17-ehr-claims.ipynb
+2026-04-29T23:50:21-04:00 book/lectures/nb-17-ehr-claims.ipynb exit=0

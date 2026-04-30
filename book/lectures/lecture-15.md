@@ -62,3 +62,8 @@ Two reasons the framing in this lecture is consequential:
 - **Hollmann et al., "TabPFN: A Transformer That Solves Small Tabular Classification Problems in a Second," _ICLR_ 2023.** The prior-fitted-networks paper; a clean example of a non-LLM foundation model.
 - **Steinberg et al., "Language models are an effective representation learning technique for electronic health record data," _J Biomed Inform_ 113, 2021.** EHR autoregressive models as foundation models.
 - **McDermott et al., "Closing the AI accountability gap: defining an end-to-end framework for internal algorithmic auditing," _FAccT_ 2020** (or current McDermott-lab preprints on EHR foundation models, depending on what's been published when you read this).
+
+## Study tools
+
+- [Study guide for L15](../study_guides/lecture-15.md) — key terms, self-check questions, curated external resources.
+- [Concept map](../concept_map.md) — see how this lecture connects to the rest of the course.

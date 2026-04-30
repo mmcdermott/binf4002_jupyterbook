@@ -1,0 +1,13 @@
+2026-04-29T22:54:13-04:00 executing book/labs/lab4_ensemble_methods.ipynb with extras: xgboost shap
+Downloading numba (3.6MiB)
+Downloading nvidia-nccl-cu12 (286.3MiB)
+Downloading shap (1.0MiB)
+Downloading llvmlite (53.7MiB)
+ Downloading shap
+ Downloading numba
+ Downloading llvmlite
+ Downloading nvidia-nccl-cu12
+Installed 77 packages in 57ms
+[NbConvertApp] Converting notebook book/labs/lab4_ensemble_methods.ipynb to notebook
+[NbConvertApp] Writing 843415 bytes to book/labs/lab4_ensemble_methods.ipynb
+2026-04-29T22:55:05-04:00 book/labs/lab4_ensemble_methods.ipynb exit=0

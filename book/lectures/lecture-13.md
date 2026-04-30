@@ -68,3 +68,8 @@ Three reasons this lecture is the hinge of the course:
 - **He et al., "Deep Residual Learning for Image Recognition," _CVPR_ 2016.** Residual connections.
 - **Smith, "A Disciplined Approach to Neural Network Hyper-Parameters," arXiv:1803.09820.** Practical LR/batch tuning, with a mental model for what the optimizer is doing.
 - **fast.ai, _Practical Deep Learning for Coders_ (free online course).** If you want a hands-on companion that builds intuition fast.
+
+## Study tools
+
+- [Study guide for L13](../study_guides/lecture-13.md) — key terms, self-check questions, curated external resources.
+- [Concept map](../concept_map.md) — see how this lecture connects to the rest of the course.

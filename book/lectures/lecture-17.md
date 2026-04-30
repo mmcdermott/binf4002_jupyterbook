@@ -62,3 +62,8 @@ Three reasons this lecture is the spine of the second half of the course:
 - **Arnrich, Choi, Friedman et al., MEDS schema specification (GitHub).** The modality-agnostic event-stream format used in lab 16.
 - **Beam, Kohane, "Big Data and Machine Learning in Health Care," _JAMA_ 319(13), 2018.** A short, opinionated piece — pairs well with this lecture's framing.
 - **Blacker et al., "Towards a definition of Real-World Data," _NEJM Evid_ 2, 2023.** Useful for the "claims vs. EHR vs. registry" comparison that L23 will return to.
+
+## Study tools
+
+- [Study guide for L17](../study_guides/lecture-17.md) — key terms, self-check questions, curated external resources.
+- [Concept map](../concept_map.md) — see how this lecture connects to the rest of the course.

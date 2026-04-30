@@ -48,3 +48,8 @@ Three reasons hands-on time was carved out here, *before* introducing neural net
 - **scikit-learn user guide.** The single most useful online reference for the model-type chunk. Everything in labs 0-5 maps to a section.
 - **Géron, _Hands-On Machine Learning with Scikit-Learn, Keras, and TensorFlow_ (3rd ed.).** The applied companion textbook. Chs. 2-7 cover almost everything in this lab chunk.
 - **Kuhn & Johnson, _Applied Predictive Modeling_.** Older but excellent, especially for thoughtful preprocessing.
+
+## Study tools
+
+- [Study guide for L11](../study_guides/lecture-11.md) — key terms, self-check questions, curated external resources.
+- [Concept map](../concept_map.md) — see how this lecture connects to the rest of the course.

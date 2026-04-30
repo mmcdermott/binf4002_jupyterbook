@@ -1,0 +1,5 @@
+2026-04-30T00:31:55-04:00 executing book/lectures/nb-26-proteins-molecules.ipynb with extras: biopython rdkit
+Installed 72 packages in 35ms
+[NbConvertApp] Converting notebook book/lectures/nb-26-proteins-molecules.ipynb to notebook
+[NbConvertApp] Writing 1090875 bytes to book/lectures/nb-26-proteins-molecules.ipynb
+2026-04-30T00:32:16-04:00 book/lectures/nb-26-proteins-molecules.ipynb exit=0

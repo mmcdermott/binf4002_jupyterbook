@@ -1,0 +1,4 @@
+2026-04-30T01:08:14-04:00 executing book/labs/lab15_timeseries.ipynb with extras: torch wfdb
+[NbConvertApp] Converting notebook book/labs/lab15_timeseries.ipynb to notebook
+[NbConvertApp] Writing 1980292 bytes to book/labs/lab15_timeseries.ipynb
+2026-04-30T01:10:08-04:00 book/labs/lab15_timeseries.ipynb exit=0

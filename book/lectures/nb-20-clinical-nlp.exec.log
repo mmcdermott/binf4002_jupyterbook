@@ -1,0 +1,17 @@
+2026-04-29T23:50:56-04:00 executing book/lectures/nb-20-clinical-nlp.ipynb with extras: torch transformers spacy scispacy negspacy
+   Building negspacy==1.0.4
+Downloading spacy (6.3MiB)
+Downloading blis (9.7MiB)
+Downloading srsly (1.1MiB)
+Downloading pydantic-core (2.0MiB)
+Downloading nmslib-metabrainz (13.5MiB)
+      Built negspacy==1.0.4
+ Downloading srsly
+ Downloading pydantic-core
+ Downloading spacy
+ Downloading blis
+ Downloading nmslib-metabrainz
+Installed 142 packages in 243ms
+[NbConvertApp] Converting notebook book/lectures/nb-20-clinical-nlp.ipynb to notebook
+[NbConvertApp] Writing 1142451 bytes to book/lectures/nb-20-clinical-nlp.ipynb
+2026-04-29T23:51:37-04:00 book/lectures/nb-20-clinical-nlp.ipynb exit=0

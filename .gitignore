@@ -28,3 +28,15 @@ _static/
 book/lectures/data/
 _exec_logs/
 processed_data.pkl
+
+# Notebook execution-generated artifacts
+book/lectures/figures/
+book/labs/figures/
+book/labs/data/
+book/lectures/data/
+book/lectures/processed_data.pkl
+book/labs/processed_data.pkl
+*.pkl
+*.npz
+__pycache__/
+

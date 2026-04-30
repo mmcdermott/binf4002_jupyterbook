@@ -68,3 +68,8 @@ Three reasons this lecture is more than "the biology you should remember from un
 - **Bycroft et al., "The UK Biobank resource with deep phenotyping and genomic data," _Nature_ 562, 2018.** UK Biobank.
 - **Coursera _Genomic Data Science_ (Johns Hopkins).** Free, hands-on, multi-course companion.
 - **Hartl & Clark, _Principles of Population Genetics_, 4th ed.** Textbook, when you want the full theoretical underpinning.
+
+## Study tools
+
+- [Study guide for L25](../study_guides/lecture-25.md) — key terms, self-check questions, curated external resources.
+- [Concept map](../concept_map.md) — see how this lecture connects to the rest of the course.

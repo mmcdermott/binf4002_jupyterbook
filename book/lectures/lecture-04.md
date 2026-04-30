@@ -52,3 +52,8 @@ Two reasons this material is more than mathematical hygiene:
 - **Cover & Thomas, _Elements of Information Theory_, Ch. 2.** The standard, terse reference for the information-theoretic primitives.
 - **Bishop, _Pattern Recognition and Machine Learning_, Chs. 1-2.** Bayesian inference and information theory in ML notation.
 - **Murphy, _Probabilistic Machine Learning: An Introduction_, Chs. 2-3.** Modern ML-oriented treatment.
+
+## Study tools
+
+- [Study guide for L04](../study_guides/lecture-04.md) — key terms, self-check questions, curated external resources.
+- [Concept map](../concept_map.md) — see how this lecture connects to the rest of the course.

@@ -62,3 +62,8 @@ Three reasons this lecture is more than "here's how transformers work":
 - **Bender, Gebru, McMillan-Major & Shmitchell, "On the Dangers of Stochastic Parrots," _FAccT_ 2021.** The critique. Required reading if you'll deploy any LLM near patients.
 - **Jurafsky & Martin, _Speech and Language Processing_, 3rd ed. drafts (free online).** Chs. on n-gram language models and transformers.
 - **Karpathy, "Let's build GPT: from scratch, in code, spelled out" (YouTube).** A 2-hour walk-through that builds a small GPT step by step. Good for the visceral feel.
+
+## Study tools
+
+- [Study guide for L14](../study_guides/lecture-14.md) — key terms, self-check questions, curated external resources.
+- [Concept map](../concept_map.md) — see how this lecture connects to the rest of the course.

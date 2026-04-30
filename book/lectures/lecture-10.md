@@ -58,3 +58,8 @@ This lecture is the *transition* of the course. Part 1 has been building the for
 - **D'Amour et al., "Underspecification presents challenges for credibility in modern machine learning," _JMLR_ 23, 2022.** Why two equally-trained models can behave differently in deployment even with identical training loss. A long but valuable read.
 - **Finlayson et al., "The Clinician and Dataset Shift in Artificial Intelligence," _NEJM_ 385, 2021.** Domain shift in clinical AI, explained for clinicians. Short and excellent.
 - **Geirhos et al., "Shortcut learning in deep neural networks," _Nat Mach Intell_ 2, 2020.** The taxonomy of shortcut-learning failures. Pairs well with L21.
+
+## Study tools
+
+- [Study guide for L10](../study_guides/lecture-10.md) — key terms, self-check questions, curated external resources.
+- [Concept map](../concept_map.md) — see how this lecture connects to the rest of the course.

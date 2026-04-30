@@ -46,3 +46,8 @@ You will see this language in L11 (NN architectures as inductive bias), L18 (tab
 - **Strang, _Introduction to Linear Algebra_ (any recent edition), Chs. 1-3 and 7.** The standard textbook, with an emphasis on how the four fundamental subspaces relate.
 - **Goodfellow, Bengio, Courville, _Deep Learning_, Ch. 2.** The exact subset of linear algebra you need for the rest of the course.
 - **Murphy, _Probabilistic Machine Learning: An Introduction_ (vol 1, 2022), Ch. 7.** Linear algebra as ML uses it — eigenanalysis, SVD, matrix calculus.
+
+## Study tools
+
+- [Study guide for L02](../study_guides/lecture-02.md) — key terms, self-check questions, curated external resources.
+- [Concept map](../concept_map.md) — see how this lecture connects to the rest of the course.

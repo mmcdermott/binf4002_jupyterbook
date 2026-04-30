@@ -1,0 +1,29 @@
+book/labs/lab0_preprocessing.ipynb
+book/labs/lab1_logistic_regression.ipynb
+book/labs/lab2_decision_trees.ipynb
+book/labs/lab3_knn.ipynb
+book/labs/lab4_ensemble_methods.ipynb	xgboost shap
+book/labs/lab5_neural_networks.ipynb	xgboost
+book/labs/lab6_multiclass_classification.ipynb	imbalanced-learn
+book/labs/lab7_regression.ipynb
+book/labs/lab8_survival_analysis.ipynb	scikit-survival
+book/labs/lab9_probabilistic_regression.ipynb
+book/labs/lab10_clustering.ipynb
+book/labs/lab11_dimensionality_reduction.ipynb	umap-learn
+book/labs/lab12_graph_data.ipynb	torch torch-geometric networkx rdkit
+book/labs/lab13_ordinal_sequences.ipynb	torch transformers datasets
+book/labs/lab14_images.ipynb	torch torchvision medmnist scikit-image
+book/labs/lab15_timeseries.ipynb	torch wfdb
+book/labs/lab16_event_streams_MEDS.ipynb	pyarrow beautifulsoup4 torch
+book/lectures/nb-13-nn-fundamentals.ipynb	torch torchvision
+book/lectures/nb-14-llm.ipynb	torch transformers datasets nltk wikipedia
+book/lectures/nb-17-ehr-claims.ipynb	pyarrow
+book/lectures/nb-19-clinical-text.ipynb	biopython datasets nltk kagglehub
+book/lectures/nb-20-clinical-nlp.ipynb	torch transformers spacy scispacy negspacy
+book/lectures/nb-21-imaging-data.ipynb	medmnist pydicom scikit-image
+book/lectures/nb-22-imaging-modeling.ipynb	torch torchvision medmnist scikit-image
+book/lectures/nb-23-pophealth.ipynb	lifelines torch
+book/lectures/nb-24-causality-fairness.ipynb	aif360 causaldata
+book/lectures/nb-25-dna-genetics.ipynb
+book/lectures/nb-26-proteins-molecules.ipynb	biopython rdkit
+book/lectures/nb-27-modern-bio-models.ipynb	torch fair-esm

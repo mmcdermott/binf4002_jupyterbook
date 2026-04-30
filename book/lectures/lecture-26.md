@@ -82,3 +82,8 @@ Three reasons this lecture is the right setup for L27:
 - **Wu et al., "MoleculeNet: a benchmark for molecular machine learning," _Chem Sci_ 9, 2018.** Standardized molecular ML benchmarks.
 - **Bento et al., "The ChEMBL bioactivity database: an update," _Nucleic Acids Res_ 42, 2014.** The substrate for most QSAR work.
 - **Coursera _Drug Discovery_ specialization (UC San Diego).** Decent companion course.
+
+## Study tools
+
+- [Study guide for L26](../study_guides/lecture-26.md) — key terms, self-check questions, curated external resources.
+- [Concept map](../concept_map.md) — see how this lecture connects to the rest of the course.

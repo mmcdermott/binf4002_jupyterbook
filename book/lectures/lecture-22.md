@@ -63,3 +63,8 @@ Three reasons this lecture is the practical core of medical-imaging ML:
 - **Raghu et al., "Transfusion: Understanding Transfer Learning for Medical Imaging," _NeurIPS_ 2019.** What transfers from ImageNet, what doesn't.
 - **Azizi et al., "Big Self-Supervised Models Advance Medical Image Classification," _ICCV_ 2021.** When self-supervision wins.
 - **Glocker et al., "Risk of Bias in Chest Radiography Deep Learning Foundation Models," _Radiology AI_ 5, 2023.** A sober look at multi-site generalization with foundation models.
+
+## Study tools
+
+- [Study guide for L22](../study_guides/lecture-22.md) — key terms, self-check questions, curated external resources.
+- [Concept map](../concept_map.md) — see how this lecture connects to the rest of the course.

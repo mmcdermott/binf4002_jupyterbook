@@ -79,3 +79,8 @@ Three reasons this lecture is the make-or-break for clinical ML modeling:
 - **McDermott et al., "Event Stream GPT: A Data Pre-processing and Modeling Library for Generative, Pre-trained Transformers over Continuous-time Sequences of Complex Events" (and current McDermott-lab work on EHR transformers).** The full event-stream representation in current research practice.
 - **Lipton, Kale & Wetzel, "Modeling Missing Data in Clinical Time Series with RNNs," _MLHC_ 2016.** Treating missingness as informative.
 - **Hyland et al., "Early prediction of circulatory failure in the intensive care unit using machine learning," _Nat Med_ 26, 2020.** A workflow-aligned EHR ML paper that gets the task definition right.
+
+## Study tools
+
+- [Study guide for L18](../study_guides/lecture-18.md) — key terms, self-check questions, curated external resources.
+- [Concept map](../concept_map.md) — see how this lecture connects to the rest of the course.

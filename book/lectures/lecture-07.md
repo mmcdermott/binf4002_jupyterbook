@@ -52,3 +52,8 @@ Three reasons this recipe is worth memorizing:
 - **Murphy, _Probabilistic Machine Learning: An Introduction_, Chs. 8-11.** Modern, ML-oriented treatment of probabilistic models, NLL, mixture models, and EM.
 - **Dempster, Laird, Rubin, "Maximum Likelihood from Incomplete Data via the EM Algorithm," _JRSS B_ 39(1), 1977.** The original EM paper. Surprisingly readable. Worth knowing the historical move.
 - **Coursera / Stanford CS229 (Andrew Ng), the lecture on EM and Gaussian mixtures.** Free online, very clean derivation.
+
+## Study tools
+
+- [Study guide for L07](../study_guides/lecture-07.md) — key terms, self-check questions, curated external resources.
+- [Concept map](../concept_map.md) — see how this lecture connects to the rest of the course.

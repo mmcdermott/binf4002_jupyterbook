@@ -1,0 +1,30 @@
+notebook	rc	cells	outputs	errors	note
+book/labs/lab0_preprocessing.ipynb	0	13	20	0	
+book/labs/lab1_logistic_regression.ipynb	0	13	15	0	
+book/labs/lab2_decision_trees.ipynb	0	10	10	0	
+book/labs/lab3_knn.ipynb	0	16	21	0	
+book/labs/lab4_ensemble_methods.ipynb	0	13	17	0	
+book/labs/lab5_neural_networks.ipynb	0	17	28	1	cell-errors=1
+book/labs/lab6_multiclass_classification.ipynb	0	26	32	19	cell-errors=19
+book/labs/lab7_regression.ipynb	0	22	30	12	cell-errors=12
+book/labs/lab8_survival_analysis.ipynb	0	20	27	8	cell-errors=8
+book/labs/lab9_probabilistic_regression.ipynb	0	20	27	15	cell-errors=15
+book/labs/lab10_clustering.ipynb	0	18	28	8	cell-errors=8
+book/labs/lab11_dimensionality_reduction.ipynb	0	16	23	5	cell-errors=5
+book/labs/lab12_graph_data.ipynb	0	21	37	13	cell-errors=13
+book/labs/lab13_ordinal_sequences.ipynb	0	22	231	7	cell-errors=7
+book/labs/lab14_images.ipynb	1	25	0	0	exit-1
+book/labs/lab15_timeseries.ipynb	0	21	28	9	cell-errors=9
+book/labs/lab16_event_streams_MEDS.ipynb	0	20	25	15	cell-errors=15
+book/lectures/nb-13-nn-fundamentals.ipynb	0	18	218	0	
+book/lectures/nb-14-llm.ipynb	0	23	75	0	
+book/lectures/nb-17-ehr-claims.ipynb	0	15	26	0	
+book/lectures/nb-19-clinical-text.ipynb	0	10	31	0	
+book/lectures/nb-20-clinical-nlp.ipynb	0	14	38	0	
+book/lectures/nb-21-imaging-data.ipynb	1	14	18	12	exit-1,cell-errors=12
+book/lectures/nb-22-imaging-modeling.ipynb	1	16	25	14	exit-1,cell-errors=14
+book/lectures/nb-23-pophealth.ipynb	0	12	30	0	
+book/lectures/nb-24-causality-fairness.ipynb	0	10	14	5	cell-errors=5
+book/lectures/nb-25-dna-genetics.ipynb	0	6	12	0	
+book/lectures/nb-26-proteins-molecules.ipynb	0	8	20	0	
+book/lectures/nb-27-modern-bio-models.ipynb	0	8	33	0	

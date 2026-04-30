@@ -1,0 +1,5 @@
+2026-04-29T23:17:12-04:00 executing book/lectures/nb-13-nn-fundamentals.ipynb with extras: torch torchvision
+Installed 97 packages in 96ms
+[NbConvertApp] Converting notebook book/lectures/nb-13-nn-fundamentals.ipynb to notebook
+[NbConvertApp] Writing 1724948 bytes to book/lectures/nb-13-nn-fundamentals.ipynb
+2026-04-29T23:32:46-04:00 book/lectures/nb-13-nn-fundamentals.ipynb exit=0

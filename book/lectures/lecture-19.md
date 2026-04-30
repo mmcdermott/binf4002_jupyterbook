@@ -64,3 +64,8 @@ Three reasons this lecture comes *before* clinical NLP modeling:
 - **Johnson, Pollard et al., "MIMIC-III, a freely accessible critical care database," _Sci Data_ 3, 2016** (and the subsequent MIMIC-IV paper). The dataset behind most clinical NLP work, plus the access procedure.
 - **Liu et al., "A scoping review of electronic health record–based clinical prediction models," _Annals of Family Medicine_ 22, 2024.** A useful summary of how clinical text is being used, and where it tends to go wrong.
 - **HIPAA Privacy Rule, 45 CFR §164.514** — the regulation governing de-identification.
+
+## Study tools
+
+- [Study guide for L19](../study_guides/lecture-19.md) — key terms, self-check questions, curated external resources.
+- [Concept map](../concept_map.md) — see how this lecture connects to the rest of the course.

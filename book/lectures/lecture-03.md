@@ -50,3 +50,8 @@ That last bullet sounds abstract; it is the reason the course is structured as i
 - **Wasserman, _All of Statistics_, Chs. 1-3.** A no-nonsense reset on probability and basic statistical inference.
 - **Murphy, _Probabilistic Machine Learning: An Introduction_, Ch. 2.** Tighter, more modern, ML-oriented.
 - **MacKay, _Information Theory, Inference, and Learning Algorithms_ (free PDF), Chs. 2-3.** Slow, careful, opinionated; pairs well with the formalism in this lecture.
+
+## Study tools
+
+- [Study guide for L03](../study_guides/lecture-03.md) — key terms, self-check questions, curated external resources.
+- [Concept map](../concept_map.md) — see how this lecture connects to the rest of the course.

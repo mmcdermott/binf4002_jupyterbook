@@ -834,7 +834,7 @@ L25-L27 folders.
 
 - **Date.** Thu Apr 30, 2026.
 - **Topic.** Synthesis of everything covered during the semester.
-- **Summary.** No new content; the originally-planned deployment lecture is *not* taught this cycle. The slot is used to walk back through the course arc — foundations → modern AI → health data modalities → population/causality/fairness → biological AI — and to surface the cross-cutting through-lines (see [`concept_map.md`](concept_map.md)) so students can see the course as a whole.
+- **Summary.** No new content; the originally-planned deployment lecture is *not* taught this cycle. The slot is used to walk back through the course arc — foundations → modern AI → clinical AI → population/causality/fairness → biological AI — and to surface the cross-cutting through-lines (see [`concept_map.md`](concept_map.md)) so students can see the course as a whole.
 - **Goals.** Re-state the course-level learning objectives, identify which lectures contributed to each one, and give students a synthesis frame for the final exam.
 - **Key takeaways.** Same as Level 0 — the six course-wide takeaways (see top of this file).
 - **Subsections.**

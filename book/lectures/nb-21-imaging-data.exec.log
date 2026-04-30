@@ -1,0 +1,80 @@
+2026-04-30T01:10:13-04:00 executing book/lectures/nb-21-imaging-data.ipynb with extras: medmnist pydicom scikit-image
+[NbConvertApp] Converting notebook book/lectures/nb-21-imaging-data.ipynb to notebook
+[NbConvertApp] ERROR | Timeout waiting for execute reply (900s).
+Traceback (most recent call last):
+  File "/home/mmd/.cache/uv/archive-v0/ZlJjh_E9hxLvS6y56M-lr/lib/python3.11/site-packages/nbclient/client.py", line 782, in _async_poll_for_reply
+    msg = await ensure_async(self.kc.shell_channel.get_msg(timeout=new_timeout))
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mmd/.cache/uv/archive-v0/ZlJjh_E9hxLvS6y56M-lr/lib/python3.11/site-packages/jupyter_core/utils/__init__.py", line 214, in ensure_async
+    result = await obj
+             ^^^^^^^^^
+  File "/home/mmd/.cache/uv/archive-v0/ZlJjh_E9hxLvS6y56M-lr/lib/python3.11/site-packages/jupyter_client/channels.py", line 316, in get_msg
+    raise Empty
+_queue.Empty
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/mmd/.cache/uv/builds-v0/.tmpjA6JOL/bin/jupyter-nbconvert", line 10, in <module>
+    sys.exit(main())
+             ^^^^^^
+  File "/home/mmd/.cache/uv/archive-v0/ZlJjh_E9hxLvS6y56M-lr/lib/python3.11/site-packages/jupyter_core/application.py", line 284, in launch_instance
+    super().launch_instance(argv=argv, **kwargs)
+  File "/home/mmd/.cache/uv/archive-v0/ZlJjh_E9hxLvS6y56M-lr/lib/python3.11/site-packages/traitlets/config/application.py", line 1075, in launch_instance
+    app.start()
+  File "/home/mmd/.cache/uv/archive-v0/ZlJjh_E9hxLvS6y56M-lr/lib/python3.11/site-packages/nbconvert/nbconvertapp.py", line 420, in start
+    self.convert_notebooks()
+  File "/home/mmd/.cache/uv/archive-v0/ZlJjh_E9hxLvS6y56M-lr/lib/python3.11/site-packages/nbconvert/nbconvertapp.py", line 597, in convert_notebooks
+    self.convert_single_notebook(notebook_filename)
+  File "/home/mmd/.cache/uv/archive-v0/ZlJjh_E9hxLvS6y56M-lr/lib/python3.11/site-packages/nbconvert/nbconvertapp.py", line 563, in convert_single_notebook
+    output, resources = self.export_single_notebook(
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mmd/.cache/uv/archive-v0/ZlJjh_E9hxLvS6y56M-lr/lib/python3.11/site-packages/nbconvert/nbconvertapp.py", line 487, in export_single_notebook
+    output, resources = self.exporter.from_filename(
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mmd/.cache/uv/archive-v0/ZlJjh_E9hxLvS6y56M-lr/lib/python3.11/site-packages/nbconvert/exporters/exporter.py", line 201, in from_filename
+    return self.from_file(f, resources=resources, **kw)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mmd/.cache/uv/archive-v0/ZlJjh_E9hxLvS6y56M-lr/lib/python3.11/site-packages/nbconvert/exporters/exporter.py", line 220, in from_file
+    return self.from_notebook_node(
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mmd/.cache/uv/archive-v0/ZlJjh_E9hxLvS6y56M-lr/lib/python3.11/site-packages/nbconvert/exporters/notebook.py", line 36, in from_notebook_node
+    nb_copy, resources = super().from_notebook_node(nb, resources, **kw)
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mmd/.cache/uv/archive-v0/ZlJjh_E9hxLvS6y56M-lr/lib/python3.11/site-packages/nbconvert/exporters/exporter.py", line 154, in from_notebook_node
+    nb_copy, resources = self._preprocess(nb_copy, resources)
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mmd/.cache/uv/archive-v0/ZlJjh_E9hxLvS6y56M-lr/lib/python3.11/site-packages/nbconvert/exporters/exporter.py", line 353, in _preprocess
+    nbc, resc = preprocessor(nbc, resc)
+                ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mmd/.cache/uv/archive-v0/ZlJjh_E9hxLvS6y56M-lr/lib/python3.11/site-packages/nbconvert/preprocessors/base.py", line 48, in __call__
+    return self.preprocess(nb, resources)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mmd/.cache/uv/archive-v0/ZlJjh_E9hxLvS6y56M-lr/lib/python3.11/site-packages/nbconvert/preprocessors/execute.py", line 103, in preprocess
+    self.preprocess_cell(cell, resources, index)
+  File "/home/mmd/.cache/uv/archive-v0/ZlJjh_E9hxLvS6y56M-lr/lib/python3.11/site-packages/nbconvert/preprocessors/execute.py", line 124, in preprocess_cell
+    cell = self.execute_cell(cell, index, store_history=True)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mmd/.cache/uv/archive-v0/ZlJjh_E9hxLvS6y56M-lr/lib/python3.11/site-packages/jupyter_core/utils/__init__.py", line 165, in wrapped
+    return loop.run_until_complete(inner)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mmd/.local/share/uv/python/cpython-3.11.13-linux-x86_64-gnu/lib/python3.11/asyncio/base_events.py", line 654, in run_until_complete
+    return future.result()
+           ^^^^^^^^^^^^^^^
+  File "/home/mmd/.cache/uv/archive-v0/ZlJjh_E9hxLvS6y56M-lr/lib/python3.11/site-packages/nbclient/client.py", line 1005, in async_execute_cell
+    exec_reply = await self.task_poll_for_reply
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mmd/.cache/uv/archive-v0/ZlJjh_E9hxLvS6y56M-lr/lib/python3.11/site-packages/nbclient/client.py", line 806, in _async_poll_for_reply
+    error_on_timeout_execute_reply = await self._async_handle_timeout(timeout, cell)
+                                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mmd/.cache/uv/archive-v0/ZlJjh_E9hxLvS6y56M-lr/lib/python3.11/site-packages/nbclient/client.py", line 856, in _async_handle_timeout
+    raise CellTimeoutError.error_from_timeout_and_cell(
+nbclient.exceptions.CellTimeoutError: A cell timed out while it was being executed, after 900 seconds.
+The message was: Cell execution timed out.
+Here is a preview of the cell contents:
+-------------------
+['# ==============================================================================', '# Load MedMNIST Data (Chest X-Ray, Dermoscopy, H&E Pathology)', '# ==============================================================================', 'MEDMNIST_LOADED = False', '']
+...
+['    print("MedMNIST would provide these — see \'Extending\' section at end.")', '    chest_images = None', '    derma_images = None', '    path_images = None', '    chest_labels = None']
+-------------------
+

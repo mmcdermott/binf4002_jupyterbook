@@ -1,0 +1,116 @@
+=== book/labs/lab0_preprocessing.ipynb :: extras=none ===
+2026-04-29T22:53:55-04:00 executing book/labs/lab0_preprocessing.ipynb with extras: none
+2026-04-29T22:54:00-04:00 book/labs/lab0_preprocessing.ipynb exit=0
+=== book/labs/lab1_logistic_regression.ipynb :: extras=none ===
+2026-04-29T22:54:00-04:00 executing book/labs/lab1_logistic_regression.ipynb with extras: none
+2026-04-29T22:54:04-04:00 book/labs/lab1_logistic_regression.ipynb exit=0
+=== book/labs/lab2_decision_trees.ipynb :: extras=none ===
+2026-04-29T22:54:04-04:00 executing book/labs/lab2_decision_trees.ipynb with extras: none
+2026-04-29T22:54:07-04:00 book/labs/lab2_decision_trees.ipynb exit=0
+=== book/labs/lab3_knn.ipynb :: extras=none ===
+2026-04-29T22:54:07-04:00 executing book/labs/lab3_knn.ipynb with extras: none
+2026-04-29T22:54:13-04:00 book/labs/lab3_knn.ipynb exit=0
+=== book/labs/lab4_ensemble_methods.ipynb :: extras=xgboost shap ===
+2026-04-29T22:54:13-04:00 executing book/labs/lab4_ensemble_methods.ipynb with extras: xgboost shap
+2026-04-29T22:55:05-04:00 book/labs/lab4_ensemble_methods.ipynb exit=0
+=== book/labs/lab5_neural_networks.ipynb :: extras=xgboost ===
+2026-04-29T22:55:05-04:00 executing book/labs/lab5_neural_networks.ipynb with extras: xgboost
+2026-04-29T22:55:15-04:00 book/labs/lab5_neural_networks.ipynb exit=0
+=== book/labs/lab6_multiclass_classification.ipynb :: extras=imbalanced-learn ===
+2026-04-29T22:55:15-04:00 executing book/labs/lab6_multiclass_classification.ipynb with extras: imbalanced-learn
+2026-04-29T22:55:22-04:00 book/labs/lab6_multiclass_classification.ipynb exit=0
+=== book/labs/lab7_regression.ipynb :: extras=none ===
+2026-04-29T22:55:22-04:00 executing book/labs/lab7_regression.ipynb with extras: none
+2026-04-29T22:55:27-04:00 book/labs/lab7_regression.ipynb exit=0
+=== book/labs/lab8_survival_analysis.ipynb :: extras=scikit-survival ===
+2026-04-29T22:55:27-04:00 executing book/labs/lab8_survival_analysis.ipynb with extras: scikit-survival
+2026-04-29T22:55:35-04:00 book/labs/lab8_survival_analysis.ipynb exit=0
+=== book/labs/lab9_probabilistic_regression.ipynb :: extras=none ===
+2026-04-29T22:55:35-04:00 executing book/labs/lab9_probabilistic_regression.ipynb with extras: none
+2026-04-29T22:55:40-04:00 book/labs/lab9_probabilistic_regression.ipynb exit=0
+=== book/labs/lab10_clustering.ipynb :: extras=none ===
+2026-04-29T22:55:40-04:00 executing book/labs/lab10_clustering.ipynb with extras: none
+2026-04-29T22:55:45-04:00 book/labs/lab10_clustering.ipynb exit=0
+=== book/labs/lab11_dimensionality_reduction.ipynb :: extras=umap-learn ===
+2026-04-29T22:55:45-04:00 executing book/labs/lab11_dimensionality_reduction.ipynb with extras: umap-learn
+2026-04-29T22:56:13-04:00 book/labs/lab11_dimensionality_reduction.ipynb exit=0
+=== book/labs/lab12_graph_data.ipynb :: extras=torch torch-geometric networkx rdkit ===
+2026-04-29T22:56:13-04:00 executing book/labs/lab12_graph_data.ipynb with extras: torch torch-geometric networkx rdkit
+2026-04-29T22:56:28-04:00 book/labs/lab12_graph_data.ipynb exit=0
+=== book/labs/lab13_ordinal_sequences.ipynb :: extras=torch transformers datasets ===
+2026-04-29T22:56:28-04:00 executing book/labs/lab13_ordinal_sequences.ipynb with extras: torch transformers datasets
+2026-04-29T22:59:45-04:00 book/labs/lab13_ordinal_sequences.ipynb exit=0
+=== book/labs/lab14_images.ipynb :: extras=torch torchvision medmnist scikit-image ===
+2026-04-29T22:59:48-04:00 executing book/labs/lab14_images.ipynb with extras: torch torchvision medmnist scikit-image
+=== book/labs/lab15_timeseries.ipynb :: extras=torch wfdb ===
+2026-04-29T23:16:50-04:00 executing book/labs/lab15_timeseries.ipynb with extras: torch wfdb
+2026-04-29T23:17:04-04:00 book/labs/lab15_timeseries.ipynb exit=0
+=== book/labs/lab16_event_streams_MEDS.ipynb :: extras=pyarrow beautifulsoup4 torch ===
+2026-04-29T23:17:04-04:00 executing book/labs/lab16_event_streams_MEDS.ipynb with extras: pyarrow beautifulsoup4 torch
+2026-04-29T23:17:12-04:00 book/labs/lab16_event_streams_MEDS.ipynb exit=0
+=== book/lectures/nb-13-nn-fundamentals.ipynb :: extras=torch torchvision ===
+2026-04-29T23:17:12-04:00 executing book/lectures/nb-13-nn-fundamentals.ipynb with extras: torch torchvision
+2026-04-29T23:32:46-04:00 book/lectures/nb-13-nn-fundamentals.ipynb exit=0
+=== book/lectures/nb-14-llm.ipynb :: extras=torch transformers datasets nltk wikipedia ===
+2026-04-29T23:32:46-04:00 executing book/lectures/nb-14-llm.ipynb with extras: torch transformers datasets nltk wikipedia
+2026-04-29T23:47:40-04:00 book/lectures/nb-14-llm.ipynb exit=0
+=== book/lectures/nb-17-ehr-claims.ipynb :: extras=pyarrow ===
+2026-04-29T23:47:40-04:00 executing book/lectures/nb-17-ehr-claims.ipynb with extras: pyarrow
+2026-04-29T23:50:21-04:00 book/lectures/nb-17-ehr-claims.ipynb exit=0
+=== book/lectures/nb-19-clinical-text.ipynb :: extras=biopython datasets nltk kagglehub ===
+2026-04-29T23:50:21-04:00 executing book/lectures/nb-19-clinical-text.ipynb with extras: biopython datasets nltk kagglehub
+2026-04-29T23:50:56-04:00 book/lectures/nb-19-clinical-text.ipynb exit=0
+=== book/lectures/nb-20-clinical-nlp.ipynb :: extras=torch transformers spacy scispacy negspacy ===
+2026-04-29T23:50:56-04:00 executing book/lectures/nb-20-clinical-nlp.ipynb with extras: torch transformers spacy scispacy negspacy
+2026-04-29T23:51:37-04:00 book/lectures/nb-20-clinical-nlp.ipynb exit=0
+=== book/lectures/nb-21-imaging-data.ipynb :: extras=medmnist pydicom scikit-image ===
+2026-04-29T23:51:37-04:00 executing book/lectures/nb-21-imaging-data.ipynb with extras: medmnist pydicom scikit-image
+=== book/lectures/nb-22-imaging-modeling.ipynb :: extras=torch torchvision medmnist scikit-image ===
+2026-04-30T00:06:45-04:00 executing book/lectures/nb-22-imaging-modeling.ipynb with extras: torch torchvision medmnist scikit-image
+=== book/lectures/nb-23-pophealth.ipynb :: extras=lifelines torch ===
+2026-04-30T00:30:09-04:00 executing book/lectures/nb-23-pophealth.ipynb with extras: lifelines torch
+2026-04-30T00:30:27-04:00 book/lectures/nb-23-pophealth.ipynb exit=0
+=== book/lectures/nb-24-causality-fairness.ipynb :: extras=aif360 causaldata ===
+2026-04-30T00:30:27-04:00 executing book/lectures/nb-24-causality-fairness.ipynb with extras: aif360 causaldata
+2026-04-30T00:30:35-04:00 book/lectures/nb-24-causality-fairness.ipynb exit=0
+=== book/lectures/nb-25-dna-genetics.ipynb :: extras=none ===
+2026-04-30T00:30:35-04:00 executing book/lectures/nb-25-dna-genetics.ipynb with extras: none
+2026-04-30T00:31:55-04:00 book/lectures/nb-25-dna-genetics.ipynb exit=0
+=== book/lectures/nb-26-proteins-molecules.ipynb :: extras=biopython rdkit ===
+2026-04-30T00:31:55-04:00 executing book/lectures/nb-26-proteins-molecules.ipynb with extras: biopython rdkit
+2026-04-30T00:32:16-04:00 book/lectures/nb-26-proteins-molecules.ipynb exit=0
+=== book/lectures/nb-27-modern-bio-models.ipynb :: extras=torch fair-esm ===
+2026-04-30T00:32:16-04:00 executing book/lectures/nb-27-modern-bio-models.ipynb with extras: torch fair-esm
+2026-04-30T00:32:37-04:00 book/lectures/nb-27-modern-bio-models.ipynb exit=0
+
+=== summary ===
+notebook                                        rc  cells  outputs  errors  note
+book/labs/lab0_preprocessing.ipynb              0   13     20       0       
+book/labs/lab1_logistic_regression.ipynb        0   13     15       0       
+book/labs/lab2_decision_trees.ipynb             0   10     10       0       
+book/labs/lab3_knn.ipynb                        0   16     21       0       
+book/labs/lab4_ensemble_methods.ipynb           0   13     17       0       
+book/labs/lab5_neural_networks.ipynb            0   17     28       1       cell-errors=1
+book/labs/lab6_multiclass_classification.ipynb  0   26     32       19      cell-errors=19
+book/labs/lab7_regression.ipynb                 0   22     30       12      cell-errors=12
+book/labs/lab8_survival_analysis.ipynb          0   20     27       8       cell-errors=8
+book/labs/lab9_probabilistic_regression.ipynb   0   20     27       15      cell-errors=15
+book/labs/lab10_clustering.ipynb                0   18     28       8       cell-errors=8
+book/labs/lab11_dimensionality_reduction.ipynb  0   16     23       5       cell-errors=5
+book/labs/lab12_graph_data.ipynb                0   21     37       13      cell-errors=13
+book/labs/lab13_ordinal_sequences.ipynb         0   22     231      7       cell-errors=7
+book/labs/lab14_images.ipynb                    1   25     0        0       exit-1
+book/labs/lab15_timeseries.ipynb                0   21     28       9       cell-errors=9
+book/labs/lab16_event_streams_MEDS.ipynb        0   20     25       15      cell-errors=15
+book/lectures/nb-13-nn-fundamentals.ipynb       0   18     218      0       
+book/lectures/nb-14-llm.ipynb                   0   23     75       0       
+book/lectures/nb-17-ehr-claims.ipynb            0   15     26       0       
+book/lectures/nb-19-clinical-text.ipynb         0   10     31       0       
+book/lectures/nb-20-clinical-nlp.ipynb          0   14     38       0       
+book/lectures/nb-21-imaging-data.ipynb          1   14     18       12      exit-1,cell-errors=12
+book/lectures/nb-22-imaging-modeling.ipynb      1   16     25       14      exit-1,cell-errors=14
+book/lectures/nb-23-pophealth.ipynb             0   12     30       0       
+book/lectures/nb-24-causality-fairness.ipynb    0   10     14       5       cell-errors=5
+book/lectures/nb-25-dna-genetics.ipynb          0   6      12       0       
+book/lectures/nb-26-proteins-molecules.ipynb    0   8      20       0       
+book/lectures/nb-27-modern-bio-models.ipynb     0   8      33       0       
