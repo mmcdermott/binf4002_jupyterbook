@@ -1,6 +1,6 @@
 # Lecture 2 — Linear algebra: the language of representations
 
-> ⚠️ **AI-synthesized content; not fully reviewed by course staff.** Treat as a study aid, not a primary source — the released slides, notebooks, and lecture recordings are authoritative. [Full caveat →](../intro.md)
+> ⚠️ **AI-synthesized; not fully reviewed by course staff. Treat as a study aid; released slides, notebooks, and lecture recordings are authoritative.**
 
 **Thu Jan 22, 2026 · Part 1 — Foundations · §1.1 Mathematical preliminaries**
 

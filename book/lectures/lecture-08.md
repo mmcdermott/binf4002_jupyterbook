@@ -1,6 +1,6 @@
 # Lecture 8 — Evaluating a binary classification model
 
-> ⚠️ **AI-synthesized content; not fully reviewed by course staff.** Treat as a study aid, not a primary source — the released slides, notebooks, and lecture recordings are authoritative. [Full caveat →](../intro.md)
+> ⚠️ **AI-synthesized; not fully reviewed by course staff. Treat as a study aid; released slides, notebooks, and lecture recordings are authoritative.**
 
 **Thu Feb 12, 2026 · guest lecturer: Florent Pollet · Part 1 — Foundations · §1.3 Evaluation, training, generalization**
 

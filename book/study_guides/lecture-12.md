@@ -1,6 +1,6 @@
 # L12 Study Guide — Lab Day #2
 
-> ⚠️ **AI-synthesized content; not fully reviewed by course staff.** Treat as a study aid, not a primary source — the released slides, notebooks, and lecture recordings are authoritative. [Full caveat →](../intro.md)
+> ⚠️ **AI-synthesized; not fully reviewed by course staff. Treat as a study aid; released slides, notebooks, and lecture recordings are authoritative.**
 
 > Continued lab work on chunk 1 (labs 0-5). No new lecture content. The labs in scope are the same as L11; this guide gives you a few additional debugging-mindset prompts.
 

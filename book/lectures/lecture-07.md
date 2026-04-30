@@ -1,6 +1,6 @@
 # Lecture 7 — Probabilistic modeling and optimization
 
-> ⚠️ **AI-synthesized content; not fully reviewed by course staff.** Treat as a study aid, not a primary source — the released slides, notebooks, and lecture recordings are authoritative. [Full caveat →](../intro.md)
+> ⚠️ **AI-synthesized; not fully reviewed by course staff. Treat as a study aid; released slides, notebooks, and lecture recordings are authoritative.**
 
 **Tue Feb 10, 2026 · guest lecturer: Di Liu · Part 1 — Foundations · §1.2 Probabilistic modeling**
 

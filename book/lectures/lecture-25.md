@@ -1,6 +1,6 @@
 # Lecture 25 — DNA, genetics, and gene regulation
 
-> ⚠️ **AI-synthesized content; not fully reviewed by course staff.** Treat as a study aid, not a primary source — the released slides, notebooks, and lecture recordings are authoritative. [Full caveat →](../intro.md)
+> ⚠️ **AI-synthesized; not fully reviewed by course staff. Treat as a study aid; released slides, notebooks, and lecture recordings are authoritative.**
 
 **Tue Apr 21, 2026 · Part 5 — Molecules & biological AI**
 

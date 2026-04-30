@@ -1,6 +1,6 @@
 # L7 Study Guide — Probabilistic Modeling & Optimization
 
-> ⚠️ **AI-synthesized content; not fully reviewed by course staff.** Treat as a study aid, not a primary source — the released slides, notebooks, and lecture recordings are authoritative. [Full caveat →](../intro.md)
+> ⚠️ **AI-synthesized; not fully reviewed by course staff. Treat as a study aid; released slides, notebooks, and lecture recordings are authoritative.**
 
 > Guest lecture by Di Liu. Bridges the abstract probabilistic framework from L3-L6 to concrete ML models, deriving familiar loss functions from first principles.
 
