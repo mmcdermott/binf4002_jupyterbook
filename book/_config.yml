@@ -34,13 +34,11 @@ repository:
 
 launch_buttons:
   notebook_interface: classic        # "classic" or "jupyterlab"
-  binderhub_url: https://mybinder.org
+  binderhub_url: ""                  # Binder disabled (no environment specification in this repo)
   colab_url: https://colab.research.google.com
-  thebe: false                       # interactive cells in-browser; off until repo is public
-  # Once the repo is public on GitHub, students reading the book see a
-  # rocket icon on each notebook page that opens the notebook in Colab
-  # (top choice) or Binder. The Colab URL is constructed from
-  # repository.url + path_to_book + the notebook path.
+  thebe: false
+  # The rocket icon on each notebook page opens the notebook in Google Colab.
+  # Colab URLs are constructed from repository.url + path_to_book + notebook path.
 
 html:
   use_repository_button: true        # "edit on GitHub" link
