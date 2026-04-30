@@ -15,7 +15,7 @@ We work through the modeling toolbox in the order most projects use it.
 - **Self-supervised pretraining.** Contrastive (SimCLR, MoCo) and masked-image (MAE) approaches that use unlabeled medical images. Useful when labels are scarce but unlabeled data abound.
 - **Chest X-ray classification (CheXNet, DenseNet-121).** The canonical CXR pipeline: ImageNet-pretrained DenseNet, fine-tuned for multi-label CXR pathology. Read the original paper, it set the template.
 - **Segmentation and U-Net.** The U-shape: encoder downsamples, decoder upsamples, skip connections preserve spatial detail. Skip connections are the key — without them, the decoder can't recover boundaries. nnU-Net is the modern auto-configured U-Net that wins most medical-segmentation challenges.
-- **Segmentation losses and metrics.** Dice loss (= 1 - Dice coefficient) is the workhorse. Weighted cross-entropy when classes are imbalanced. Boundary-aware losses (HD95, focal-Tversky) for rare structures. The metric you optimize ≠ the metric you report.
+- **Segmentation losses and metrics.** Dice loss (= 1 - Dice coefficient) is the workhorse loss. Weighted cross-entropy when classes are imbalanced. Boundary-aware *losses* like focal-Tversky and the boundary loss of Kervadec et al. for rare structures; HD95 (95th-percentile Hausdorff distance) is a boundary-aware *metric*, not a loss — it's non-differentiable, so you optimize a differentiable surrogate and report HD95 alongside Dice. The metric you optimize ≠ the metric you report.
 - **Multi-instance learning (MIL) for pathology.** Whole-slide images are too big for end-to-end training. The MIL formulation: split into patches, encode patches, aggregate to a slide-level prediction. Attention-MIL (Ilse et al.) is the standard aggregator.
 - **Modality-specific augmentation.** What's a *valid* augmentation for medical images? Random rotation makes sense for histopathology (rotation-invariant) but not for CXRs (heart is on the left). Random intensity changes can simulate scanner variation but can also break the semantic meaning of Hounsfield units. Augmentation is a domain choice.
 - **Class imbalance.** Most pathology is rare. Loss reweighting, sampling strategies, and threshold tuning all matter.
@@ -34,7 +34,7 @@ Three reasons this lecture is the practical core of medical-imaging ML:
 
 ## Things you should walk away believing
 
-- ImageNet transfer is a strong default starting point even for grayscale medical images.
+- ImageNet transfer is the conventional default starting point even for grayscale medical images, and it often helps — but the gain is smaller than commonly assumed (Raghu et al., *Transfusion*, NeurIPS 2019, showed much of the apparent benefit comes from initialization-scale effects rather than from learned features).
 - Domain-specific pretraining is helpful when task and domain match. It is not a free win.
 - U-Net is the right structural prior for segmentation. Skip connections are essential, not decorative.
 - Dice loss + Dice score is the workhorse pair for segmentation; pick boundary-aware metrics for boundary-sensitive tasks.

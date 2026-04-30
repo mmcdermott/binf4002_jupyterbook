@@ -56,7 +56,7 @@ Three reasons this lecture is the right setup for L27:
 - SMILES / fingerprints / random forests are still legitimate small-molecule baselines.
 - Random splits over-estimate molecular-ML performance; scaffold splits are the honest evaluation.
 - Docking is a useful tool, not a black box. Know its assumptions before you trust the score.
-- The PDB has ~200K structures; sequence databases have hundreds of millions. The gap is the reason structure prediction (L27) matters.
+- The PDB has ~230K structures (as of 2025); sequence databases have hundreds of millions. The gap is the reason structure prediction (L27) matters.
 - "Deep learning beats classical X" claims should be checked with proper splits and proper baselines.
 
 ## How this connects to the rest of the course
@@ -115,7 +115,7 @@ Molecular datasets contain many *near-duplicate* compounds (same scaffold, diffe
 2. SIFT scores a missense variant by sequence conservation. PolyPhen adds structural features. When would you reach for SIFT vs. PolyPhen vs. an ESM-2 zero-shot score (L27)?
 3. ECFP fingerprints encode local substructure. Why do they work surprisingly well on QSAR despite ignoring 3D geometry?
 4. AutoDock Vina returns a "docking score." What does it actually estimate, and what are its known failure modes?
-5. A paper reports 0.85 ROC on lipophilicity prediction with random splits and 0.65 with scaffold splits. Which number should the reader take away as the model's true performance?
+5. A paper reports RMSE 0.55 on lipophilicity prediction (a regression task) with random splits and RMSE 1.20 with scaffold splits. Which number should the reader take away as the model's true performance, and why does the gap matter?
 
 ### Additional Resources
 
