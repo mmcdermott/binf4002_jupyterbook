@@ -1,5 +1,7 @@
 # Lecture 10 — Generalization, domain shift, fairness
 
+> ⚠️ **AI-synthesized content; not fully reviewed by course staff.** Treat as a study aid, not a primary source — the released slides, notebooks, and lecture recordings are authoritative. [Full caveat →](../intro.md)
+
 **Thu Feb 19, 2026 · Part 1 — Foundations · §1.3 Evaluation, training, generalization**
 
 ## What this lecture is about

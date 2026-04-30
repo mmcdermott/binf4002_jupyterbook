@@ -1,5 +1,7 @@
 # Lecture 12 — Lab Day #2
 
+> ⚠️ **AI-synthesized content; not fully reviewed by course staff.** Treat as a study aid, not a primary source — the released slides, notebooks, and lecture recordings are authoritative. [Full caveat →](../intro.md)
+
 **Thu Feb 26, 2026 · Part 2 — Modern AI & lab work**
 
 ## What this class meeting was about

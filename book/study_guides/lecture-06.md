@@ -1,5 +1,7 @@
 # L6 Study Guide — Probabilistic Optimization & Bias-Variance
 
+> ⚠️ **AI-synthesized content; not fully reviewed by course staff.** Treat as a study aid, not a primary source — the released slides, notebooks, and lecture recordings are authoritative. [Full caveat →](../intro.md)
+
 ## Key Terms
 
 | Term | Definition |

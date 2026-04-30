@@ -1,5 +1,7 @@
 # Lecture 28 — Course recap
 
+> ⚠️ **AI-synthesized content; not fully reviewed by course staff.** Treat as a study aid, not a primary source — the released slides, notebooks, and lecture recordings are authoritative. [Full caveat →](../intro.md)
+
 **Date.** Thu Apr 30, 2026.
 
 The standalone deployment lecture originally planned for this slot was **not taught this cycle**. Instead, L28 is a guided walk back through the course arc — making the cross-cutting through-lines explicit and giving you a final-exam study frame.

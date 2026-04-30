@@ -1,5 +1,7 @@
 # Lecture 13 — Neural networks: from motivation to practice
 
+> ⚠️ **AI-synthesized content; not fully reviewed by course staff.** Treat as a study aid, not a primary source — the released slides, notebooks, and lecture recordings are authoritative. [Full caveat →](../intro.md)
+
 **Tue Mar 3, 2026 · Part 2 — Modern AI & lab work**
 
 ## What this lecture is about

@@ -1,5 +1,7 @@
 # L11 Study Guide — Lab Day #1
 
+> ⚠️ **AI-synthesized content; not fully reviewed by course staff.** Treat as a study aid, not a primary source — the released slides, notebooks, and lecture recordings are authoritative. [Full caveat →](../intro.md)
+
 > No lecture content. In-class Q&A and lab work for the first lab chunk (labs 0-5: ML model types). Use this study guide as a checklist for what each model class is trying to do; for full review see the [Labs](../labs/intro.md).
 
 ## Key Terms

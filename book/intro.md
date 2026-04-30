@@ -4,6 +4,19 @@
 
 This book is the student-facing companion to the Spring 2026 BINF 4002 lectures and labs. Everything you need to review for the course lives in these pages.
 
+```{warning}
+**This site was synthesized with the help of generative AI and has not been fully reviewed by course staff.** The lecture summaries, study guides, concept map, part overviews, and external-reference lists were drafted by an LLM working from the released slide decks, notebooks, and instructor study-guide drafts — not written from scratch by the instructor. Spot checks have been done, but a comprehensive line-by-line review is still pending.
+
+What this means in practice:
+
+- **Treat the site as a study aid, not a primary source.** The released PDFs, the lecture recordings, and the actual notebooks are the authoritative course content.
+- **If something on a page contradicts what was said in lecture, lecture wins.** Please flag the discrepancy to course staff so it can be corrected.
+- **Reading lists may include papers / books / courses that are useful but were not specifically endorsed by the instructor.** They are starting points for self-study.
+- **Specific factual claims** (numerical estimates, benchmark rankings, citation details, dataset provenance) may be slightly off; cross-check anything you plan to repeat in a paper or assignment.
+
+Caveat blocks have already been added inline to the LLM and modern-bio-AI companion notebooks where specific wording was flagged for over-claiming; see `AUDIT_RESPONSE.md` in the repository for the running list of known revisions.
+```
+
 ## Where to start
 
 Pick the path that matches what you're trying to do.

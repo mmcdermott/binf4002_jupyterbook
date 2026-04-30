@@ -1,5 +1,9 @@
 # Course concept map
 
+```{warning}
+**This page was drafted with the help of generative AI and has not been fully reviewed by course staff.** The prerequisite graph, through-line cross-references, and external-reference clusters were synthesized by an LLM from the lecture content. Treat it as a study aid, not a primary source. See the [home page](intro.md) for the full caveat.
+```
+
 **How this page is meant to work.** The course covered 28 class meetings and a lot of material. This page is the "step back" view — how the lectures connect, which ideas thread through the semester, and where to look in the syllabus when you want to follow a thread.
 
 If you're studying for the final, work this page top-to-bottom: the prerequisite map → the six through-lines → the interactive mind map at the bottom. Each section answers a different question.

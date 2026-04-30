@@ -1,5 +1,7 @@
 # Lecture 4 — Conditioning, Bayes' rule, and information theory
 
+> ⚠️ **AI-synthesized content; not fully reviewed by course staff.** Treat as a study aid, not a primary source — the released slides, notebooks, and lecture recordings are authoritative. [Full caveat →](../intro.md)
+
 **Thu Jan 29, 2026 · Part 1 — Foundations · §1.1 Mathematical preliminaries**
 
 ## What this lecture is about

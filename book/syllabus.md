@@ -1,6 +1,10 @@
 # BINF 4002 — Machine Learning for Health
 ## Syllabus (Spring 2026)
 
+```{warning}
+**This page was drafted with the help of generative AI and has not been fully reviewed by course staff.** Treat it as a study aid, not a primary source — the released slide decks, notebooks, and lecture recordings are authoritative. See the [home page](intro.md) for the full caveat.
+```
+
 This is the **canonical syllabus** for BINF 4002. It is a hierarchical content map: every level — course → part → section → lecture — has the same structure:
 
 - **Topic** — what this level is about, in one sentence.

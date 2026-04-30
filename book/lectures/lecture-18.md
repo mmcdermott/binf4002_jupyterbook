@@ -1,5 +1,7 @@
 # Lecture 18 — Modeling over EHR and claims data
 
+> ⚠️ **AI-synthesized content; not fully reviewed by course staff.** Treat as a study aid, not a primary source — the released slides, notebooks, and lecture recordings are authoritative. [Full caveat →](../intro.md)
+
 **Thu Mar 26, 2026 · Part 3 — Health data modalities · §3.1 EHR & claims**
 
 ## What this lecture is about

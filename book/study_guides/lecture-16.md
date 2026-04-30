@@ -1,5 +1,7 @@
 # L16 Study Guide — Lab Day #3
 
+> ⚠️ **AI-synthesized content; not fully reviewed by course staff.** Treat as a study aid, not a primary source — the released slides, notebooks, and lecture recordings are authoritative. [Full caveat →](../intro.md)
+
 > Last class before spring break. Lab chunks 2 (losses, labs 6-11) and 3 (data types, labs 12-16) are both in scope. No new lecture content. See the [Labs](../labs/intro.md) for full notebooks; this guide gives you the conceptual map of what each chunk teaches.
 
 ## Chunk 2 — ML Loss Types / Objectives

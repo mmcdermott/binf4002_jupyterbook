@@ -1,5 +1,7 @@
 # Lecture 19 — Clinical and biomedical text: the modality
 
+> ⚠️ **AI-synthesized content; not fully reviewed by course staff.** Treat as a study aid, not a primary source — the released slides, notebooks, and lecture recordings are authoritative. [Full caveat →](../intro.md)
+
 **Tue Mar 31, 2026 · Part 3 — Health data modalities · §3.2 Clinical text**
 
 ## What this lecture is about

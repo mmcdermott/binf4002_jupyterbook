@@ -1,5 +1,7 @@
 # L13 Study Guide — Neural Networks: From Motivation to Practice
 
+> ⚠️ **AI-synthesized content; not fully reviewed by course staff.** Treat as a study aid, not a primary source — the released slides, notebooks, and lecture recordings are authoritative. [Full caveat →](../intro.md)
+
 > This study guide consolidates the "Neural Networks supplementary lecture" content from the L7-10 study guide alongside the L13 calendar slot in this course.
 
 ## Key Terms

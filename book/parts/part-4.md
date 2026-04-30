@@ -1,5 +1,7 @@
 # Part 4 — Population, Causality, Fairness
 
+> ⚠️ **AI-synthesized content; not fully reviewed by course staff.** Treat as a study aid, not a primary source — the released slides, notebooks, and lecture recordings are authoritative. [Full caveat →](../intro.md)
+
 **Lectures 23-24**
 
 ## What this part is about

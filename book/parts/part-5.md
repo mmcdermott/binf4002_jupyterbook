@@ -1,5 +1,7 @@
 # Part 5 — Molecules & Biological AI
 
+> ⚠️ **AI-synthesized content; not fully reviewed by course staff.** Treat as a study aid, not a primary source — the released slides, notebooks, and lecture recordings are authoritative. [Full caveat →](../intro.md)
+
 **Lectures 25-27**
 
 ## What this part is about

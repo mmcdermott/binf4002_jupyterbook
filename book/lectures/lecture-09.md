@@ -1,5 +1,7 @@
 # Lecture 9 — Training a binary classification model
 
+> ⚠️ **AI-synthesized content; not fully reviewed by course staff.** Treat as a study aid, not a primary source — the released slides, notebooks, and lecture recordings are authoritative. [Full caveat →](../intro.md)
+
 **Tue Feb 17, 2026 · Part 1 — Foundations · §1.3 Evaluation, training, generalization**
 
 ## What this lecture is about

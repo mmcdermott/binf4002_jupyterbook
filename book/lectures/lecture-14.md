@@ -1,5 +1,7 @@
 # Lecture 14 — Large language models: from n-grams to attention
 
+> ⚠️ **AI-synthesized content; not fully reviewed by course staff.** Treat as a study aid, not a primary source — the released slides, notebooks, and lecture recordings are authoritative. [Full caveat →](../intro.md)
+
 **Thu Mar 5, 2026 · Part 2 — Modern AI & lab work**
 
 ## What this lecture is about
