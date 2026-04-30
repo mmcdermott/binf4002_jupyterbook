@@ -13,7 +13,7 @@ Once that hazard is in your mind, the rest of the lecture lays out the full ML t
 - **The pipeline.** Pick a loss → pick a function class → optimize empirical loss → check generalization → repeat.
 - **Data splits.** Train / validation / test. Why each exists, what role each plays in estimating expected loss (callback to L6).
 - **Model capacity and misspecification.** Capacity = how many functions the model class can represent. Misspecification = the right function isn't in the class. Both bite, in different ways.
-- **k-Nearest Neighbors as a procedural baseline.** No training step in the usual sense; classification = "vote among the k closest training points." It is *consistent* (in the limit of infinite data, it converges to the Bayes-optimal classifier) but practically catastrophic in high dimensions.
+- **k-Nearest Neighbors as a procedural baseline.** No training step in the usual sense; classification = "vote among the k closest training points." It is *Bayes-consistent* — but only when **k → ∞ and k/n → 0** as n → ∞. Fixed-k k-NN (e.g., 1-NN) is *not* Bayes-consistent: Cover & Hart (1967) showed 1-NN converges to at most twice the Bayes error. And in high dimensions, k-NN is practically catastrophic regardless of k.
 - **The optimization view.** Training = minimize empirical risk. With logistic loss + linear model = logistic regression. With cross-entropy + neural network = the same recipe scaled up.
 
 The paradox flagged is the **Healthy Vaccinee Effect** — a confounder you should have in your peripheral vision the rest of the course.

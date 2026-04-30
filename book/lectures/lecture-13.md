@@ -14,7 +14,7 @@ The lecture is built in two halves.
 
 - **Motivation.** Linear models can't approximate arbitrary functions. Trees and forests can but generalize poorly with high-dimensional structured inputs (images, sequences). Kernels can but scale badly. Neural networks combine *expressiveness* (universal approximation), *parametric deployment* (fixed-size model regardless of training-set size), and *automatic differentiation* (any differentiable loss + architecture is trainable).
 - **Anatomy.** Layers, activations, depth, parameters. A layer is "apply a linear map, then a non-linearity." Depth lets you compose features into higher-level features.
-- **Architecture as inductive bias.** This is the central conceptual move. CNNs encode "translation-equivariance and locality matter" — the right bias for natural images. RNNs encode "sequential structure matters." Transformers encode "any-to-any token interaction matters but with attention as the routing mechanism." The architecture is *not* incidental; it is the prior.
+- **Architecture as inductive bias.** This is the central conceptual move. CNNs encode "translation-equivariance and locality matter" — the right bias for natural images (pooling layers add translation invariance at the readout). RNNs encode "sequential structure matters." Transformers use *self-attention*, which is permutation equivariant on its own — and then add *positional encoding* precisely to break that symmetry so token order matters. The architecture is *not* incidental; it is the prior.
 - **Loss matching task type.** Squared error → Gaussian (regression). Cross-entropy → categorical (classification). Hinge → margin-based. NLL → arbitrary parametric. The choice is informed by L7's framework.
 
 **The second half is practical:** how do you actually train one of these without it failing silently?
@@ -71,8 +71,8 @@ Three reasons this lecture is the hinge of the course:
 | **ReLU** | σ(z) = max(0, z). Default activation; simple, non-saturating, but can produce "dead neurons" (stuck at 0 for all inputs). |
 | **GELU** | Gaussian Error Linear Unit. Smooth approximation of ReLU; preferred in transformers (BERT, GPT). |
 | **Depth vs. Width** | Depth (more layers) is far more parameter-efficient than width (more neurons per layer) for high expressiveness in practice. |
-| **Inductive Bias via Architecture** | FC/MLP: no structural prior. CNN: translation equivariance (locality). RNN: sequential ordering. Transformer: permutation equivariance with learned interactions. |
-| **Xavier / Glorot Init** | Weight variance = 1/d_in (or 2/(d_in+d_out)). Designed for tanh/sigmoid. |
+| **Inductive Bias via Architecture** | FC/MLP: no structural prior. CNN: translation equivariance (locality) at conv layers; pooling adds invariance. RNN: sequential ordering. Self-attention: permutation equivariant; **full transformers add positional encoding to break this symmetry, so the deployed transformer is *not* permutation equivariant** — order matters. |
+| **Xavier / Glorot Init** | Two related conventions: Xavier "fan-in" sets weight variance = 1/d_in; the original Glorot recommendation is 2/(d_in+d_out). The two give different values; the "fan-in" form is more common in modern code. Designed for tanh/sigmoid. |
 | **Kaiming / He Init** | Weight variance = 2/d_in. Designed for ReLU; accounts for ReLU zeroing half the neurons. |
 | **Batch Normalization** | Normalizes layer inputs to zero mean and unit variance per mini-batch. Reduces internal covariate shift. |
 | **Layer Normalization** | Normalizes across the feature dimension *per sample*. Preferred in transformers; works with variable sequence lengths. |
@@ -98,9 +98,9 @@ Three reasons this lecture is the hinge of the course:
 | Layer Type | Inductive Bias | Health Modality | Rule of Thumb |
 |---|---|---|---|
 | **FC / MLP** | No structural prior | Tabular EHR, lab values | Baseline for structured data |
-| **CNN** | Translation equivariance, locality | Medical images, ECG signals | First choice for images |
+| **CNN** | Translation equivariance + locality (pooling adds invariance) | Medical images, ECG signals | First choice for images |
 | **RNN / LSTM** | Sequential ordering | Clinical notes, time series | Use if order is crucial |
-| **Transformer** | Permutation equivariant; learned interactions | Any; esp. notes, sequences | Fewest structural assumptions; default when unsure |
+| **Transformer** | Self-attention is permutation equivariant; positional encoding restores order sensitivity, so the full model *is not* permutation equivariant | Any; esp. notes, sequences | Fewest structural assumptions; default when unsure |
 
 ### Practical Optimization: The Full Toolkit
 

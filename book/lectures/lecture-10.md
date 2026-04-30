@@ -58,7 +58,7 @@ This lecture is the *transition* of the course. Part 1 has been building the for
 
 | Term | Definition |
 |---|---|
-| **Memorization** | A model that stores exact (xᵢ, yᵢ) pairs achieves zero training loss but fails to generalize. The "lookup table" solution is always available to a sufficiently complex model. |
+| **Memorization** | A model that stores exact (xᵢ, yᵢ) pairs and achieves zero training loss. *Classically* this was assumed to imply failure to generalize; the modern-DL puzzle is that overparameterized networks can interpolate the training data and still generalize well (benign overfitting). |
 | **Regularization** | Any technique that constrains effective complexity to discourage memorization: L2/L1 penalties, dropout, early stopping, data augmentation. |
 | **Zhang et al. (2017)** | Empirical result: deep neural networks can memorize random labels on CIFAR-10. Capacity alone does not explain generalization — modern networks *can* memorize but often choose not to. |
 | **Inductive Bias** | "How easy it is to learn the right model." The implicit preference an algorithm or architecture has for certain function classes, independent of data. |
@@ -87,7 +87,7 @@ Zhang et al. (2017) showed that neural networks have enough capacity to memorize
 |---|---|
 | **Fundamental learning process (SGD)** | Interpolation, double descent, implicit regularization from mini-batch noise |
 | **Data structure (manifold hypothesis)** | Directions of variance and density in the data; representation learning captures this |
-| **Architecture (hard structural constraints)** | CNNs enforce translation invariance; transformers enforce permutation equivariance |
+| **Architecture (hard structural constraints)** | CNNs enforce translation **equivariance** at convolutional layers (pooling adds translation invariance at the readout); self-attention is permutation equivariant, and full transformers add positional encoding precisely to *break* that symmetry so order matters |
 | **Training objective (soft constraints)** | Auxiliary losses, pre-training objectives, contrastive losses |
 
 ### The Unsolvable Problems
