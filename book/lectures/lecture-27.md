@@ -12,10 +12,10 @@ We move through five threads.
 
 **Thread 1: Protein language models.**
 
-- **ESM-2 (Lin et al., 2023).** Masked language modeling on a protein-sequence corpus. Same architecture pattern as BERT, applied to amino acids. Scales: 8M to 15B parameters.
-- **Attention as a coevolution proxy.** Without ever seeing an MSA at inference time, transformer attention heads in protein LMs *recover* coevolutionary patterns that look like the contacts MSAs reveal. This is the surprising finding that legitimized protein LMs.
-- **Protein embeddings.** ESM-2 produces a continuous representation of any protein. Useful as input features for almost any downstream protein task.
-- **Zero-shot variant-effect prediction.** Score how unlikely a mutation is under the protein LM. Highly correlated with experimental fitness measurements. Beats SIFT and PolyPhen on most benchmarks. (But note: the comparison is sensitive to which dataset and which split.)
+- **ESM-2 (Lin et al., 2023).** Masked language modeling on a protein-sequence corpus. Transformer-encoder architecture in the BERT family, applied to amino-acid tokens. Scales: 8M to 15B parameters.
+- **Attention as a contact / coevolution *signal*.** Some attention heads and learned embeddings in protein LMs *correlate with* structural contacts and evolutionary constraints, and single-sequence LMs can support contact-relevant predictions. This is **not** the same as explicitly estimating coevolutionary couplings from an MSA (DCA-style); attention should be read as a useful diagnostic signal, not as a causal coupling score.
+- **Protein embeddings.** ESM-2 produces a continuous representation of any protein. Useful as input features for many downstream protein tasks.
+- **Zero-shot variant-effect prediction.** Score how unlikely a mutation is under the protein LM. Often *competitive with, and on some benchmarks outperforming,* classical predictors such as SIFT and PolyPhen. The conclusion depends strongly on the benchmark, variant set, train/test leakage, and whether the endpoint is molecular fitness or clinical pathogenicity — there is no blanket ranking.
 - **What protein LMs miss.** Multimer interactions, post-translational modifications, condition-specific behavior, anything outside the training distribution.
 
 **Thread 2: AlphaFold-style structure prediction.**
@@ -50,7 +50,7 @@ We move through five threads.
 
 Three reasons this lecture is the conceptual capstone of the biological AI arc:
 
-**The same recipes (transformer / NLL / scale) keep winning across biological domains.** ESM-2 is BERT-on-proteins. Evo is GPT-on-DNA. The architectural reuse is genuinely impressive — and is also the reason caution is warranted: a recipe that wins on syntactic similarity may not capture function.
+**The same paradigm (sequence-modeling, NLL, scale) keeps winning across biological domains.** ESM-2 is a transformer in the BERT family applied to protein sequences; Evo is a long-context decoder LM applied to genomes. The *paradigm reuse* is genuinely impressive — but the architectures are not literally identical to natural-language LLMs (long context, MSA-derived inputs, equivariance constraints all change the model class), and a recipe that wins on syntactic-similarity-style benchmarks may not capture function.
 
 **Domain constraints still dominate.** Equivariance for 3D molecules. MSAs for protein structure. Long context for regulatory genomics. The architectural choices are *about* what biology forces, not about NN trends.
 
@@ -58,7 +58,7 @@ Three reasons this lecture is the conceptual capstone of the biological AI arc:
 
 ## Things you should walk away believing
 
-- Protein language models learn coevolutionary structure from sequence alone. The fact this works is the foundational result of the modern era.
+- Protein language models learn statistical regularities from large protein corpora that *correlate with* structural and evolutionary constraints. Some attention heads and embeddings carry contact-relevant signal — useful — but they are not the same as explicit MSA-derived coevolutionary couplings.
 - pLDDT is the AlphaFold confidence score. Use it. Don't trust low-pLDDT regions.
 - Genomic foundation models are an active research area with unsettled claims. Read the critique alongside the proposals.
 - Equivariant networks are the right inductive bias for 3D molecules. Most current best-in-class methods use them.
@@ -69,7 +69,7 @@ Three reasons this lecture is the conceptual capstone of the biological AI arc:
 ## How this connects to the rest of the course
 
 - L25 (DNA, genetics) and L26 (proteins, molecules) are the substrate.
-- L14 (LLMs) provides the architectural template; modern biological AI is mostly transformers in domain costume.
+- L14 (LLMs) provides the *paradigm* (sequence modeling, NLL, scale, transfer); modern biological AI reuses this paradigm but the architectures are domain-specific (long-context, MSA-aware, 3D-equivariant).
 - L15 (foundation models) — every system in this lecture is a foundation model claim; ask the L15 questions.
 - L13 (NN architecture as inductive bias) — equivariant networks are the cleanest example.
 - L24 (fairness) — biological AI inherits training-data biases (Eurocentric genome data; PDB skewed toward soluble proteins).

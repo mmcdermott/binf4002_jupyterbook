@@ -5,10 +5,10 @@
 | Term | Definition |
 |---|---|
 | **Protein language model (pLM)** | Transformer trained with masked / autoregressive language modeling on amino-acid sequences. ESM-2 is the canonical example. |
-| **ESM-2** | Lin et al. 2023. Scales: 8M to 15B parameters. Same architectural pattern as BERT, applied to amino acids. |
-| **Coevolution recovery** | pLM attention heads, without ever seeing an MSA at inference, recover coevolutionary patterns that look like contacts. The legitimating result. |
+| **ESM-2** | Lin et al. 2023. Scales: 8M to 15B parameters. Transformer-encoder in the BERT family applied to amino-acid tokens. |
+| **Contact / coevolution *signal*** | Some pLM attention heads and embeddings *correlate with* structural contacts and evolutionary constraints — even from a single sequence at inference. **Not the same as** explicit MSA-derived coevolutionary couplings (DCA-style); read attention as a useful diagnostic, not a causal coupling score. |
 | **Protein embedding** | A continuous representation of a protein from a pLM. Useful as input features for many downstream protein tasks. |
-| **Zero-shot variant-effect prediction** | Score how unlikely a mutation is under the pLM. Highly correlated with experimental fitness; beats SIFT / PolyPhen on most benchmarks. |
+| **Zero-shot variant-effect prediction** | Score how unlikely a mutation is under the pLM. Often *competitive with, and on some benchmarks outperforming,* SIFT / PolyPhen. Conclusion is dataset-, split-, and endpoint-dependent — there is no blanket ranking. |
 | **AlphaFold 2** | Jumper et al. 2021. Sequence + MSA → 3D structure. Combines an evoformer (transformer over residues + MSA) with a structure module. CASP14 winner. |
 | **pLDDT** | Predicted Local Distance Difference Test. Per-residue confidence in [0, 100]. *Use it. Always.* Distinguishes well-predicted regions from disordered or wrong ones. |
 | **AlphaFold DB** | ~200M predicted structures, free, queryable. Has rewritten what's possible for proteome-scale analysis. |
@@ -44,7 +44,7 @@ Predictive models are validated against held-out test sets. Generative models �
 
 ## Self-Check Questions
 
-1. ESM-2 attention heads recover coevolutionary contacts. Why is this surprising / notable, given that ESM-2 never sees an MSA at inference?
+1. ESM-2 attention heads carry contact-relevant signal even though no MSA is supplied at inference. What is the right way to phrase this — "the model has discovered coevolution," "attention recovers MSA couplings," or "single-sequence statistics correlate with structural constraints"? Which framing is most accurate, and why?
 2. AlphaFold 2 predictions come with pLDDT scores. Walk through the consequences of ignoring pLDDT in three downstream use cases.
 3. Genomic foundation models (Enformer, Evo) face a critique that they don't outperform task-specific models. What do you think the reasonable interpretation of this critique is?
 4. Equivariance for 3D molecules: state the symmetry being respected, and explain why baking it into the architecture is more efficient than learning it from data.

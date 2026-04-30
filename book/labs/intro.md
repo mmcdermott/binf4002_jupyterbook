@@ -1,6 +1,6 @@
 # Labs
 
-Seventeen Jupyter notebooks released across the semester in three chunks. Each lab is a self-contained exercise in a particular ML model type, loss type, or data type. The labs are designed to be run on Google Colab (no local install required) and were the substrate for three in-class lab days (L11, L12, L16).
+Seventeen Jupyter notebooks released across the semester in three chunks. Each lab is a self-contained exercise in a particular ML model type, loss type, or data type. The labs were originally distributed as Colab-runnable notebooks and were the substrate for three in-class lab days (L11, L12, L16).
 
 The release schedule:
 
@@ -50,10 +50,30 @@ Click any lab below to view it inline. To re-run it yourself, use the launch but
 
 ## How to run the labs
 
-Each lab notebook has Colab-friendly boilerplate at the top and was designed to run on free Colab GPUs/TPUs. To run a lab:
+Each lab notebook has Colab-friendly boilerplate at the top. To run a lab:
 
 1. Open the notebook page in this book (links above).
-2. Click the launch icon at the top right of the notebook page (when this book is hosted on a public GitHub repo, the icon takes you to Colab or Binder with the notebook pre-loaded).
-3. Run cells in order. Most labs save a pickled output that later labs may read.
+2. Click the launch icon at the top right of the notebook page; it opens the notebook in Colab with one click.
+3. Run cells in order.
 
-If you're reading this book locally, you can also open any lab directly in Jupyter / VS Code from `Labs/notebooks/`.
+### Runtime expectations
+
+Most labs run comfortably on a free Colab CPU runtime in under 10 minutes. The exceptions:
+
+| Lab | Approx. runtime | Free CPU OK? | Free GPU helpful? | Notes |
+|---|---|---|---|---|
+| Lab 0-5 | 1-3 min each | yes | no | Pure scikit-learn / numpy / matplotlib. |
+| Lab 5 (NN) | 3-5 min | yes | no | Small NN; no GPU needed. |
+| Lab 6-9 | 1-3 min each | yes | no | Loss-type variants; classical methods. |
+| Lab 10-11 | 2-5 min each | yes | no | Clustering / dim-reduction; UMAP install can take ~30s. |
+| Lab 12 (graphs) | 5-15 min | yes | recommended | Installs `torch_geometric` and trains a small GCN; faster on GPU. |
+| Lab 13 (sequences) | 10-30 min | acceptable | **recommended** | Fine-tunes a small transformer; CPU works but is slow. |
+| Lab 14 (images) | 10-30 min | acceptable | **recommended** | CNN training on MedMNIST; downloads ~80 MB of data. |
+| Lab 15 (time series) | 5-15 min | yes | no | `wfdb` data downloads can take a minute. |
+| Lab 16 (MEDS) | 5-15 min | yes | no | Downloads small MIMIC-IV demo data in MEDS format. |
+
+### Cross-lab dependencies
+
+Labs 0-11 share a `processed_data.pkl` produced by Lab 0. **Run Lab 0 first** (or download its output) before opening labs 1-11. Labs 12-16 are independent of that pickle but each needs its own dataset download (graph data, sequence corpus, MedMNIST, ECG signals, MIMIC-IV demo respectively).
+
+If you're reading this book locally, you can also open any lab directly in Jupyter / VS Code from `Labs/notebooks/`. The Python environment used to render this book in CI is documented in `pyproject.toml` (Jupyter Book itself); per-notebook scientific dependencies are documented in `scripts/notebook_extras.tsv` and are installed into ephemeral isolated venvs by `scripts/execute_notebook.sh` during book builds.

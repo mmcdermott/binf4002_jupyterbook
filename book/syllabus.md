@@ -56,10 +56,10 @@ The dates given for each lecture are the calendar slot in BINF 4002 Spring 2026.
 # Level 0 — The course
 
 ## Topic
-Machine learning for health, taught from mathematical foundations through modern AI to deployment.
+Machine learning for health, taught from mathematical foundations through modern AI and the major clinical and biological data modalities. Deployment is treated as a *through-line* surfaced through other lectures (calibration, domain shift, label/action windows, fairness mechanisms); the standalone deployment lecture originally planned for L28 was **not taught this cycle** and is flagged for self-study (see [L28](lectures/lecture-28.md)).
 
 ## Summary
-BINF 4002 builds the mathematical and statistical machinery of ML (vectors, probability, optimization, evaluation, generalization), then connects that machinery to modern neural and foundation-model methods, then walks modality by modality through the data and modeling problems of health AI: EHR/claims, clinical text, medical imaging, population health, causality and fairness, genomics, proteins/molecules, modern biological AI, and deployment. The recurring move across the course is to map a modality onto generic ML, identify where that mapping breaks in health, and trace the breakage to task definition, representation, modeling, evaluation, and deployment.
+BINF 4002 builds the mathematical and statistical machinery of ML (vectors, probability, optimization, evaluation, generalization), then connects that machinery to modern neural and foundation-model methods, then walks modality by modality through the data and modeling problems of health AI: EHR/claims, clinical text, medical imaging, population health, causality and fairness, genomics, proteins/molecules, modern biological AI. The recurring move across the course is to map a modality onto generic ML, identify where that mapping breaks in health, and trace the breakage to task definition, representation, modeling, and evaluation.
 
 ## Goals / learning objectives
 After this course, students should be able to:
@@ -69,7 +69,7 @@ After this course, students should be able to:
 4. Identify the data-generating process behind any health dataset (care delivery, billing, measurement, biology, selection, access) and reason about how it shapes models.
 5. Distinguish prediction from intervention; reason mechanistically about fairness; recognize when fairness metrics are mutually incompatible.
 6. Critique foundation-model claims by asking what domain and task distribution a model actually covers.
-7. Anticipate deployment phenomena: drift, label delay, feedback loops, alert fatigue, differential access, regulation.
+7. Recognize *deployment-adjacent* phenomena introduced through other lectures — calibration drift (L8), domain shift (L10), label/action windows (L17-L18), fairness mechanisms (L24). The standalone topics of drift monitoring, label delay, feedback loops, alert fatigue, and FDA SaMD regulation were *not taught* this cycle; see [L28](lectures/lecture-28.md) for self-study pointers.
 8. Hold scientific skepticism about benchmarks, model performance, and deployment claims.
 
 ## Key takeaways

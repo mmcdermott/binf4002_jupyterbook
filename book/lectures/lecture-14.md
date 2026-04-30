@@ -45,7 +45,7 @@ Three reasons this lecture is more than "here's how transformers work":
 - L13 (NN training mechanics) — every detail in this lecture's transformers is a special case of L13's recipe.
 - L15 (foundation models) — frames LLMs as the prototypical foundation model and pushes the framework further.
 - L20 (clinical NLP) — comes back to LLM-vs.-domain-adapted-model trade-offs in clinical settings.
-- L27 (modern biological AI) — protein language models (ESM-2) and DNA foundation models (Evo) are the *same architecture* applied to non-natural-language sequences.
+- L27 (modern biological AI) — protein language models (ESM-2) and DNA foundation models (Evo) reuse the *sequence-modeling and foundation-model paradigm* of L14: tokenized sequences, self-supervised or large-scale training, transfer to downstream tasks. The architectures are *not* always literally the same as natural-language LLMs — domain constraints (long genomic context, MSA-derived inputs, 3D-equivariant heads) change the model class. Treat the connection as a paradigm analogy.
 
 ## Source files in this folder
 
