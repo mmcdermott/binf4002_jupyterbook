@@ -1,6 +1,6 @@
 # BINF 4002 — Machine Learning for Health (Jupyter Book)
 
-A Sphinx-based Jupyter Book for the Spring 2026 BINF 4002 course at Cornell. Each lecture chapter is a student-facing review page; companion notebooks are first-class child pages that render with their original outputs; all 17 course labs are first-class chapters in their own Part; per-lecture **study guides** with key terms, self-check questions, and curated external resources live in their own Part as well. Every notebook page ships **"Open in Colab"** and **"Open in Binder"** launch buttons (active once this repo is public on GitHub).
+A Sphinx-based Jupyter Book for the Spring 2026 BINF 4002 course at Columbia DBMI. Each lecture chapter is a student-facing review page; companion notebooks are first-class child pages that render with their original outputs; all 17 course labs are first-class chapters in their own Part; per-lecture **study guides** with key terms, self-check questions, and curated external resources live in their own Part as well. Every notebook page ships **"Open in Colab"** and **"Open in Binder"** launch buttons (active once this repo is public on GitHub).
 
 ## What's in this repo
 
@@ -100,4 +100,4 @@ Course content (lecture text, syllabus, mind map, study guides) is licensed unde
 
 ## Acknowledgements
 
-Course materials build on guest lectures from Di Liu (L7) and Florent Pollet (L8), and on the BINF 4002 teaching infrastructure at Cornell.
+Course materials build on guest lectures from Di Liu (L7) and Florent Pollet (L8), and on the BINF 4002 teaching infrastructure at Columbia DBMI.

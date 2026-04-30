@@ -1,6 +1,6 @@
 # BINF 4002 — Machine Learning for Health
 
-**Spring 2026 · Cornell**
+**Spring 2026 · Columbia DBMI**
 
 This book is the student-facing companion to the Spring 2026 BINF 4002 lectures and labs. Everything you need to review for the course lives in these pages.
 
