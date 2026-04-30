@@ -33,7 +33,7 @@ We split the lecture into two halves: proteins, then small molecules.
 - **SMILES strings.** A linear textual encoding of a molecule. Canonical SMILES is unique; non-canonical is not. Easy to parse, easy to use as ML input.
 - **Molecular fingerprints (ECFP / Morgan fingerprints).** Bit-vector encodings: bit i is on iff some local substructure of radius r is present. Fast similarity (Tanimoto), fast classification (random forests on fingerprints are still competitive).
 - **QSAR — Quantitative Structure-Activity Relationship.** "Predict bioactivity from structure." Random forest on fingerprints + log-transformed activity readouts is the canonical setup.
-- **Molecular docking.** Predict how a small molecule binds to a protein pocket. AutoDock Vina is the workhorse. Useful when you have a structure for the target.
+- **Molecular docking.** Predict how a small molecule binds to a protein pocket. AutoDock Vina is the long-standing workhorse; commercial tools (Glide) and recent ML-based docking (DiffDock and successors) are increasingly competitive on benchmarks, though their behavior off-distribution is still debated. Useful when you have a structure for the target.
 - **The drug-discovery pipeline.** Hit identification → lead optimization → preclinical → trials. ML can help at every stage; usually it helps most at the early ones (hit-finding, virtual screening).
 - **Scaffold splits.** A train/test split that *separates by chemical scaffold*, not by random sample. Random splits over-estimate generalization for molecules because similar molecules end up in both train and test. Scaffold splits are the honest evaluation.
 - **The classical-baseline challenge.** A consistent finding in the molecular-ML literature: a random forest on Morgan fingerprints, evaluated with scaffold splits, is *competitive* with most reported deep-learning approaches. Not always, but often. The lecture pushes back against "deep learning solved chemistry."
@@ -92,7 +92,7 @@ Three reasons this lecture is the right setup for L27:
 | **ECFP / Morgan fingerprint** | Bit-vector encoding: bit i is on iff some local substructure of radius r is present. Default small-molecule featurization. |
 | **QSAR** | Quantitative Structure-Activity Relationship: predict bioactivity from structure. Random forest on fingerprints + log-activity is the canonical setup. |
 | **Tanimoto similarity** | \|A ∩ B\| / \|A ∪ B\| over fingerprint bits. Standard chemical-similarity measure. |
-| **Molecular docking** | Predict how a small molecule binds to a protein pocket. AutoDock Vina is the workhorse. |
+| **Molecular docking** | Predict how a small molecule binds to a protein pocket. AutoDock Vina is the long-standing workhorse; Glide (commercial) and ML-based DiffDock-style methods are increasingly competitive on benchmarks. |
 | **Scaffold split** | Train/test split by chemical scaffold rather than at random. **Random splits over-estimate molecular-ML performance.** |
 
 ### Classical Methods Are Strong

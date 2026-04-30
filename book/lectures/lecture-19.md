@@ -96,7 +96,7 @@ Each section has its own conventions and its own failure modes for downstream mo
 ### Self-Check Questions
 
 1. Why is "five copies of the same paragraph for the same patient" not five independent samples? What modeling decision does this affect?
-2. NegEx flips the polarity of any keyword preceded by a negation phrase ("no", "denies", "rule out"). Walk through one *failure mode* of this approach.
+2. NegEx (Chapman et al., 2001) marks a clinical concept as negated when a negation trigger phrase ("no", "denies", "rule out") appears within a fixed-size *scope window* near the concept, with termination cues that close the scope. Walk through one *failure mode* of this windowed-scope approach.
 3. MIMIC-III is the most-used open clinical-text dataset. What's the *selection effect* in MIMIC patients that limits "MIMIC-NLP performance" as a measure of "clinical NLP performance"?
 4. HIPAA Safe Harbor lists 18 categories of PHI to remove. After removing all of them, can a patient still be re-identified? Give an example.
 5. PubMed and clinical notes are both "biomedical text." Why are they ecosystems with different conventions, and what does that imply for transfer?
